@@ -2,6 +2,12 @@
 
 **Akış ve ekran taslakları.** Kararlar: Beş kategori (kitap, film, dizi, oyun, müzik), farklı kategorilerden 1–5 başlangıç eseri, kategoriler arası öneri, hesaplı kaydetme ve gerçek görseller. Arama şimdilik eser adına göre.
 
+## İlk sürüm kararları
+
+1. **Arama:** Yalnızca eser adına göre çalışır. Tür adına veya özelliğe göre arama bu sürümün kapsamında değildir.
+2. **Kaydetme:** Hesap gerekir. Misafir kullanıcı öneri görebilir; eser kaydetmek istediğinde giriş veya kayıt ekranına gider ve işlem tamamlanınca eser kaydedilir.
+3. **Görsel yön:** Örnek site belirlenmedi. İlk sürümde mevcut açık zemin, mor vurgu, DM Sans gövde yazısı, Playfair başlıklar ve orta yoğunluklu düzen kullanılır. Bu seçim değiştirilebilir.
+4. **Taslak paylaşımı:** Bu Markdown dosyası GitHub dalında paylaşılır; ayrıca kâğıt çizimi veya Figma dosyası hazırlanmaz.
 ## Tek sayfalık kullanıcı akışı
 
 ```mermaid
