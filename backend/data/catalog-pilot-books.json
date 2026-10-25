@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "source": "local",
+      "source_id": "kitap-1",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/11481354-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL893414W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Çöl gezegeni Arrakis üzerindeki baharatın kontrolü için verilen mücadelede Paul Atreides, ailesinin yıkımından sonra Fremenlerle yeni bir yol arar."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-14",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/283860-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL27258W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Siberuzayda çalışamayan hacker Case, gizemli bir iş teklifini kabul ederek yapay zekâ ve şirket çıkarlarının iç içe geçtiği tehlikeli bir göreve katılır."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-12",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/12216503-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL85892W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Jonathan Harker’ın Transilvanya’da Kont Drakula ile karşılaşması, İngiltere’ye uzanan vampir tehdidine karşı verilen mücadeleyi başlatır."
+    }
+  ]
+}

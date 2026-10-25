@@ -58,3 +58,75 @@ def test_user_isolation_persistence_and_ephemeral_answers():
     assert a.put(f"/api/me/contents/{source['id']}/dislike",headers=csrf_headers(a)).status_code==200
     assert a.get('/api/me').json()['feedback'][str(source['id'])]=='dislike'
     assert a.put(f"/api/me/contents/{source['id']}/favorite").status_code==403
+
+def test_single_source_recommendations():
+    c=client()
+    items=c.get('/api/contents').json()
+    for category in ('kitap','oyun'):
+        source=next(x for x in items if x['category']==category and x['themes'])
+        r=c.get(f"/api/contents/{source['id']}/recommendations")
+        assert r.status_code==200
+        data=r.json()
+        assert data['source']['id']==source['id']
+        assert data['results'] and all(x['content']['category']==category and x['content']['id']!=source['id'] for x in data['results'])
+        assert all(x['reason'] and x['score']>0 for x in data['results'])
+    assert c.get('/api/contents/999999/recommendations').status_code==404
+
+def test_guest_search_and_single_source_recommendation():
+    c=client()
+    found=c.get('/api/contents',params={'q':'disco'}).json()
+    assert found and all('disco' in x['title'].lower() for x in found)
+    source=found[0]
+    data=c.get(f"/api/contents/{source['id']}/recommendations").json()
+    assert data['source']['id']==source['id']
+    assert data['results']
+    assert all(x['content']['category']==source['category'] and x['content']['id']!=source['id'] for x in data['results'])
+
+def test_saved_persistence_and_isolation():
+    a,b=client(),client()
+    assert a.post('/api/auth/register',json={'email':'s1@example.com','password':'password123'}).status_code==200
+    assert b.post('/api/auth/register',json={'email':'s2@example.com','password':'password123'}).status_code==200
+    first=a.get('/api/contents').json()[0]
+    assert a.get('/api/me/saved').json()==[]
+    assert a.put(f"/api/me/contents/{first['id']}/favorite",headers=csrf_headers(a)).status_code==200
+    saved=a.get('/api/me/saved').json()
+    assert [x['id'] for x in saved]==[first['id']]
+    assert saved[0]['title']==first['title'] and saved[0]['themes']==first['themes']
+    assert b.get('/api/me/saved').json()==[]
+    assert a.post('/api/auth/logout',headers=csrf_headers(a)).status_code==200
+    assert a.get('/api/me/saved').status_code==401
+    assert a.post('/api/auth/login',json={'email':'s1@example.com','password':'password123'}).status_code==200
+    assert [x['id'] for x in a.get('/api/me/saved').json()]==[first['id']]
+    assert a.delete(f"/api/me/contents/{first['id']}/favorite",headers=csrf_headers(a)).status_code==200
+    assert a.get('/api/me/saved').json()==[]
+
+def test_catalog_filtering_four_categories():
+    c=client()
+    items=c.get('/api/contents').json()
+    assert items and {x['category'] for x in items}<={'kitap','film','dizi','oyun'}
+    for category in ('kitap','film','dizi','oyun'):
+        rows=c.get('/api/contents',params={'category':category}).json()
+        assert rows and all(x['category']==category for x in rows)
+    assert c.get('/api/contents',params={'category':'müzik'}).status_code==422
+    assert c.get('/api/contents',params={'category':'gecersiz'}).status_code==422
+    assert c.get('/api/contents',params={'q':'siyasi entrika'}).json()==[]
+
+def test_quality_report_flags_missing():
+    from app.catalog import quality_issues
+    blank=Content(category='kitap',title='Boş Açıklamalı Deneme',description='   ',genres=[],themes=[],moods=[],source='local',source_id='test-blank')
+    with Session() as db:
+        db.add(blank); db.commit()
+        try:
+            issues=quality_issues(db)
+            blank_issues=[x for x in issues if x['id']==blank.id]
+            assert blank_issues and set(blank_issues[0]['issues'])>={'description','image_url','image_credit','image_source_url'}
+        finally:
+            db.delete(blank); db.commit()
+    assert issues
+    assert {x['category'] for x in issues}<={'kitap','film','dizi','oyun'}
+    assert any('image_url' in x['issues'] for x in issues)
+    assert any('description' in x['issues'] for x in issues)
+    assert any('image_credit' in x['issues'] for x in issues)
+    assert any('image_source_url' in x['issues'] for x in issues)
+    assert any('pattern_description' in x['issues'] for x in issues)
+    assert all(x['id'] and x['title'] for x in issues)

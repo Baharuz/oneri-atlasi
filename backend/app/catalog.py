@@ -1,5 +1,6 @@
 from sqlalchemy import select
 from .models import Content, Tag, ContentTag
+import json
 
 # Etiketler ve kısa açıklamalar bu öğrenci projesi için elle hazırlanmıştır.
 # biçim: ad | tür | tema | atmosfer
@@ -102,3 +103,37 @@ def seed(db):
                     tag_id = lookup.get((kind,name))
                     if tag_id: db.add(ContentTag(content_id=item.id,tag_id=tag_id))
         db.commit()
+
+REPORT_CATEGORIES = ("kitap", "film", "dizi", "oyun")
+
+def _is_pattern_description(item):
+    text = item.description or ""
+    return text.startswith(f"{item.title}: ") and " temalarını " in text and " bir atmosferle buluşturan bir " in text
+
+def quality_issues(db):
+    """Salt okunur rapor: boş görsel/açıklama/kaynak-atıf ve kalıp açıklamalı kayıtlar. Eksik bulmak normal sonuçtur."""
+    items = db.scalars(select(Content).where(Content.category.in_(REPORT_CATEGORIES)).order_by(Content.category, Content.title, Content.id)).all()
+    issues = []
+    for item in items:
+        missing = []
+        if not (item.image_url or "").strip(): missing.append("image_url")
+        if not (item.description or "").strip(): missing.append("description")
+        if not (item.image_credit or "").strip(): missing.append("image_credit")
+        if not (item.image_source_url or "").strip(): missing.append("image_source_url")
+        if _is_pattern_description(item): missing.append("pattern_description")
+        if missing: issues.append({"id": item.id, "category": item.category, "title": item.title, "issues": missing})
+    return issues
+
+def main():
+    from .db import SessionLocal
+    try:
+        with SessionLocal() as db:
+            issues = quality_issues(db)
+    except Exception as error:
+        print(json.dumps({"error": str(error), "hint": "Veritabanına erişilemedi; DATABASE_URL değerini kontrol edin."}, ensure_ascii=False))
+        return 1
+    print(json.dumps({"total": len(issues), "items": issues}, ensure_ascii=False, indent=2))
+    return 0
+
+if __name__ == "__main__":
+    raise SystemExit(main())

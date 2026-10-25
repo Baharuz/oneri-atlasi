@@ -27,6 +27,8 @@ class Content(Base):
     language: Mapped[str] = mapped_column(String(20), default="tr")
     year: Mapped[int | None] = mapped_column(Integer, nullable=True)
     image_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
+    image_credit: Mapped[str | None] = mapped_column(String(300), nullable=True)
+    image_source_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
     source: Mapped[str] = mapped_column(String(30), default="local")
     source_id: Mapped[str] = mapped_column(String(100))
 

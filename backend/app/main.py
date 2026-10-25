@@ -19,6 +19,7 @@ serializer = URLSafeTimedSerializer(os.getenv("SESSION_SECRET", "dev-only-change
 COOKIE_SECURE = os.getenv("COOKIE_SECURE", "false").lower() == "true"
 COOKIE_SAMESITE = os.getenv("COOKIE_SAMESITE", "lax")
 CATEGORIES = {"kitap", "film", "dizi", "oyun", "müzik"}
+MVP_CATEGORIES = ("kitap", "film", "dizi", "oyun")
 
 class AuthInput(BaseModel):
     email: EmailStr
@@ -76,7 +77,7 @@ def set_cookies(response: Response, user_id: int):
     response.set_cookie("csrf", secrets.token_urlsafe(32), httponly=False, secure=COOKIE_SECURE, samesite=COOKIE_SAMESITE, max_age=604800)
 
 def content_dict(item):
-    return {field: getattr(item, field) for field in ("id", "category", "title", "description", "genres", "themes", "moods", "language", "year", "image_url", "source", "source_id")}
+    return {field: getattr(item, field) for field in ("id", "category", "title", "description", "genres", "themes", "moods", "language", "year", "image_url", "image_credit", "image_source_url", "source", "source_id")}
 
 @app.get("/api/health")
 def health(): return {"ok": True}
@@ -106,6 +107,11 @@ def me(user: User = Depends(current_user), db: Session = Depends(get_db)):
     interactions = db.scalars(select(Interaction).where(Interaction.user_id == user.id)).all()
     return {"id": user.id, "email": user.email, "preferences": user.preferences, "favorites": [x.content_id for x in interactions if x.kind == "favorite"], "feedback": {x.content_id: x.kind for x in interactions if x.kind in {"like", "dislike"}}}
 
+@app.get("/api/me/saved")
+def saved(user: User = Depends(current_user), db: Session = Depends(get_db)):
+    stmt = select(Content).join(Interaction, Interaction.content_id == Content.id).where(Interaction.user_id == user.id, Interaction.kind == "favorite").order_by(Content.title, Content.id)
+    return [content_dict(x) for x in db.scalars(stmt).all()]
+
 @app.put("/api/me/preferences", dependencies=[Depends(csrf)])
 def save_preferences(data: ProfileInput, user: User = Depends(current_user), db: Session = Depends(get_db)):
     if len(set(data.source_ids)) != len(data.source_ids): raise HTTPException(422, "Tekrarlı kaynak")
@@ -121,9 +127,9 @@ def save_preferences(data: ProfileInput, user: User = Depends(current_user), db:
 
 @app.get("/api/contents")
 def contents(q: str = "", category: str | None = None, db: Session = Depends(get_db)):
-    stmt = select(Content)
+    stmt = select(Content).where(Content.category.in_(MVP_CATEGORIES))
     if category:
-        if category not in CATEGORIES: raise HTTPException(422, "Geçersiz kategori")
+        if category not in MVP_CATEGORIES: raise HTTPException(422, "Geçersiz kategori")
         stmt = stmt.where(Content.category == category)
     if q: stmt = stmt.where(Content.title.ilike(f"%{q[:80]}%"))
     return [content_dict(x) for x in db.scalars(stmt.order_by(Content.title).limit(100)).all()]
@@ -133,6 +139,19 @@ def content_detail(content_id: int, db: Session = Depends(get_db)):
     item = db.get(Content, content_id)
     if not item: raise HTTPException(404, "İçerik bulunamadı")
     return content_dict(item)
+
+@app.get("/api/contents/{content_id}/recommendations")
+def content_recommendations(content_id: int, request: Request, db: Session = Depends(get_db)):
+    source = db.get(Content, content_id)
+    if not source: raise HTTPException(404, "İçerik bulunamadı")
+    all_contents = db.scalars(select(Content)).all()
+    user = optional_user(request, db)
+    feedback = {}
+    if user:
+        feedback = {x.content_id: x.kind for x in db.scalars(select(Interaction).where(Interaction.user_id == user.id, Interaction.kind.in_(["like", "dislike"]))).all()}
+    result = recommend(all_contents, [source], {"categories": [source.category]}, user.preferences if user else None, feedback)
+    rows = result.get(source.category, [])
+    return {"source": content_dict(source), "results": [{"content": content_dict(x["content"]), "score": x["score"], "reason": x["reason"]} for x in rows]}
 
 @app.post("/api/recommend", dependencies=[Depends(csrf)])
 def recommendations(data: RecommendInput, request: Request, db: Session = Depends(get_db)):

@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "source": "local",
+      "source_id": "kitap-1",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/11481354-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL893414W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Çöl gezegeni Arrakis üzerindeki baharatın kontrolü için verilen mücadelede Paul Atreides, ailesinin yıkımından sonra Fremenlerle yeni bir yol arar."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-2",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/12524639-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL27448W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Frodo, Tek Yüzük’ü yok etmek için Orta Dünya boyunca yola çıkar; yol arkadaşlığı, güç tutkusu ve Sauron’a karşı verilen savaş bu büyük anlatının merkezindedir."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-3",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/9267242-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL1168083W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Sürekli gözetim altındaki Okyanusya’da Winston Smith, Parti’nin geçmişi ve düşünceleri denetlemesine karşı sessiz bir direniş arar."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-4",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/13116014-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL32525579W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Raskolnikov’un işlediği cinayetin ardından yaşadığı vicdan çatışması, bir soruşturma ve kefaret arayışıyla iç içe ilerler."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-5",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/10708272-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL10263W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Çöle düşen bir pilotun tanıştığı Küçük Prens, gezegenler arası yolculuğunda kurduğu ilişkiler üzerinden dostluğu ve sevgiyi anlatır."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-6",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/13405534-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL262496W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Sherlock Holmes ile Dr. Watson’ın ilk ortak vakasında Londra’daki gizemli bir cinayet, geçmişte yaşanan olaylarla bağlantılı çıkar."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-7",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/14612610-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL46125W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Hari Seldon, Galaktik İmparatorluk’un çöküşünü öngörür ve insanlığın bilgisini koruyarak karanlık dönemi kısaltacak Vakıf planını kurar."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-8",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/12646537-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL5735363W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Katniss Everdeen, kız kardeşinin yerine gönüllü olarak seçildiği ölümcül Açlık Oyunları’nda hayatta kalmaya ve otoriteye karşı durmaya çalışır."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-9",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/12986869-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL2163649W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Dünya’nın yıkılmasından hemen önce kurtulan Arthur Dent, Ford Prefect ile evrende beklenmedik ve absürt bir yolculuğa çıkar."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-10",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/15155833-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL82563W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Büyücü olduğunu öğrenen Harry Potter, Hogwarts’taki ilk yılında arkadaşlıklar kurar ve Felsefe Taşı etrafındaki gizemi çözmeye çalışır."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-11",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/8235363-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL1095427W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Zorlu bir çocukluğun ardından mürebbiye olan Jane Eyre, Thornfield Hall’da bağımsızlık arayışıyla aşk ve saklanan sırlar arasında karar verir."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-12",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/12216503-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL85892W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Jonathan Harker’ın Transilvanya’da Kont Drakula ile karşılaşması, İngiltere’ye uzanan vampir tehdidine karşı verilen mücadeleyi başlatır."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-13",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/7414780-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL796465W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Endülüslü çoban Santiago, gördüğü rüyanın izinden Mısır piramitlerine doğru yola çıkar ve aradığı hazinenin anlamını sorgular."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-14",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/283860-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL27258W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Siberuzayda çalışamayan hacker Case, gizemli bir iş teklifini kabul ederek yapay zekâ ve şirket çıkarlarının iç içe geçtiği tehlikeli bir göreve katılır."
+    },
+    {
+      "source": "local",
+      "source_id": "kitap-15",
+      "category": "kitap",
+      "image_url": "https://covers.openlibrary.org/b/id/225607-M.jpg",
+      "image_source_url": "https://openlibrary.org/works/OL1063588W",
+      "image_credit": "Kapak: Open Library",
+      "description": "Eski mahkûm Jean Valjean, yeni bir hayat kurmaya çalışırken müfettiş Javert’in takibi, adalet ve merhamet arasında yıllara yayılan bir mücadeleye dönüşür."
+    }
+  ]
+}
