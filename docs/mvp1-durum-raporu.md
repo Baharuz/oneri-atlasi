@@ -1,8 +1,8 @@
 # MVP-1 durum raporu
 
-**Tarih:** 26 Ekim 2026
+**Tarih:** 26 Ekim 2026; müzik arayüzü güncellemesi 28 Ekim 2026
 
-**İncelenen sürüm:** `main`, `2ec3137` (backend çalışması ile Bahar'ın `feat/flow-first-frontend` dalının birleşimi)
+**İncelenen sürüm:** `main` (backend çalışması ile Bahar'ın `feat/flow-first-frontend` dalının birleşimi)
 
 **Amaç:** Çalışan kodu, yerel veriyi ve üzerinde anlaşılmış MVP-1 kapsamını birbirinden ayırarak teslim durumunu göstermek.
 
@@ -16,7 +16,7 @@ Ziyaretçi **kitap, film, dizi veya oyun** kategorisinde eser adını arar, **bi
 
 | İster / akış | Durum | Bugünkü gerçek davranış ve kanıt |
 | --- | --- | --- |
-| Dört kategorili katalog | **Kısmi** | PostgreSQL'de kitap, film, dizi ve oyundan 15'er eser var; `GET /api/contents` bu 60 eseri listeliyor. Arayüz ayrıca **müzik** seçeneği gösteriyor; backend müziği MVP listesinden çıkarıyor ve `category=müzik` isteğine 422 veriyor. Arayüzde müzik filtresi boş kalır. |
+| Dört kategorili katalog | **Çalışıyor** | PostgreSQL'de kitap, film, dizi ve oyundan 15'er eser var; `GET /api/contents` bu 60 eseri listeliyor. Arayüz artık yalnız bu dört kategoriyi gösteriyor. Eski 15 müzik kaydı veritabanında duruyor, MVP listesinden ve arayüzden gizli. |
 | Eser adına göre arama | **Çalışıyor** | Backend `q` ile başlık araması sunuyor; arayüz yüklenen katalogda başlığa göre filtreliyor. Tür adına göre arama henüz yok; bu MVP-2 konusu. |
 | Tek eserden aynı kategoride öneri | **Kısmi** | `GET /api/contents/{id}/recommendations` çalışıyor; kaynak eseri dışarıda bırakıp aynı kategoriden en çok 8 sonuç ve gerekçe veriyor. Fakat birleşik arayüz bu ucu kullanmıyor: eski `POST /api/recommend` ile 1–5 kaynak ve farklı hedef kategoriler seçtiriyor. Kararlaştırılan MVP-1 akışı arayüzde uygulanmış değil. |
 | Gerçek görsel, tür, kısa açıklama | **Kısmi** | Yerel veritabanındaki 15 kitabın doğrulanmış kapağı, kaynak/atıf alanı ve esere özel kısa açıklaması var. Film, dizi ve oyundan **45 kayıt** hâlâ görselsiz ve kalıp açıklamalı; arayüz bunlarda kategori simgesi gösteriyor. Türler kartta görünüyor. Görsel kredisi/kaynak bağlantısı API'de var, arayüzde gösterilmiyor. |
@@ -24,7 +24,7 @@ Ziyaretçi **kitap, film, dizi veya oyun** kategorisinde eser adını arar, **bi
 | Kaydedilenler ekranı | **Kısmi** | Backend `GET /api/me/saved` ile kullanıcının tam eser kartlarını döndürüyor; kalıcılık ve hesap ayrımı testli. Arayüz bu ucu çağırmıyor, ilk katalog listesini favori ID'leriyle filtreliyor. Mevcut 60 MVP kaydında görülebilir; katalog 100'ü aşınca eksik kart riski var. |
 | Boş/yüklenme/hata durumları | **Kısmi** | Arayüzde katalog yüklenmesi, boş arama ve bazı API hata ekranları var. Telefon, klavye ve ağ kesintisiyle uçtan uca kabul kontrolü yapılmadı. |
 
-**Bugün hedeflendiği gibi çalışmayanlar:** Arayüzde tek eser → aynı kategori MVP-1 akışı yok; müzik düğmesi boş bir kategoriye götürüyor; 45 film/dizi/oyun kartında istenen gerçek görsel ve özgün açıklama yok; görsel kaynak/atıf bilgisi kullanıcıya gösterilmiyor. Kaydetme akışı için “çalışmıyor” demek de “tamam” demek de erken: backend testi var, tarayıcı kabul testi henüz yok.
+**Bugün hedeflendiği gibi çalışmayanlar:** Arayüzde tek eser → aynı kategori MVP-1 akışı yok; 45 film/dizi/oyun kartında istenen gerçek görsel ve özgün açıklama yok; görsel kaynak/atıf bilgisi kullanıcıya gösterilmiyor. Kaydetme akışı için “çalışmıyor” demek de “tamam” demek de erken: backend testi var, tarayıcı kabul testi henüz yok.
 
 ## Doğrulama ve yerel veri
 
@@ -36,7 +36,7 @@ Ziyaretçi **kitap, film, dizi veya oyun** kategorisinde eser adını arar, **bi
 
 ## Açık işler ve öncelik
 
-1. **P0 — Kapsamı arayüzde eşitle:** Bahar'ın ekranında MVP-1 için dört kategori, tek kaynak eser ve aynı kategori sonucu kullanılsın; `/api/contents/{id}/recommendations` bağlansın. Çoklu kaynak, müzik, tercih testi ve kategoriler arası akış sonraki sürüm için ayrı tutulabilir.
+1. **P0 — Kalan kapsam kararını netleştir:** Dört kategori arayüzde uygulanmıştır. Çoklu kaynak seçimi hakkında kullanıcıyla karar verildikten sonra öneri akışı buna göre düzenlenmelidir; tek kaynak/aynı kategori kararı korunursa `/api/contents/{id}/recommendations` arayüze bağlanmalıdır. Müzik ve kategoriler arası akış MVP-1 dışındadır.
 2. **P0 — Katalog verisini tamamla:** 45 film/dizi/oyun kaydı için doğru görsel, kullanım/atıf bilgisi ve esere özel açıklama insan kontrolünden geçirilsin. Aday arama ve güvenli JSON güncelleme araçları hazır; TMDB/RAWG adaylarını canlı sorgulamak için yerel geliştirici anahtarları gerekiyor. Anahtarlar repoya eklenmemeli.
 3. **P1 — Kaydetme akışını tarayıcıda doğrula:** Misafir kaydet → giriş/kayıt → aynı eser; sayfa yenileme, çıkış/giriş, kaydı kaldırma ve iki hesap ayrımı. Kaydedilenler ekranı `/api/me/saved` ucunu kullansın.
 4. **P1 — Öneri kalitesini iyileştir:** Stardew Valley için sıcak/2D yaşam simülasyonu benzerleri zayıf; souls-like başlangıç eseri ve uygun komşular katalogda yok. Eser/etiket ekleme sonrası insan değerlendirmesi tekrarlanmalı.
