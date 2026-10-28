@@ -1,6 +1,6 @@
 # MVP-1 durum raporu
 
-**Tarih:** 26 Ekim 2026; müzik arayüzü güncellemesi 28 Ekim 2026
+**Tarih:** 26 Ekim 2026; akış güncellemesi 28 Ekim 2026
 
 **İncelenen sürüm:** `main` (backend çalışması ile Bahar'ın `feat/flow-first-frontend` dalının birleşimi)
 
@@ -18,13 +18,13 @@ Ziyaretçi **kitap, film, dizi veya oyun** kategorisinde eser adını arar, **bi
 | --- | --- | --- |
 | Dört kategorili katalog | **Çalışıyor** | PostgreSQL'de kitap, film, dizi ve oyundan 15'er eser var; `GET /api/contents` bu 60 eseri listeliyor. Arayüz artık yalnız bu dört kategoriyi gösteriyor. Eski 15 müzik kaydı veritabanında duruyor, MVP listesinden ve arayüzden gizli. |
 | Eser adına göre arama | **Çalışıyor** | Backend `q` ile başlık araması sunuyor; arayüz yüklenen katalogda başlığa göre filtreliyor. Tür adına göre arama henüz yok; bu MVP-2 konusu. |
-| Tek eserden aynı kategoride öneri | **Kısmi** | `GET /api/contents/{id}/recommendations` çalışıyor; kaynak eseri dışarıda bırakıp aynı kategoriden en çok 8 sonuç ve gerekçe veriyor. Fakat birleşik arayüz bu ucu kullanmıyor: eski `POST /api/recommend` ile 1–5 kaynak ve farklı hedef kategoriler seçtiriyor. Kararlaştırılan MVP-1 akışı arayüzde uygulanmış değil. |
+| Tek eserden aynı kategoride öneri | **Kısmi** | Arayüz artık tek eser seçtiriyor ve `GET /api/contents/{id}/recommendations` ucunu çağırıyor. Kaynak eseri dışarıda bırakıp aynı kategoriden en çok 8 gerekçeli sonuç veren API yerel istekte doğrulandı. Tarayıcıda seçim ve geri dönüş akışının manuel kabul testi henüz yapılmadı. |
 | Gerçek görsel, tür, kısa açıklama | **Kısmi** | Yerel veritabanındaki 15 kitabın doğrulanmış kapağı, kaynak/atıf alanı ve esere özel kısa açıklaması var. Film, dizi ve oyundan **45 kayıt** hâlâ görselsiz ve kalıp açıklamalı; arayüz bunlarda kategori simgesi gösteriyor. Türler kartta görünüyor. Görsel kredisi/kaynak bağlantısı API'de var, arayüzde gösterilmiyor. |
 | Giriş/kayıt ve kaydetme | **Kısmi** | Backend oturum, CSRF, favori ekleme/çıkarma ve kullanıcılar arası ayrımı test ediyor. Arayüz giriş gerektiren kaydetme ve girişten sonra aynı esere dönme koduna sahip. Birleşik arayüzde gerçek tarayıcıdan baştan sona test henüz yapılmadı. |
 | Kaydedilenler ekranı | **Kısmi** | Backend `GET /api/me/saved` ile kullanıcının tam eser kartlarını döndürüyor; kalıcılık ve hesap ayrımı testli. Arayüz bu ucu çağırmıyor, ilk katalog listesini favori ID'leriyle filtreliyor. Mevcut 60 MVP kaydında görülebilir; katalog 100'ü aşınca eksik kart riski var. |
 | Boş/yüklenme/hata durumları | **Kısmi** | Arayüzde katalog yüklenmesi, boş arama ve bazı API hata ekranları var. Telefon, klavye ve ağ kesintisiyle uçtan uca kabul kontrolü yapılmadı. |
 
-**Bugün hedeflendiği gibi çalışmayanlar:** Arayüzde tek eser → aynı kategori MVP-1 akışı yok; 45 film/dizi/oyun kartında istenen gerçek görsel ve özgün açıklama yok; görsel kaynak/atıf bilgisi kullanıcıya gösterilmiyor. Kaydetme akışı için “çalışmıyor” demek de “tamam” demek de erken: backend testi var, tarayıcı kabul testi henüz yok.
+**Bugün hedeflendiği gibi çalışmayanlar:** 45 film/dizi/oyun kartında istenen gerçek görsel ve özgün açıklama yok; görsel kaynak/atıf bilgisi kullanıcıya gösterilmiyor. Tek eser önerisi ve kaydetme için API/kod kontrolleri var, ancak tarayıcı kabul testi henüz yok.
 
 ## Doğrulama ve yerel veri
 
@@ -32,11 +32,12 @@ Ziyaretçi **kitap, film, dizi veya oyun** kategorisinde eser adını arar, **bi
 - `frontend` içinde `npm run build`: TypeScript kontrolü ve Vite üretim derlemesi **geçti**. Vite geliştirme sunucusu yerelde açıldı. Bu kontroller tek başına tarayıcı akışının tamamını kanıtlamaz.
 - Yerel PostgreSQL: Docker veritabanı sağlıklı, Alembic sürümü **0002 (head)**, toplam **75 kayıt** (beş kategoride 15'er). Bunun 60'ı dört MVP kategorisinde listeleniyor.
 - Yerel API kontrolü: kitap listesi `200` ve 15/15 görselli; müzik filtresi `422`; tek kitap için aynı kategori önerisi `200` ve 8 sonuç verdi.
+- 28 Ekim kontrolü: Dune başlık araması HTTP `200` ile tek kayıt; seçilen Dune için öneri ucu HTTP `200` ile 8 kitap döndürdü. Frontend derlemesi ve 20 backend testi yeniden geçti. Tarayıcı otomasyonu URL güvenliği denetiminde durduğu için bu kontrol gerçek kullanıcı tıklamasının yerini tutmaz.
 - `python -m app.catalog` kalite raporu: **45 sorunlu MVP kaydı** (film 15, dizi 15, oyun 15; kitap 0). Bu sayı bu bilgisayardaki güncellenmiş veritabanına aittir.
 
 ## Açık işler ve öncelik
 
-1. **P0 — Kalan kapsam kararını netleştir:** Dört kategori arayüzde uygulanmıştır. Çoklu kaynak seçimi hakkında kullanıcıyla karar verildikten sonra öneri akışı buna göre düzenlenmelidir; tek kaynak/aynı kategori kararı korunursa `/api/contents/{id}/recommendations` arayüze bağlanmalıdır. Müzik ve kategoriler arası akış MVP-1 dışındadır.
+1. **P0 — Tarayıcı kabulünü tamamla:** Dört kategori, tek eser seçimi ve aynı kategori önerisi kodda bağlıdır. Misafir olarak arama → seçim → öneri → detay → geri dönüş akışı gerçek tarayıcıda kontrol edilmeli; çoklu kaynak, müzik ve kategoriler arası akış sonraki sürüme kalır.
 2. **P0 — Katalog verisini tamamla:** 45 film/dizi/oyun kaydı için doğru görsel, kullanım/atıf bilgisi ve esere özel açıklama insan kontrolünden geçirilsin. Aday arama ve güvenli JSON güncelleme araçları hazır; TMDB/RAWG adaylarını canlı sorgulamak için yerel geliştirici anahtarları gerekiyor. Anahtarlar repoya eklenmemeli.
 3. **P1 — Kaydetme akışını tarayıcıda doğrula:** Misafir kaydet → giriş/kayıt → aynı eser; sayfa yenileme, çıkış/giriş, kaydı kaldırma ve iki hesap ayrımı. Kaydedilenler ekranı `/api/me/saved` ucunu kullansın.
 4. **P1 — Öneri kalitesini iyileştir:** Stardew Valley için sıcak/2D yaşam simülasyonu benzerleri zayıf; souls-like başlangıç eseri ve uygun komşular katalogda yok. Eser/etiket ekleme sonrası insan değerlendirmesi tekrarlanmalı.
