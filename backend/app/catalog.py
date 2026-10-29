@@ -107,17 +107,84 @@ Subnautica|macera|keşif,hayatta kalma,gizem|sakin,gerilimli|Okyanuslarla kaplı
 Firewatch|macera|gizem,kişisel yolculuk,iletişim|sakin,gerilimli|Bir ormanda yangın gözcüsü olan Henry, telsiz görüşmeleri ve tuhaf olaylar arasında geçmişiyle yüzleşir."""
 }
 
+DESCRIPTIONS = {
+    ("kitap", "Dune"): "Paul Atreides, ailesinin Arrakis'e taşınmasıyla baharat ticaretinin ve çöl halkının belirlediği bir güç mücadelesinin içine düşer.",
+    ("kitap", "Yüzüklerin Efendisi"): "Frodo ve yol arkadaşları, Orta Dünya'yı tehdit eden Tek Yüzük'ü yok etmek için tehlikeli ve uzun bir yolculuğa çıkar.",
+    ("kitap", "1984"): "Winston Smith, her düşüncenin gözetlendiği Okyanusya'da geçmişin nasıl değiştirildiğini fark ederek baskıcı düzene karşı küçük bir alan arar.",
+    ("kitap", "Suç ve Ceza"): "Raskolnikov'un işlediği cinayetin ardından duyduğu suçluluk, onu hem kendi kuramlarıyla hem de çevresindeki insanlarla yüzleşmeye zorlar.",
+    ("kitap", "Küçük Prens"): "Küçük Prens farklı gezegenlerde karşılaştığı yetişkinler aracılığıyla dostluk, sevgi ve bakmanın ötesinde görmeyi öğrenir.",
+    ("kitap", "Sherlock Holmes: Kızıl Dosya"): "Dr. Watson, Sherlock Holmes ile tanışır ve birlikte izleri Londra'dan uzak bir geçmişe uzanan esrarengiz bir cinayeti araştırırlar.",
+    ("kitap", "Vakıf"): "Hari Seldon, imparatorluğun çöküşünü öngörerek bilgiyi koruyacak bir Vakıf kurar; sonraki kuşaklar değişen güç dengelerinde ayakta kalmaya çalışır.",
+    ("kitap", "Açlık Oyunları"): "Katniss Everdeen, kız kardeşinin yerine seçilince Panem'in televizyonda yayımlanan ölümcül yarışmasında hayatta kalmak zorunda kalır.",
+    ("kitap", "Otostopçunun Galaksi Rehberi"): "Dünya'nın yıkılmasından hemen önce kurtarılan Arthur Dent, galaksiyi dolaşırken evrenin tuhaf kurallarıyla ve absürt yol arkadaşlarıyla tanışır.",
+    ("kitap", "Harry Potter ve Felsefe Taşı"): "Harry Potter on birinci yaş gününde büyücü olduğunu öğrenir; Hogwarts'taki ilk yılında yeni dostluklar kurarken ailesinin geçmişine yaklaşır.",
+    ("kitap", "Jane Eyre"): "Yetim büyüyen Jane Eyre, kendi ayakları üzerinde durmaya çalışırken Thornfield Malikânesi'ndeki duygusal ve ahlaki sınavlarla karşılaşır.",
+    ("kitap", "Drakula"): "Jonathan Harker'ın Transilvanya'daki ziyareti, Kont Drakula'nın İngiltere'ye uzanan tehdidini ortaya çıkarır ve bir grup insanı onu durdurmak için birleştirir.",
+    ("kitap", "Simyacı"): "Santiago, gördüğü rüyanın izinden Mısır'a doğru giderken karşılaştığı insanların yardımıyla aradığı hazinenin anlamını sorgular.",
+    ("kitap", "Neuromancer"): "Eski hacker Case, yeniden siber uzaya bağlanma umuduyla tehlikeli bir işe girer ve şirketlerin, yapay zekâların yönettiği bir entrikaya çekilir.",
+    ("kitap", "Sefiller"): "Jean Valjean geçmişinden kaçıp yeni bir yaşam kurmaya çalışırken Javert'in takibi, yoksulluk ve adaletsizlikle dolu bir toplumda kaderini belirler.",
+    ("film", "Arrival"): "Birden fazla ülkeye inen uzay gemilerinin ardından dilbilimci Louise Banks, ziyaretçilerin dilini çözerek niyetlerini anlamaya çalışır.",
+    ("film", "Interstellar"): "Yaşanmaz hâle gelen Dünya'da Cooper, insanlığa yeni bir yuva arayan uzay görevine katılır; zamanın etkisi ailesinden uzaklığını derinleştirir.",
+    ("film", "The Dark Knight"): "Batman, Gotham'da suç örgütlerini durdurmaya çalışırken Joker'in yarattığı kaos, kahramanlık ve adalet anlayışını sınar.",
+    ("film", "Inception"): "Dom Cobb, rüyalara girerek bilgi çalan ekibiyle bu kez bir düşünceyi hedefin zihnine yerleştirmeye çalışır.",
+    ("film", "Spirited Away"): "Chihiro, ailesiyle birlikte ruhların dünyasına girer ve onları kurtarmak için gizemli bir hamamda çalışmayı öğrenir.",
+    ("film", "The Grand Budapest Hotel"): "Otel görevlisi Gustave ile genç yardımcısı Zero, değerli bir tablo ve tartışmalı bir miras yüzünden peşlerine düşenlerden kaçar.",
+    ("film", "Parasite"): "Kim ailesi, varlıklı Park ailesinin evinde iş buldukça iki hanenin yaşamları iç içe geçer ve sınıf farkının yarattığı gerilim büyür.",
+    ("film", "The Matrix"): "Yazılımcı Neo, yaşadığı dünyanın bir simülasyon olabileceğini öğrenir ve makinelerin kurduğu düzene karşı mücadeleye katılır.",
+    ("film", "Amélie"): "Paris'te yalnız yaşayan Amélie, çevresindekilerin hayatına küçük müdahalelerle neşe katarken kendi mutluluğuyla yüzleşir.",
+    ("film", "Blade Runner 2049"): "Replikant avcısı K, geçmişe ilişkin sarsıcı bir iz bulur; araştırması onu kayıp Rick Deckard'a ve kendi kimliğiyle ilgili sorulara götürür.",
+    ("film", "The Lord of the Rings: The Fellowship of the Ring"): "Frodo, Tek Yüzük'ü yok etmek için Shire'dan ayrılır; farklı halklardan kurulan yol arkadaşlığı karanlık güçlere karşı ilk adımı atar.",
+    ("film", "Knives Out"): "Ünlü bir polisiye yazarının ölümünden sonra dedektif Benoit Blanc, aile üyelerinin çelişkili ifadelerini ve miras çekişmesini inceler.",
+    ("film", "Mad Max: Fury Road"): "Furiosa'nın kaçışına katılan Max, çölün acımasız yöneticisinden kurtulmaya çalışan bir grupla uzun bir kovalamacaya girer.",
+    ("film", "Her"): "Yalnız bir yazar olan Theodore, yapay zekâ işletim sistemi Samantha ile yakınlaşır ve ilişkinin anlamını yeniden düşünür.",
+    ("film", "The Truman Show"): "Truman Burbank, günlük yaşamındaki tuhaflıkları fark ettikçe bütün hayatının bir televizyon programı olarak kurgulandığını keşfeder.",
+    ("dizi", "Dark"): "Almanya'daki küçük bir kasabada çocukların kaybolması, birbirine bağlı aileleri geçmişe ve geleceğe uzanan karmaşık bir gizeme sürükler.",
+    ("dizi", "The Expanse"): "Dünya, Mars ve Kuşak arasındaki gerilim, kayıp bir kadını arayan dedektif ile bir uzay gemisi mürettebatının yollarını kesiştirir.",
+    ("dizi", "Breaking Bad"): "Kimya öğretmeni Walter White, hastalık teşhisinden sonra uyuşturucu üretimine başlar ve aldığı kararlar ailesiyle çevresini giderek tehlikeye atar.",
+    ("dizi", "The Good Place"): "Ölümden sonraki iyi yere geldiğini sanan Eleanor, oraya yanlışlıkla alındığını fark ederek daha iyi biri olmayı öğrenmeye çalışır.",
+    ("dizi", "Stranger Things"): "Will'in kaybolmasıyla başlayan arayış, arkadaşlarını gizli deneylere, doğaüstü güçlere ve Hawkins'in karanlık yüzüne götürür.",
+    ("dizi", "Severance"): "Lumon çalışanları iş ve özel yaşam anılarını ayıran bir işleme girer; Mark, ofisteki düzenin ardındaki gerçeği araştırır.",
+    ("dizi", "The Crown"): "II. Elizabeth'in tahta çıkışıyla birlikte kraliyet görevi, aile ilişkileri ve Britanya siyasetindeki değişimler uzun yıllara yayılan bir hikâyeye dönüşür.",
+    ("dizi", "Sherlock"): "Sherlock Holmes ve Dr. Watson, modern Londra'da sıra dışı suçları çözerken keskin gözlem ile karmaşık kişisel ilişkiler arasında ilerler.",
+    ("dizi", "Arcane"): "Piltover ile Zaun arasındaki eşitsizlik büyürken Vi ve Jinx'in kopan bağı, bilimsel keşifler ve siyasal çatışmalarla sınanır.",
+    ("dizi", "Avatar: The Last Airbender"): "Genç Avatar Aang, dostlarıyla dört ulusu dolaşarak elementleri öğrenir ve Ateş Ulusu'nun başlattığı savaşı sona erdirmeye çalışır.",
+    ("dizi", "Black Mirror"): "Birbirinden bağımsız öyküler, günlük yaşamı değiştiren teknolojilerin mahremiyet, güç ve insan ilişkileri üzerindeki sonuçlarını ele alır.",
+    ("dizi", "Ted Lasso"): "Amerikalı futbol antrenörü Ted Lasso, İngiltere'de bir futbol takımının başına geçer ve iyimser yaklaşımıyla hem oyuncuları hem kendisini değiştirir.",
+    ("dizi", "The Last of Us"): "Salgın sonrası Amerika'da Joel, Ellie'yi ülkenin öbür ucuna götürmekle görevlendirilir; zorlu yolculuk aralarında güçlü bir bağ kurar.",
+    ("dizi", "Only Murders in the Building"): "Aynı apartmanda yaşayan üç suç meraklısı, komşularının ölümünü araştırırken buldukları ipuçlarını bir podcast'e dönüştürür.",
+    ("dizi", "Foundation"): "Hari Seldon'un imparatorluğun çöküşüne ilişkin öngörüsü, farklı gezegenlerde ve kuşaklarda bilgiyi koruma mücadelesini başlatır.",
+    ("oyun", "Disco Elysium"): "Hafızasını yitirmiş bir dedektif, Revachol'da bir cinayeti soruştururken kendi geçmişini ve kentin siyasi çatışmalarını da çözmeye çalışır.",
+    ("oyun", "Outer Wilds"): "Oyuncu, zaman döngüsüne sıkışmış küçük bir güneş sistemini keşfederek kayıp bir uygarlığın geride bıraktığı işaretleri birleştirir.",
+    ("oyun", "Civilization VI"): "Oyuncu, antik çağdan modern döneme uzanan bir uygarlık kurar; diplomasi, araştırma ve savaş kararlarıyla tarihsel yönünü belirler.",
+    ("oyun", "The Witcher 3"): "Canavar avcısı Geralt, kayıp Ciri'yi ararken savaşın yıprattığı bölgelerde insanların ve yaratıkların iç içe geçtiği seçimler yapar.",
+    ("oyun", "Stardew Valley"): "Oyuncu, miras kalan çiftliği onarır; ürün yetiştirir, kasaba sakinleriyle tanışır ve Pelican Town'da kendi günlük ritmini kurar.",
+    ("oyun", "Hollow Knight"): "Küçük bir şövalye, terk edilmiş Hallownest krallığının derinliklerine inerek kayıp tarihini ve yayılan enfeksiyonun kaynağını keşfeder.",
+    ("oyun", "Mass Effect"): "Komutan Shepard, galaksiyi tehdit eden kadim bir tehlikeyi araştırırken farklı türlerden bir ekip kurar ve zor seçimlerle karşılaşır.",
+    ("oyun", "Portal 2"): "Chell, Aperture laboratuvarlarında portal silahıyla fizik bulmacalarını çözerek yapay zekâ GLaDOS'un kurduğu engelleri aşmaya çalışır.",
+    ("oyun", "The Last of Us Part I"): "Joel ve Ellie, salgın sonrası Amerika'yı geçerken kaynak kıtlığı, tehlikeli gruplar ve aralarında gelişen bağla yüzleşir.",
+    ("oyun", "Hades"): "Yeraltı dünyasından kaçmaya çalışan Zagreus, her denemede farklı tanrıların desteğini alır ve ailesine ilişkin sırları açığa çıkarır.",
+    ("oyun", "Journey"): "Oyuncu, uzak bir dağın zirvesine ulaşmak için çölde ilerler; yolda karşılaştığı isimsiz yolcularla sözsüz bir bağ kurabilir.",
+    ("oyun", "Detroit: Become Human"): "Üç androidin kesişen hikâyesi, teknolojik bir toplumda özgür irade ve insan sayılmanın ne anlama geldiğini seçimlerle sorgular.",
+    ("oyun", "Baldur's Gate 3"): "Zihnine parazit yerleştirilen bir maceracı, Faerûn'da yoldaşlar toplayarak tedavi arar ve büyük bir tehdidin izini sürer.",
+    ("oyun", "Return of the Obra Dinn"): "Sigorta müfettişi, yıllar sonra ortaya çıkan Obra Dinn gemisindeki mürettebatın akıbetini geçmişin donmuş anlarını inceleyerek çözer.",
+    ("oyun", "Celeste"): "Madeline, Celeste Dağı'na tırmanırken zorlu platform bölümlerini aşar ve kaygılarıyla başa çıkmanın yolunu arar.",
+}
+
 def seed(db):
-    existing = {(item.source, item.source_id) for item in db.scalars(select(Content)).all()}
+    existing = {(item.source, item.source_id): item for item in db.scalars(select(Content)).all()}
     for category, block in DATA.items():
         for number, line in enumerate(block.splitlines(), 1):
             source_id = f"{category}-{number}"
-            if ("local", source_id) in existing:
-                continue
             parts = line.split("|", 4)
             title, genres, themes, moods = parts[:4]
+            if ("local", source_id) in existing:
+                item = existing[("local", source_id)]
+                if (category, title) in DESCRIPTIONS and _is_pattern_description(item):
+                    item.description = DESCRIPTIONS[(category, title)]
+                    item.language = "tr"
+                continue
             values = [genres.split(","), themes.split(","), moods.split(",")]
-            description = parts[4] if len(parts) == 5 else f"{title}: {', '.join(values[1])} temalarını {', '.join(values[2])} bir atmosferle buluşturan bir {category}."
+            description = parts[4] if len(parts) == 5 else DESCRIPTIONS[(category, title)]
             db.add(Content(category=category, title=title, description=description, genres=values[0], themes=values[1], moods=values[2], language="tr" if len(parts) == 5 else "en", source="local", source_id=source_id))
     db.flush()
     items = db.scalars(select(Content)).all()

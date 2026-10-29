@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
 from app.db import Base, get_db
-from app.catalog import seed
+from app.catalog import DESCRIPTIONS, seed
 from app.main import app
 from app.models import Content
 from app.recommend import recommend
@@ -44,12 +44,14 @@ def test_seed_expands_existing_catalog_idempotently():
     Base.metadata.create_all(isolated_engine)
     with sessionmaker(bind=isolated_engine)() as db:
         original = Content(category="kitap", title="Dune", description="Elle düzenlenmiş açıklama", genres=["bilimkurgu"], themes=["siyasi entrika"], moods=["destansı"], source="local", source_id="kitap-1")
-        db.add(original)
+        pattern = Content(category="kitap", title="Yüzüklerin Efendisi", description="Yüzüklerin Efendisi: dostluk temalarını destansı bir atmosferle buluşturan bir kitap.", genres=["fantastik"], themes=["dostluk"], moods=["destansı"], source="local", source_id="kitap-2")
+        db.add_all([original, pattern])
         db.commit()
         original_id = original.id
         seed(db)
         assert db.query(Content).count() == 100
         assert db.get(Content, original_id).description == "Elle düzenlenmiş açıklama"
+        assert db.query(Content).filter_by(source_id="kitap-2").one().description == DESCRIPTIONS[("kitap", "Yüzüklerin Efendisi")]
         assert db.query(ContentTag).count() > 0
         new_book = db.query(Content).filter_by(source="local", source_id="kitap-16").one()
         assert new_book.title == "Fahrenheit 451"
@@ -134,19 +136,20 @@ def test_catalog_filtering_four_categories():
 def test_quality_report_flags_missing():
     from app.catalog import quality_issues
     blank=Content(category='kitap',title='Boş Açıklamalı Deneme',description='   ',genres=[],themes=[],moods=[],source='local',source_id='test-blank')
+    pattern=Content(category='kitap',title='Kalıp Deneme',description='Kalıp Deneme: dostluk temalarını sakin bir atmosferle buluşturan bir kitap.',genres=[],themes=[],moods=[],source='local',source_id='test-pattern')
     with Session() as db:
-        db.add(blank); db.commit()
+        db.add_all([blank,pattern]); db.commit()
         try:
             issues=quality_issues(db)
             blank_issues=[x for x in issues if x['id']==blank.id]
             assert blank_issues and set(blank_issues[0]['issues'])>={'description','image_url','image_credit','image_source_url'}
+            assert 'pattern_description' in next(x for x in issues if x['id']==pattern.id)['issues']
         finally:
-            db.delete(blank); db.commit()
+            db.delete(blank); db.delete(pattern); db.commit()
     assert issues
     assert {x['category'] for x in issues}<={'kitap','film','dizi','oyun'}
     assert any('image_url' in x['issues'] for x in issues)
     assert any('description' in x['issues'] for x in issues)
     assert any('image_credit' in x['issues'] for x in issues)
     assert any('image_source_url' in x['issues'] for x in issues)
-    assert any('pattern_description' in x['issues'] for x in issues)
     assert all(x['id'] and x['title'] for x in issues)
