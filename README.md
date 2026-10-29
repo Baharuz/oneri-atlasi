@@ -40,7 +40,19 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 - Hesaplı: kayıt, giriş, çıkış, kalıcı tercihler, favoriler, değiştirilebilir beğeni/beğenmeme, öneri geçmişi ve “Bugüne özel öneri al”.
 - Anlık test cevapları profili değiştirmez; yalnızca açık kaydetme düğmesi bunu yapar.
 - API her kullanıcının özel kaydını oturumdaki kullanıcı kimliğiyle sınırlar. Şifreler Argon2 ile hashlenir.
-- Başlangıç kataloğunda kategori başına 25, toplam 100 eser vardır. Yeni eklenen 40 eserin kısa açıklamaları ve etiketleri proje için elle hazırlanmıştır; görselleri ve kaynak atıfları henüz eklenmemiştir. Var olan bir veritabanını genişletmek için `backend` dizininde `python seed.py` komutunu yeniden çalıştırın; mevcut eser kayıtları korunur.
+- Mevcut katalogda kategori başına 25, toplam 100 eser vardır. Açıklamalar eser özelinde Türkçe hazırlanmıştır. 85 kaydın görseli ve atfı henüz eksiktir; uygulama bu kayıtlarda kategori simgesi gösterir. Var olan veritabanında açıklamaları güncellemek ve yeni eserleri eklemek için `backend` dizininde `python seed.py` komutunu yeniden çalıştırın. Elle düzenlenmiş açıklamalar ve kullanıcı kayıtları korunur.
+- Kaydedilenler ekranı doğrudan `GET /api/me/saved` sonucunu gösterir. Görseli olan eserlerde kart ve detay ekranı kaynak atfını bağlantısıyla birlikte gösterir.
+
+## Katalog denetimi
+
+Şema geçişlerinin son sürümü `0003_remove_unused_category`'dir. Katalog tamamlanma hedefi kategori başına 125, toplam 500 eserdir. Hedefin karşılanıp karşılanmadığını, mükerrer başlıkları ve boş görsel/atıf/açıklama alanlarını denetlemek için `backend` dizininde:
+
+```powershell
+python -m app.catalog_audit
+python -m app.catalog_audit --check-urls
+```
+
+İkinci komut görsel ve kaynak bağlantılarını HTTP üzerinden ayrıca denetler. Bağlantı denetimi, görselin doğru esere ait olduğunu veya lisans iznini tek başına kanıtlamaz; bunlar eser bazında ayrıca doğrulanmalıdır. Mevcut 100 eserlik katalog bu denetimde beklenen şekilde başarısız olur.
 
 ## Öneri algoritması
 
@@ -48,4 +60,4 @@ Kaynak içeriklerin tema etiketleri 2, atmosfer etiketleri 1,5, aynı kategoride
 
 ## Sağlayıcılar ve sınırlar
 
-`CatalogProvider` arayüzü ileride katalog verisi getiren adaptörler içindir. TMDB, Open Library ve IGDB canlı bağlantıları **ertelendi**. Öneri sıralamasını bu API'ler değil, uygulamanın kendi algoritması yapar. Şimdilik kapak görselleri yerine yerel kategori yer tutucuları kullanılır. Katalog küçük ve elle hazırlanmış olduğundan bazı dar tercih birleşimlerinde uygun sonuç bulunmayabilir; arayüz bunu belirtir. Geliştirme ortamında Docker Desktop çalışır durumda olmalıdır.
+`CatalogProvider` arayüzü ileride katalog verisi getiren adaptörler içindir. TMDB ve RAWG için salt okunur aday toplama aracı bulunur; bunların kullanımı ilgili API anahtarlarını gerektirir. Öneri sıralamasını dış API'ler değil, uygulamanın kendi algoritması yapar. Görseli eksik kayıtlarda yerel kategori simgesi kullanılır. Katalog küçük ve elle hazırlanmış olduğundan bazı dar tercih birleşimlerinde uygun sonuç bulunmayabilir; arayüz bunu belirtir. PostgreSQL kurulumu için Docker Desktop çalışır durumda olmalıdır.
