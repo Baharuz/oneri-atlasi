@@ -132,7 +132,7 @@ def contents(q: str = "", category: str | None = None, db: Session = Depends(get
         if category not in MVP_CATEGORIES: raise HTTPException(422, "Geçersiz kategori")
         stmt = stmt.where(Content.category == category)
     if q: stmt = stmt.where(Content.title.ilike(f"%{q[:80]}%"))
-    return [content_dict(x) for x in db.scalars(stmt.order_by(Content.title).limit(100)).all()]
+    return [content_dict(x) for x in db.scalars(stmt.order_by(Content.title).limit(500)).all()]
 
 @app.get("/api/contents/{content_id}")
 def content_detail(content_id: int, db: Session = Depends(get_db)):

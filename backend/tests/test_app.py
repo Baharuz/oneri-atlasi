@@ -36,7 +36,28 @@ def test_feature_changes_ranking():
         source=next(x for x in contents if x.title=='Küçük Prens')
         friendship=recommend(contents,[source],{'features':['dostluk'],'categories':['oyun']})['oyun']
         exploration=recommend(contents,[source],{'features':['keşif'],'categories':['oyun']})['oyun']
-        assert friendship[0]['content'].id != exploration[0]['content'].id
+        assert [x['content'].id for x in friendship[:4]] != [x['content'].id for x in exploration[:4]]
+
+def test_seed_expands_existing_catalog_idempotently():
+    from app.models import ContentTag
+    isolated_engine = create_engine("sqlite+pysqlite:///:memory:")
+    Base.metadata.create_all(isolated_engine)
+    with sessionmaker(bind=isolated_engine)() as db:
+        original = Content(category="kitap", title="Dune", description="Elle düzenlenmiş açıklama", genres=["bilimkurgu"], themes=["siyasi entrika"], moods=["destansı"], source="local", source_id="kitap-1")
+        db.add(original)
+        db.commit()
+        original_id = original.id
+        seed(db)
+        assert db.query(Content).count() == 100
+        assert db.get(Content, original_id).description == "Elle düzenlenmiş açıklama"
+        assert db.query(ContentTag).count() > 0
+        new_book = db.query(Content).filter_by(source="local", source_id="kitap-16").one()
+        assert new_book.title == "Fahrenheit 451"
+        assert "temalarını" not in new_book.description
+        links = db.query(ContentTag).count()
+        seed(db)
+        assert db.query(Content).count() == 100
+        assert db.query(ContentTag).count() == links
 
 def test_user_isolation_persistence_and_ephemeral_answers():
     a,b=client(),client()
@@ -103,10 +124,10 @@ def test_saved_persistence_and_isolation():
 def test_catalog_filtering_four_categories():
     c=client()
     items=c.get('/api/contents').json()
-    assert items and {x['category'] for x in items}<={'kitap','film','dizi','oyun'}
+    assert len(items)==100 and {x['category'] for x in items}=={'kitap','film','dizi','oyun'}
     for category in ('kitap','film','dizi','oyun'):
         rows=c.get('/api/contents',params={'category':category}).json()
-        assert rows and all(x['category']==category for x in rows)
+        assert len(rows)==25 and all(x['category']==category for x in rows)
     assert c.get('/api/contents',params={'category':'gecersiz'}).status_code==422
     assert c.get('/api/contents',params={'q':'siyasi entrika'}).json()==[]
 

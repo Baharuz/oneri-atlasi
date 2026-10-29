@@ -10,13 +10,13 @@
 
 | Akış | API | Durum | Not |
 | --- | --- | --- | --- |
-| Katalog/başlık arama | `GET /api/contents?category=oyun&q=Stardew` | Mevcut | Yanıt `Content[]`, başlığa göre kısmi arama; en çok 100 kayıt. Varsayılan listede yalnızca dört MVP kategorisi. |
+| Katalog/başlık arama | `GET /api/contents?category=oyun&q=Stardew` | Mevcut | Yanıt `Content[]`, başlığa göre kısmi arama; en çok 500 kayıt. Varsayılan listede yalnızca dört MVP kategorisi. |
 | Eser ayrıntısı | `GET /api/contents/{id}` | Mevcut | Yanıt `Content`; olmayan ID için 404. |
 | Tek eserden aynı kategoriye öneri | `GET /api/contents/{id}/recommendations` | Mevcut | Yanıt `{source: Content, results: Recommendation[]}`. Tek kaynak ve aynı kategori sunucu tarafından garanti edilir; giriş/CSRF gerekmez. |
 | Kaydol/giriş/çıkış | `POST /api/auth/register`, `/login`, `/logout` | Mevcut | E-posta + şifre; başarılı giriş oturum ve CSRF çerezi kurar. Çıkış CSRF doğrular. |
 | Oturum/kayıtlı ID'ler | `GET /api/me` | Mevcut | 401 ise ziyaretçi. `favorites: number[]` kaydedilmiş eser ID'leri. |
 | Kaydet/kayıttan çıkar | `PUT` / `DELETE /api/me/contents/{id}/favorite` | Mevcut | Giriş ve CSRF gerekir. Başarılı yanıt `{ok: true}`; ardından `/api/me` ile durumu tazele. |
-| Kaydedilen eser kartları | `GET /api/me/saved` | Mevcut | Yanıt başlık ve ID'ye göre sıralı `Content[]`. Giriş gerekir. `/api/contents` için 100 kayıt sınırına takılmadan kartlar yüklenir. |
+| Kaydedilen eser kartları | `GET /api/me/saved` | Mevcut | Yanıt başlık ve ID'ye göre sıralı `Content[]`. Giriş gerekir. `/api/contents` için 500 kayıt sınırına takılmadan kartlar yüklenir. |
 
 `Content` alanları mevcut yanıtla aynı kalır: `id`, `category`, `title`, `description`, `genres`, `themes`, `moods`, `language`, `year`, `image_url`, `image_credit`, `image_source_url`, `source`, `source_id`. `category` değerleri MVP ekranında `kitap | film | dizi | oyun`. Kitap kategorisinde 15 kayıt yerel pilotta doğrulanmış görsel ve eser özelindeki açıklamayla güncellendi; film, dizi ve oyundaki 45 kayıt hâlâ bu verileri bekliyor. Ön yüz boş resmi bir kategori simgesiyle kalıcı olarak gizlememeli; kayıt yayına alınmadan veri düzeltilmelidir.
 
@@ -50,8 +50,8 @@
 ## Kod incelemesinden çıkan işler
 
 1. **Öneri sözleşmesi:** Mevcut `POST /api/recommend` bir ila beş kaynak ve istenen herhangi bir hedef kategoriye izin veriyor. Yeni GET ucu mevcut sıralama işlevini yeniden kullanarak tek kaynak/aynı kategori kuralını açıkça uyguluyor; eski uç ileri sürüm için korundu. İlgili odaklı test eklendi.
-2. **Kaydedilenleri yükleme:** `/api/me` yalnızca favori ID'lerini döndürüyor. Yeni `/api/me/saved` kullanıcının tam eser kartlarını döndürür; katalogdaki 100 kayıt sınırından etkilenmez. Mevcut ön yüz hâlâ ilk 100 katalog kaydıyla eşliyor; Bahar'ın ekranı yeni uca bağlanmalı.
-3. **Katalog kalitesi:** Başlangıç verisi 5 × 15 kayıt. Seed her esere etiketlerden kalıp açıklama üretiyor, `image_url` doldurmuyor ve yalnızca `contents` tablosu boşsa çalışıyor. Var olan veritabanını düzeltmek için tekrar seed çalıştırmak yetmez. `backend` dizininden `python -m app.catalog` komutu dört MVP kategorisindeki boş görselleri ve kalıp açıklamaları JSON olarak raporlar; veri değiştirmez. Dört kategoride yayınlanacak her kayıt için kimliği doğrulanmış görsel, kaynak kullanım koşulu ve eser özelinde açıklama gerekir; bu ayrı, kontrollü veri işidir.
+2. **Kaydedilenleri yükleme:** `/api/me` yalnızca favori ID'lerini döndürüyor. `/api/me/saved` kullanıcının tam eser kartlarını döndürür; katalogdaki 500 kayıt sınırından etkilenmez. Mevcut ön yüz hâlâ katalog listesindeki favori ID'lerini eşliyor; ekran bu uca bağlanmalı.
+3. **Katalog kalitesi:** Başlangıç verisi dört kategoride 25'er, toplam 100 kayıt. Seed eksik kayıtları ekler ve mevcut kayıtların açıklama/görsel alanlarını değiştirmez. İlk 60 kaydın açıklaması kalıp metinle oluşturuldu; yeni 40 kaydın esere özel kısa açıklaması vardır. Seed görsel doldurmaz. `backend` dizininden `python -m app.catalog` komutu boş görselleri ve kalıp açıklamaları JSON olarak raporlar; veri değiştirmez. Yayınlanacak her kayıt için doğru görsel ve kaynak atfı ayrıca doğrulanmalıdır.
 4. **Doğrulama:** Backend testlerinde misafir başlık arama/aynı kategori öneri, dört kategori filtrelemesi, iki kullanıcı arasında kaydetme ayrımı, çıkış/giriş sonrası kalıcılık, kayıttan çıkarma ve veri kalitesi raporu kapsanıyor. Ajan çalıştırmasında 8 test geçti. PostgreSQL üzerinde yerel uçtan uca kontrol ayrıca yapılmalı; otomatik testler şu anda bellek içi SQLite kullanıyor.
 
 ## Uygulama sırası ve ekip sınırı

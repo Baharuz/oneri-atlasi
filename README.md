@@ -40,7 +40,7 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 - Hesaplı: kayıt, giriş, çıkış, kalıcı tercihler, favoriler, değiştirilebilir beğeni/beğenmeme, öneri geçmişi ve “Bugüne özel öneri al”.
 - Anlık test cevapları profili değiştirmez; yalnızca açık kaydetme düğmesi bunu yapar.
 - API her kullanıcının özel kaydını oturumdaki kullanıcı kimliğiyle sınırlar. Şifreler Argon2 ile hashlenir.
-- Başlangıç kataloğunda kategori başına 15, toplam 60 eser vardır. Kısa açıklamalar ve etiketler proje için elle hazırlanmıştır; harici katalog verisi değildir.
+- Başlangıç kataloğunda kategori başına 25, toplam 100 eser vardır. Yeni eklenen 40 eserin kısa açıklamaları ve etiketleri proje için elle hazırlanmıştır; görselleri ve kaynak atıfları henüz eklenmemiştir. Var olan bir veritabanını genişletmek için `backend` dizininde `python seed.py` komutunu yeniden çalıştırın; mevcut eser kayıtları korunur.
 
 ## Öneri algoritması
 
