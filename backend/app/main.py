@@ -18,8 +18,8 @@ hasher = PasswordHash.recommended()
 serializer = URLSafeTimedSerializer(os.getenv("SESSION_SECRET", "dev-only-change-me"))
 COOKIE_SECURE = os.getenv("COOKIE_SECURE", "false").lower() == "true"
 COOKIE_SAMESITE = os.getenv("COOKIE_SAMESITE", "lax")
-CATEGORIES = {"kitap", "film", "dizi", "oyun", "müzik"}
-MVP_CATEGORIES = ("kitap", "film", "dizi", "oyun")
+CATEGORIES = ("kitap", "film", "dizi", "oyun")
+MVP_CATEGORIES = CATEGORIES
 
 class AuthInput(BaseModel):
     email: EmailStr
@@ -38,7 +38,7 @@ class Answers(BaseModel):
     @field_validator("categories")
     @classmethod
     def categories_valid(cls, value):
-        if not value or not set(value) <= CATEGORIES: raise ValueError("Geçersiz kategori")
+        if not value or not set(value) <= set(CATEGORIES): raise ValueError("Geçersiz kategori")
         return list(dict.fromkeys(value))
 
 class RecommendInput(BaseModel):
@@ -109,14 +109,14 @@ def me(user: User = Depends(current_user), db: Session = Depends(get_db)):
 
 @app.get("/api/me/saved")
 def saved(user: User = Depends(current_user), db: Session = Depends(get_db)):
-    stmt = select(Content).join(Interaction, Interaction.content_id == Content.id).where(Interaction.user_id == user.id, Interaction.kind == "favorite").order_by(Content.title, Content.id)
+    stmt = select(Content).join(Interaction, Interaction.content_id == Content.id).where(Interaction.user_id == user.id, Interaction.kind == "favorite", Content.category.in_(CATEGORIES)).order_by(Content.title, Content.id)
     return [content_dict(x) for x in db.scalars(stmt).all()]
 
 @app.put("/api/me/preferences", dependencies=[Depends(csrf)])
 def save_preferences(data: ProfileInput, user: User = Depends(current_user), db: Session = Depends(get_db)):
     if len(set(data.source_ids)) != len(data.source_ids): raise HTTPException(422, "Tekrarlı kaynak")
     if data.source_ids:
-        found = db.scalars(select(Content.id).where(Content.id.in_(data.source_ids))).all()
+        found = db.scalars(select(Content.id).where(Content.id.in_(data.source_ids), Content.category.in_(CATEGORIES))).all()
         if len(found) != len(data.source_ids): raise HTTPException(422, "İçerik bulunamadı")
     user.preferences = data.model_dump()
     for content_id in data.source_ids:
@@ -137,14 +137,14 @@ def contents(q: str = "", category: str | None = None, db: Session = Depends(get
 @app.get("/api/contents/{content_id}")
 def content_detail(content_id: int, db: Session = Depends(get_db)):
     item = db.get(Content, content_id)
-    if not item: raise HTTPException(404, "İçerik bulunamadı")
+    if not item or item.category not in CATEGORIES: raise HTTPException(404, "İçerik bulunamadı")
     return content_dict(item)
 
 @app.get("/api/contents/{content_id}/recommendations")
 def content_recommendations(content_id: int, request: Request, db: Session = Depends(get_db)):
     source = db.get(Content, content_id)
-    if not source: raise HTTPException(404, "İçerik bulunamadı")
-    all_contents = db.scalars(select(Content)).all()
+    if not source or source.category not in CATEGORIES: raise HTTPException(404, "İçerik bulunamadı")
+    all_contents = db.scalars(select(Content).where(Content.category.in_(CATEGORIES))).all()
     user = optional_user(request, db)
     feedback = {}
     if user:
@@ -156,9 +156,9 @@ def content_recommendations(content_id: int, request: Request, db: Session = Dep
 @app.post("/api/recommend", dependencies=[Depends(csrf)])
 def recommendations(data: RecommendInput, request: Request, db: Session = Depends(get_db)):
     if len(set(data.source_ids)) != len(data.source_ids): raise HTTPException(422, "Tekrarlı kaynak")
-    sources = db.scalars(select(Content).where(Content.id.in_(data.source_ids))).all()
+    sources = db.scalars(select(Content).where(Content.id.in_(data.source_ids), Content.category.in_(CATEGORIES))).all()
     if len(sources) != len(data.source_ids): raise HTTPException(422, "İçerik bulunamadı")
-    all_contents = db.scalars(select(Content)).all()
+    all_contents = db.scalars(select(Content).where(Content.category.in_(CATEGORIES))).all()
     allowed = set().union(*(set(x.themes + x.moods + x.genres) for x in sources))
     if not set(data.answers.features) <= allowed: raise HTTPException(422, "Seçilen özellik kaynak içeriklerde yok")
     user = optional_user(request, db)
@@ -174,7 +174,8 @@ def recommendations(data: RecommendInput, request: Request, db: Session = Depend
 @app.put("/api/me/contents/{content_id}/{kind}", dependencies=[Depends(csrf)])
 def interaction(content_id: int, kind: str, user: User = Depends(current_user), db: Session = Depends(get_db)):
     if kind not in {"favorite", "like", "dislike"}: raise HTTPException(422, "Geçersiz işlem")
-    if not db.get(Content, content_id): raise HTTPException(404, "İçerik bulunamadı")
+    item = db.get(Content, content_id)
+    if not item or item.category not in CATEGORIES: raise HTTPException(404, "İçerik bulunamadı")
     if kind in {"like", "dislike"}:
         db.execute(delete(Interaction).where(Interaction.user_id == user.id, Interaction.content_id == content_id, Interaction.kind.in_(["like", "dislike"])))
     existing = db.scalar(select(Interaction).where(Interaction.user_id == user.id, Interaction.content_id == content_id, Interaction.kind == kind))

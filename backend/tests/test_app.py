@@ -107,7 +107,6 @@ def test_catalog_filtering_four_categories():
     for category in ('kitap','film','dizi','oyun'):
         rows=c.get('/api/contents',params={'category':category}).json()
         assert rows and all(x['category']==category for x in rows)
-    assert c.get('/api/contents',params={'category':'müzik'}).status_code==422
     assert c.get('/api/contents',params={'category':'gecersiz'}).status_code==422
     assert c.get('/api/contents',params={'q':'siyasi entrika'}).json()==[]
 

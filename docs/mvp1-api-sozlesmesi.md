@@ -10,7 +10,7 @@
 
 | Akış | API | Durum | Not |
 | --- | --- | --- | --- |
-| Katalog/başlık arama | `GET /api/contents?category=oyun&q=Stardew` | Mevcut | Yanıt `Content[]`, başlığa göre kısmi arama; en çok 100 kayıt. Varsayılan listede yalnızca dört MVP kategorisi; `category=müzik` için 422. |
+| Katalog/başlık arama | `GET /api/contents?category=oyun&q=Stardew` | Mevcut | Yanıt `Content[]`, başlığa göre kısmi arama; en çok 100 kayıt. Varsayılan listede yalnızca dört MVP kategorisi. |
 | Eser ayrıntısı | `GET /api/contents/{id}` | Mevcut | Yanıt `Content`; olmayan ID için 404. |
 | Tek eserden aynı kategoriye öneri | `GET /api/contents/{id}/recommendations` | Mevcut | Yanıt `{source: Content, results: Recommendation[]}`. Tek kaynak ve aynı kategori sunucu tarafından garanti edilir; giriş/CSRF gerekmez. |
 | Kaydol/giriş/çıkış | `POST /api/auth/register`, `/login`, `/logout` | Mevcut | E-posta + şifre; başarılı giriş oturum ve CSRF çerezi kurar. Çıkış CSRF doğrular. |
@@ -18,7 +18,7 @@
 | Kaydet/kayıttan çıkar | `PUT` / `DELETE /api/me/contents/{id}/favorite` | Mevcut | Giriş ve CSRF gerekir. Başarılı yanıt `{ok: true}`; ardından `/api/me` ile durumu tazele. |
 | Kaydedilen eser kartları | `GET /api/me/saved` | Mevcut | Yanıt başlık ve ID'ye göre sıralı `Content[]`. Giriş gerekir. `/api/contents` için 100 kayıt sınırına takılmadan kartlar yüklenir. |
 
-`Content` alanları mevcut yanıtla aynı kalır: `id`, `category`, `title`, `description`, `genres`, `themes`, `moods`, `language`, `year`, `image_url`, `image_credit`, `image_source_url`, `source`, `source_id`. `category` değerleri MVP ekranında `kitap | film | dizi | oyun`; mevcut veritabanında ayrıca `müzik` vardır. Kitap kategorisinde 15 kayıt yerel pilotta doğrulanmış görsel ve eser özelindeki açıklamayla güncellendi; film, dizi ve oyundaki 45 kayıt hâlâ bu verileri bekliyor. Ön yüz boş resmi bir kategori simgesiyle kalıcı olarak gizlememeli; kayıt yayına alınmadan veri düzeltilmelidir.
+`Content` alanları mevcut yanıtla aynı kalır: `id`, `category`, `title`, `description`, `genres`, `themes`, `moods`, `language`, `year`, `image_url`, `image_credit`, `image_source_url`, `source`, `source_id`. `category` değerleri MVP ekranında `kitap | film | dizi | oyun`. Kitap kategorisinde 15 kayıt yerel pilotta doğrulanmış görsel ve eser özelindeki açıklamayla güncellendi; film, dizi ve oyundaki 45 kayıt hâlâ bu verileri bekliyor. Ön yüz boş resmi bir kategori simgesiyle kalıcı olarak gizlememeli; kayıt yayına alınmadan veri düzeltilmelidir.
 
 Öneri ucu için örnek yanıt şekli (temsili içerik, gerçek sıralama veya görsel URL'si taahhüdü değildir):
 

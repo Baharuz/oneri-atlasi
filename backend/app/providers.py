@@ -5,4 +5,4 @@ class CatalogProvider(Protocol):
     name: str
     async def search(self, query: str, limit: int = 20) -> list[dict]: ...
 
-PROVIDER_STATUS = {"TMDB": "ertelendi", "Open Library": "ertelendi", "IGDB": "ertelendi", "MusicBrainz": "ertelendi"}
+PROVIDER_STATUS = {"TMDB": "ertelendi", "Open Library": "ertelendi", "IGDB": "ertelendi"}

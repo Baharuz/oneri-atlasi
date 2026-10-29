@@ -18,7 +18,7 @@ def recommend(contents, sources, answers, profile=None, feedback=None):
     for tag in answers.get("features", []): weights[("theme", tag)] += 5
     for tag in answers.get("moods", []): weights[("mood", tag)] += 3
     mode = answers.get("mode", "close")
-    target = answers.get("categories") or ["kitap", "film", "dizi", "oyun", "müzik"]
+    target = answers.get("categories") or ["kitap", "film", "dizi", "oyun"]
     by_category = {}
     for category in target:
         scored = []

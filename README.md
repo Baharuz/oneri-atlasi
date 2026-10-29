@@ -1,6 +1,6 @@
 # Öneri Atlası
 
-Kitap, film, dizi, oyun ve müzik arasında ortak tema ve atmosferlere göre öneri veren Türkçe öğrenci projesi. React + Vite + TypeScript arayüzü, FastAPI + SQLAlchemy API'si, PostgreSQL ve Alembic kullanır. API anahtarı gerekmez.
+Kitap, film, dizi ve oyun arasında ortak tema ve atmosferlere göre öneri veren Türkçe öğrenci projesi. React + Vite + TypeScript arayüzü, FastAPI + SQLAlchemy API'si, PostgreSQL ve Alembic kullanır. API anahtarı gerekmez.
 
 ## Windows / PowerShell kurulumu
 
@@ -40,12 +40,12 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 - Hesaplı: kayıt, giriş, çıkış, kalıcı tercihler, favoriler, değiştirilebilir beğeni/beğenmeme, öneri geçmişi ve “Bugüne özel öneri al”.
 - Anlık test cevapları profili değiştirmez; yalnızca açık kaydetme düğmesi bunu yapar.
 - API her kullanıcının özel kaydını oturumdaki kullanıcı kimliğiyle sınırlar. Şifreler Argon2 ile hashlenir.
-- Başlangıç kataloğunda kategori başına 15, toplam 75 eser vardır. Kısa açıklamalar ve etiketler proje için elle hazırlanmıştır; harici katalog verisi değildir.
+- Başlangıç kataloğunda kategori başına 15, toplam 60 eser vardır. Kısa açıklamalar ve etiketler proje için elle hazırlanmıştır; harici katalog verisi değildir.
 
 ## Öneri algoritması
 
-Kaynak içeriklerin tema etiketleri 2, atmosfer etiketleri 1,5, aynı kategorideki türleri 1 ağırlık alır. Profilde kayıtlı tema/atmosferler 1,5/1; anlık testte işaretlenen özellik/atmosferler 5/3 ağırlık alır. Adayın eşleşen etiket ağırlıkları toplanır. Müzikte başka kategorinin tür etiketi eşleştirilmez; ortak atmosfer ve tema kullanılır. Beğenilmeyen ve seçilen kaynak içerikler çıkarılır. “Keşfet” ve “Şaşırt” seçenekleri yalnızca en az bir gerçek eşleşmesi olan adaylarda tekrar eden etiketlere çeşitlilik cezası uygular. Her kategorinin sonuçları ayrı sıralanır ve gerçek eşleşen en güçlü iki etiket gerekçede gösterilir. Sayısal skor arayüzde olasılık veya doğruluk yüzdesi olarak gösterilmez.
+Kaynak içeriklerin tema etiketleri 2, atmosfer etiketleri 1,5, aynı kategorideki türleri 1 ağırlık alır. Profilde kayıtlı tema/atmosferler 1,5/1; anlık testte işaretlenen özellik/atmosferler 5/3 ağırlık alır. Adayın eşleşen etiket ağırlıkları toplanır. Beğenilmeyen ve seçilen kaynak içerikler çıkarılır. “Keşfet” ve “Şaşırt” seçenekleri yalnızca en az bir gerçek eşleşmesi olan adaylarda tekrar eden etiketlere çeşitlilik cezası uygular. Her kategorinin sonuçları ayrı sıralanır ve gerçek eşleşen en güçlü iki etiket gerekçede gösterilir. Sayısal skor arayüzde olasılık veya doğruluk yüzdesi olarak gösterilmez.
 
 ## Sağlayıcılar ve sınırlar
 
-`CatalogProvider` arayüzü ileride katalog verisi getiren adaptörler içindir. TMDB, Open Library, IGDB ve MusicBrainz canlı bağlantıları **ertelendi**. Öneri sıralamasını bu API'ler değil, uygulamanın kendi algoritması yapar. Şimdilik kapak görselleri yerine yerel kategori yer tutucuları kullanılır. Katalog küçük ve elle hazırlanmış olduğundan bazı dar tercih birleşimlerinde uygun sonuç bulunmayabilir; arayüz bunu belirtir. Geliştirme ortamında Docker Desktop çalışır durumda olmalıdır.
+`CatalogProvider` arayüzü ileride katalog verisi getiren adaptörler içindir. TMDB, Open Library ve IGDB canlı bağlantıları **ertelendi**. Öneri sıralamasını bu API'ler değil, uygulamanın kendi algoritması yapar. Şimdilik kapak görselleri yerine yerel kategori yer tutucuları kullanılır. Katalog küçük ve elle hazırlanmış olduğundan bazı dar tercih birleşimlerinde uygun sonuç bulunmayabilir; arayüz bunu belirtir. Geliştirme ortamında Docker Desktop çalışır durumda olmalıdır.

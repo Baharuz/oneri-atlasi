@@ -37,7 +37,7 @@ Boş arama sonucu, öneri bulunamaması, yüklenme ve API hatası da tasarlanaca
 
 ## 3. Mevcut depoyla karşılaştırma
 
-Depoda React + Vite + TypeScript arayüzü, FastAPI + SQLAlchemy API'si, PostgreSQL ve Alembic bulunuyor. Katalogda beş kategori ve kategori başına 15 eser var; ilk sürüm arayüzünde müzik sunulmayacak. Başlığa göre arama, kategoriye göre öneri ve hesaplı favori kaydı için temel kod mevcut.
+Depoda React + Vite + TypeScript arayüzü, FastAPI + SQLAlchemy API'si, PostgreSQL ve Alembic bulunuyor. Katalogda dört kategori ve kategori başına 15 eser var. Başlığa göre arama, kategoriye göre öneri ve hesaplı favori kaydı için temel kod mevcut.
 
 Başlıca açıklar:
 

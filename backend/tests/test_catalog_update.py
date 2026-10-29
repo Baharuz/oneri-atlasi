@@ -74,7 +74,7 @@ def test_validation_errors_block_all_writes(session):
              _item("film", 2, image_url="http://example.com/a.jpg"),
              _item("kitap", 9),
              _item("kitap", 1),
-             _item("oyun", 3, category="müzik"),
+             _item("oyun", 3, category="gecersiz"),
              _item("oyun", 3, description="Bir Oyun: dostluk temalarını sıcak bir atmosferle buluşturan bir oyun.")]
     with pytest.raises(ManifestError) as error:
         apply_manifest(session, items)

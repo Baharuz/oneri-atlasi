@@ -1,6 +1,6 @@
 # Öneri Atlası — ilk teslim
 
-**Akış ve ekran taslakları.** Kararlar: Beş kategori (kitap, film, dizi, oyun, müzik), farklı kategorilerden 1–5 başlangıç eseri, kategoriler arası öneri, hesaplı kaydetme ve gerçek görseller. Arama şimdilik eser adına göre.
+**Akış ve ekran taslakları.** Kararlar: Dört kategori (kitap, film, dizi, oyun), farklı kategorilerden 1–5 başlangıç eseri, kategoriler arası öneri, hesaplı kaydetme ve gerçek görseller. Arama şimdilik eser adına göre.
 
 ## İlk sürüm kararları
 
@@ -12,7 +12,7 @@
 
 ```mermaid
 flowchart LR
-A["Ana sayfa: 5 kategori"] --> B["Kategori filtresi + eser arama"]
+A["Ana sayfa: 4 kategori"] --> B["Kategori filtresi + eser arama"]
 B --> C["1–5 eser seç"]
 C --> T{"Tercih testi?"}
 T -->|Atla| R["Öneri listesi: kaynaklar + sonuç kategorileri"]
@@ -42,7 +42,7 @@ Sevdiğin eserlerden yenilerini keşfet
 Kategori seç
 [Kitap] [Film]
 [Dizi]  [Oyun]
-[Müzik]
+
 Giriş / kayıt
 ```
 
@@ -51,7 +51,7 @@ Giriş / kayıt
 Öneri Atlası             Kaydedilenler  Giriş
 Sevdiğin eserlerden yenilerini keşfet
 [ Eser seç ]
-[Kitap] [Film] [Dizi] [Oyun] [Müzik]
+[Kitap] [Film] [Dizi] [Oyun]
 ```
 
 Kategori kartı aramayı ilgili filtreyle açar. Ana eylem “Eser seç”tir.
@@ -63,7 +63,7 @@ Kategori kartı aramayı ilgili filtreyle açar. Ana eylem “Eser seç”tir.
 ← Ana sayfa                  1/3
 Sevdiğin eserleri seç
 [ Eser adına göre ara ________ ]
-[Tümü] [Kitap] [Film] [Dizi] [Oyun] [Müzik]
+[Tümü] [Kitap] [Film] [Dizi] [Oyun]
 Seçilenler (2/5): Eser A ×  Eser B ×
 [kapak] Eser C · Film · türler [Seç]
 [kapak] Eser D · Film · türler [Seç]
@@ -79,7 +79,7 @@ Seçilenler (2/5): Eser A ×  Eser B ×
 ← Seçime dön              Kaydedilenler
 Başlangıç eserlerin: Eser A · Film; Eser B · Kitap
 [Kaynakları değiştir]
-Sonuç kategorisi: [Kitap] [Film] [Dizi] [Oyun] [Müzik]
+Sonuç kategorisi: [Kitap] [Film] [Dizi] [Oyun]
 [gerçek görsel]
 Öneri E · Film · Dram, Macera
 Kısa açıklama...
@@ -87,7 +87,7 @@ Neden? Ortak tema ve atmosfer.
 [Detay] [Kaydet]
 ```
 
-**Masaüstü:** Üstte kaynak eserler, altında beş sonuç kategorisi sekmesi; en çok üç kart sütunu. Her kartta gerçek görsel, başlık, türler, kısa açıklama, gerçek eşleşmeye dayanan gerekçe ve kaydetme bulunur. Sonuç kategorisi kaynak eserin kategorisiyle sınırlı değildir.
+**Masaüstü:** Üstte kaynak eserler, altında dört sonuç kategorisi sekmesi; en çok üç kart sütunu. Her kartta gerçek görsel, başlık, türler, kısa açıklama, gerçek eşleşmeye dayanan gerekçe ve kaydetme bulunur. Sonuç kategorisi kaynak eserin kategorisiyle sınırlı değildir.
 
 ### 4. Eser detayı
 

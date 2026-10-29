@@ -64,22 +64,7 @@ Journey|macera|keşif,kişisel yolculuk|sakin,duygusal
 Detroit: Become Human|macera|özgürlük,teknoloji,kimlik|gerilimli,duygusal
 Baldur's Gate 3|rol yapma|ayrıntılı evren,dostluk,strateji|destansı
 Return of the Obra Dinn|bulmaca|gizem,strateji|gerilimli
-Celeste|platform|kişisel yolculuk,karakter gelişimi|umutlu,duygusal""",
-"müzik": """Time - Hans Zimmer|film müziği|kişisel yolculuk|destansı,duygusal
-Experience - Ludovico Einaudi|piyano|kişisel yolculuk|sakin,duygusal
-Clair de Lune - Claude Debussy|klasik|romantizm|sakin,duygusal
-Midnight City - M83|elektronik|keşif|neşeli,büyülü
-Everything in Its Right Place - Radiohead|alternatif|gerçeklik|karanlık,sakin
-Cornfield Chase - Hans Zimmer|film müziği|keşif,aile|destansı,umutlu
-Weightless - Marconi Union|ambient|kişisel yolculuk|sakin
-Run Boy Run - Woodkid|alternatif|hayatta kalma|destansı,gerilimli
-The Night We Met - Lord Huron|indie|romantizm|duygusal,karanlık
-On the Nature of Daylight - Max Richter|klasik|aile|duygusal,karanlık
-Dog Days Are Over - Florence + The Machine|alternatif|özgürlük|neşeli,umutlu
-Intro - The xx|indie|gizem|sakin,karanlık
-Take Five - Dave Brubeck|caz|strateji|neşeli,sakin
-Nara - E.S. Posthumus|film müziği|keşif|destansı,büyülü
-Outro - M83|elektronik|kişisel yolculuk|destansı,duygusal"""
+Celeste|platform|kişisel yolculuk,karakter gelişimi|umutlu,duygusal"""
 }
 
 def seed(db):
