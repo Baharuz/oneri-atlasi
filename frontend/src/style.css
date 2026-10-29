@@ -8,3 +8,7 @@
 @media(max-width:650px){.homecategories{grid-template-columns:repeat(2,minmax(0,1fr))}.hero h2{margin-top:36px}.resultgrid{grid-template-columns:1fr}.card .art{height:190px}.detailart{min-height:250px}.tabs button{padding:10px}.sourcebox .compact{margin-top:8px}}
 @media(max-width:350px){.homecategories{grid-template-columns:1fr}.categoryfilters button{flex:1}.top nav{justify-content:flex-start}}
 
+.imagecredit{font-size:12px;color:#6d6576;margin:6px 0 12px;line-height:1.45}
+.imagecredit a{color:#674b8b;text-decoration:underline;text-underline-offset:2px}
+.imagecredit a:hover{color:#46306b}
+
