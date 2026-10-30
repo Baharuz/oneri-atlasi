@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Bir Kış Gecesi Eğer Bir Yolcu için özgün temsili görsel">
+<title>Bir Kış Gecesi Eğer Bir Yolcu — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="192.0" cy="166.0" r="44" fill="#eecf93" opacity="0.11"/><circle cx="414.6" cy="778.0" r="38" fill="#eecf93" opacity="0.12"/><circle cx="471.3" cy="412.0" r="25" fill="#eecf93" opacity="0.27"/><circle cx="343.2" cy="475.0" r="70" fill="#eecf93" opacity="0.22"/><circle cx="446.1" cy="727.0" r="54" fill="#eecf93" opacity="0.11"/><circle cx="288.6" cy="448.0" r="65" fill="#eecf93" opacity="0.15"/><circle cx="200.4" cy="751.0" r="40" fill="#eecf93" opacity="0.15"/><circle cx="70.2" cy="367.0" r="34" fill="#eecf93" opacity="0.28"/><circle cx="565.8" cy="301.0" r="76" fill="#eecf93" opacity="0.23"/><circle cx="534.3" cy="358.0" r="29" fill="#eecf93" opacity="0.15"/><circle cx="294.9" cy="736.0" r="17" fill="#eecf93" opacity="0.17"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · DENEYSEL</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Bir Kış Gecesi Eğer</text><text x="50" y="538" class="title">Bir Yolcu</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">KITAPLAR · GIZEMLI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

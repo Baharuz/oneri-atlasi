@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Last of Us için özgün temsili görsel">
+<title>The Last of Us — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="135.3" cy="682.0" r="29" fill="#f2d2a8" opacity="0.14"/><circle cx="385.2" cy="355.0" r="73" fill="#f2d2a8" opacity="0.14"/><circle cx="454.5" cy="544.0" r="32" fill="#f2d2a8" opacity="0.14"/><circle cx="555.3" cy="373.0" r="33" fill="#f2d2a8" opacity="0.24"/><circle cx="252.9" cy="748.0" r="37" fill="#f2d2a8" opacity="0.12"/><circle cx="93.3" cy="481.0" r="19" fill="#f2d2a8" opacity="0.12"/><circle cx="452.4" cy="622.0" r="14" fill="#f2d2a8" opacity="0.24"/><circle cx="473.4" cy="499.0" r="28" fill="#f2d2a8" opacity="0.10"/><circle cx="488.1" cy="283.0" r="13" fill="#f2d2a8" opacity="0.15"/><circle cx="129.0" cy="106.0" r="59" fill="#f2d2a8" opacity="0.21"/><circle cx="273.9" cy="301.0" r="20" fill="#f2d2a8" opacity="0.21"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · DRAM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Last of Us</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">HAYATTA KALMA · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

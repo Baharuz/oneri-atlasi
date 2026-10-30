@@ -7,6 +7,8 @@ import argparse
 from collections import Counter
 import json
 import unicodedata
+from pathlib import Path
+import xml.etree.ElementTree as ET
 
 import httpx
 from sqlalchemy import select
@@ -22,6 +24,18 @@ def _key(title):
 
 
 def _url_error(client, url, image):
+    if image and isinstance(url, str) and url.startswith("/art/"):
+        public = Path(__file__).resolve().parents[2] / "frontend" / "public"
+        path = (public / url.lstrip("/")).resolve()
+        if not path.is_relative_to(public.resolve()) or path.suffix != ".svg":
+            return "geçersiz yerel görsel yolu"
+        if not path.is_file():
+            return "yerel görsel dosyası yok"
+        try:
+            ET.parse(path)
+        except ET.ParseError:
+            return "SVG geçersiz"
+        return None
     if not isinstance(url, str) or not url.startswith("https://"):
         return "HTTPS URL gerekli"
     try:

@@ -32,3 +32,5 @@ def test_url_audit_rejects_broken_or_non_image_response():
         assert _url_error(client, "https://example.test/broken", True) == "HTTP 404"
         assert _url_error(client, "https://example.test/page", True) == "yanıt görsel değil"
         assert _url_error(client, "https://example.test/page", False) is None
+        assert _url_error(client, "/art/kitap-1.svg", True) is None
+        assert _url_error(client, "/art/olmayan.svg", True) == "yerel görsel dosyası yok"

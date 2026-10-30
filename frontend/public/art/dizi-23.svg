@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Westworld için özgün temsili görsel">
+<title>Westworld — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="399.9" cy="532.0" r="70" fill="#f2d2a8" opacity="0.10"/><circle cx="160.5" cy="406.0" r="31" fill="#f2d2a8" opacity="0.20"/><circle cx="423.0" cy="289.0" r="65" fill="#f2d2a8" opacity="0.18"/><circle cx="194.1" cy="292.0" r="16" fill="#f2d2a8" opacity="0.25"/><circle cx="563.7" cy="538.0" r="25" fill="#f2d2a8" opacity="0.22"/><circle cx="305.4" cy="613.0" r="70" fill="#f2d2a8" opacity="0.15"/><circle cx="540.6" cy="484.0" r="14" fill="#f2d2a8" opacity="0.12"/><circle cx="435.6" cy="118.0" r="57" fill="#f2d2a8" opacity="0.17"/><circle cx="469.2" cy="691.0" r="22" fill="#f2d2a8" opacity="0.13"/><circle cx="55.5" cy="517.0" r="65" fill="#f2d2a8" opacity="0.12"/><circle cx="89.1" cy="814.0" r="33" fill="#f2d2a8" opacity="0.13"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · BILIMKURGU</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Westworld</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">TEKNOLOJI · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

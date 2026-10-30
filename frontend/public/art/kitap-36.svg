@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Hyperion için özgün temsili görsel">
+<title>Hyperion — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="141.6" cy="622.0" r="25" fill="#eecf93" opacity="0.28"/><circle cx="565.8" cy="592.0" r="16" fill="#eecf93" opacity="0.17"/><circle cx="538.5" cy="493.0" r="58" fill="#eecf93" opacity="0.22"/><circle cx="534.3" cy="634.0" r="46" fill="#eecf93" opacity="0.25"/><circle cx="162.6" cy="163.0" r="25" fill="#eecf93" opacity="0.18"/><circle cx="219.3" cy="235.0" r="25" fill="#eecf93" opacity="0.12"/><circle cx="309.6" cy="643.0" r="51" fill="#eecf93" opacity="0.19"/><circle cx="156.3" cy="418.0" r="17" fill="#eecf93" opacity="0.28"/><circle cx="460.8" cy="730.0" r="48" fill="#eecf93" opacity="0.18"/><circle cx="408.3" cy="355.0" r="67" fill="#eecf93" opacity="0.23"/><circle cx="303.3" cy="484.0" r="50" fill="#eecf93" opacity="0.13"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · BILIMKURGU</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Hyperion</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">INANÇ · DESTANSI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

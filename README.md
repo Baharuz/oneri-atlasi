@@ -40,7 +40,7 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 - Hesaplı: kayıt, giriş, çıkış, kalıcı tercihler, favoriler, değiştirilebilir beğeni/beğenmeme, öneri geçmişi ve “Bugüne özel öneri al”.
 - Anlık test cevapları profili değiştirmez; yalnızca açık kaydetme düğmesi bunu yapar.
 - API her kullanıcının özel kaydını oturumdaki kullanıcı kimliğiyle sınırlar. Şifreler Argon2 ile hashlenir.
-- Mevcut katalogda kategori başına 25, toplam 100 eser vardır. Açıklamalar eser özelinde Türkçe hazırlanmıştır. 85 kaydın görseli ve atfı henüz eksiktir; uygulama bu kayıtlarda kategori simgesi gösterir. Var olan veritabanında açıklamaları güncellemek ve yeni eserleri eklemek için `backend` dizininde `python seed.py` komutunu yeniden çalıştırın. Elle düzenlenmiş açıklamalar ve kullanıcı kayıtları korunur.
+- Mevcut katalogda 125 kitap, 25 film, 25 dizi ve 25 oyun olmak üzere 200 eser vardır. Açıklamalar eser özelinde Türkçe hazırlanmıştır. Görseller resmî kapak/afiş değildir; eser adlarından ve etiketlerinden `app.catalog_art` ile üretilen özgün, temsili SVG'lerdir. Önce `backend` dizininde `python -m app.catalog_art`, ardından `python seed.py` çalıştırın. Seed, elle düzenlenmiş açıklamaları ve kullanıcı kayıtlarını korur; yerel katalog görsellerini proje görsellerine geçirir.
 - Kaydedilenler ekranı doğrudan `GET /api/me/saved` sonucunu gösterir. Görseli olan eserlerde kart ve detay ekranı kaynak atfını bağlantısıyla birlikte gösterir.
 
 ## Katalog denetimi
@@ -52,7 +52,7 @@ python -m app.catalog_audit
 python -m app.catalog_audit --check-urls
 ```
 
-İkinci komut görsel ve kaynak bağlantılarını HTTP üzerinden ayrıca denetler. Bağlantı denetimi, görselin doğru esere ait olduğunu veya lisans iznini tek başına kanıtlamaz; bunlar eser bazında ayrıca doğrulanmalıdır. Mevcut 100 eserlik katalog bu denetimde beklenen şekilde başarısız olur.
+İkinci komut yerel SVG dosyalarının geçerli olduğunu ve kaynak bağlantılarının HTTP yanıtını ayrıca denetler. Görseller yalnızca bu proje için üretilmiştir; resmî eser görseli olarak sunulmamalıdır. Mevcut 200 eserlik katalog, 500 eserlik sayı hedefinde beklenen şekilde başarısız olur.
 
 ## Öneri algoritması
 

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Outer Wilds için özgün temsili görsel">
+<title>Outer Wilds — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="248.7" cy="556.0" r="51" fill="#e8ce7e" opacity="0.26"/><circle cx="173.1" cy="373.0" r="49" fill="#e8ce7e" opacity="0.23"/><circle cx="122.7" cy="514.0" r="28" fill="#e8ce7e" opacity="0.27"/><circle cx="305.4" cy="751.0" r="35" fill="#e8ce7e" opacity="0.13"/><circle cx="517.5" cy="217.0" r="44" fill="#e8ce7e" opacity="0.14"/><circle cx="231.9" cy="577.0" r="21" fill="#e8ce7e" opacity="0.26"/><circle cx="360.0" cy="820.0" r="66" fill="#e8ce7e" opacity="0.23"/><circle cx="51.3" cy="232.0" r="30" fill="#e8ce7e" opacity="0.25"/><circle cx="292.8" cy="364.0" r="35" fill="#e8ce7e" opacity="0.21"/><circle cx="278.1" cy="634.0" r="22" fill="#e8ce7e" opacity="0.11"/><circle cx="112.2" cy="562.0" r="42" fill="#e8ce7e" opacity="0.14"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · MACERA</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Outer Wilds</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">KEŞIF · SAKIN</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

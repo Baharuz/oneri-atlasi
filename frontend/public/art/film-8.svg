@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Matrix için özgün temsili görsel">
+<title>The Matrix — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#302235"/><stop offset="1" stop-color="#b45672"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="213.0" cy="559.0" r="69" fill="#f6bf73" opacity="0.24"/><circle cx="45.0" cy="178.0" r="43" fill="#f6bf73" opacity="0.28"/><circle cx="156.3" cy="574.0" r="49" fill="#f6bf73" opacity="0.18"/><circle cx="469.2" cy="721.0" r="72" fill="#f6bf73" opacity="0.15"/><circle cx="313.8" cy="361.0" r="22" fill="#f6bf73" opacity="0.10"/><circle cx="202.5" cy="664.0" r="72" fill="#f6bf73" opacity="0.26"/><circle cx="381.0" cy="769.0" r="34" fill="#f6bf73" opacity="0.16"/><circle cx="175.2" cy="772.0" r="58" fill="#f6bf73" opacity="0.26"/><circle cx="204.6" cy="556.0" r="72" fill="#f6bf73" opacity="0.13"/><circle cx="78.6" cy="244.0" r="30" fill="#f6bf73" opacity="0.12"/><circle cx="297.0" cy="226.0" r="20" fill="#f6bf73" opacity="0.23"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f6bf73" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#302235" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f6bf73" letter-spacing="3">FILM · BILIMKURGU</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Matrix</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f6bf73" letter-spacing="2">ÖZGÜRLÜK · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

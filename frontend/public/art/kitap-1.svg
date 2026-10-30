@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Dune için özgün temsili görsel">
+<title>Dune — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="192.0" cy="220.0" r="53" fill="#eecf93" opacity="0.26"/><circle cx="389.4" cy="67.0" r="52" fill="#eecf93" opacity="0.27"/><circle cx="540.6" cy="142.0" r="63" fill="#eecf93" opacity="0.18"/><circle cx="563.7" cy="547.0" r="18" fill="#eecf93" opacity="0.10"/><circle cx="437.7" cy="241.0" r="52" fill="#eecf93" opacity="0.17"/><circle cx="280.2" cy="736.0" r="52" fill="#eecf93" opacity="0.14"/><circle cx="341.1" cy="796.0" r="47" fill="#eecf93" opacity="0.26"/><circle cx="324.3" cy="673.0" r="27" fill="#eecf93" opacity="0.27"/><circle cx="59.7" cy="613.0" r="35" fill="#eecf93" opacity="0.14"/><circle cx="53.4" cy="373.0" r="47" fill="#eecf93" opacity="0.20"/><circle cx="78.6" cy="178.0" r="28" fill="#eecf93" opacity="0.22"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · BILIMKURGU</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Dune</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">SIYASI ENTRIKA · DESTANSI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

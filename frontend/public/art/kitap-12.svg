@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Drakula için özgün temsili görsel">
+<title>Drakula — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="561.6" cy="751.0" r="32" fill="#eecf93" opacity="0.19"/><circle cx="229.8" cy="649.0" r="54" fill="#eecf93" opacity="0.27"/><circle cx="313.8" cy="91.0" r="36" fill="#eecf93" opacity="0.18"/><circle cx="519.6" cy="340.0" r="22" fill="#eecf93" opacity="0.28"/><circle cx="343.2" cy="247.0" r="48" fill="#eecf93" opacity="0.19"/><circle cx="120.6" cy="100.0" r="29" fill="#eecf93" opacity="0.28"/><circle cx="341.1" cy="346.0" r="55" fill="#eecf93" opacity="0.27"/><circle cx="481.8" cy="238.0" r="62" fill="#eecf93" opacity="0.14"/><circle cx="143.7" cy="196.0" r="39" fill="#eecf93" opacity="0.18"/><circle cx="282.3" cy="370.0" r="18" fill="#eecf93" opacity="0.22"/><circle cx="479.7" cy="700.0" r="76" fill="#eecf93" opacity="0.10"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · KORKU</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Drakula</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">GIZEM · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Bin Muhteşem Güneş için özgün temsili görsel">
+<title>Bin Muhteşem Güneş — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="223.5" cy="436.0" r="12" fill="#eecf93" opacity="0.10"/><circle cx="565.8" cy="526.0" r="21" fill="#eecf93" opacity="0.13"/><circle cx="385.2" cy="235.0" r="14" fill="#eecf93" opacity="0.17"/><circle cx="158.4" cy="313.0" r="42" fill="#eecf93" opacity="0.28"/><circle cx="523.8" cy="409.0" r="22" fill="#eecf93" opacity="0.18"/><circle cx="290.7" cy="631.0" r="33" fill="#eecf93" opacity="0.17"/><circle cx="498.6" cy="817.0" r="67" fill="#eecf93" opacity="0.26"/><circle cx="521.7" cy="358.0" r="17" fill="#eecf93" opacity="0.23"/><circle cx="341.1" cy="460.0" r="49" fill="#eecf93" opacity="0.15"/><circle cx="259.2" cy="286.0" r="54" fill="#eecf93" opacity="0.13"/><circle cx="397.8" cy="250.0" r="74" fill="#eecf93" opacity="0.20"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · DRAM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Bin Muhteşem Güneş</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">AILE · DUYGUSAL</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

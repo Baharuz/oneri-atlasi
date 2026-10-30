@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Oliver Twist için özgün temsili görsel">
+<title>Oliver Twist — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="326.4" cy="757.0" r="72" fill="#eecf93" opacity="0.26"/><circle cx="213.0" cy="283.0" r="53" fill="#eecf93" opacity="0.16"/><circle cx="315.9" cy="589.0" r="27" fill="#eecf93" opacity="0.21"/><circle cx="57.6" cy="214.0" r="49" fill="#eecf93" opacity="0.15"/><circle cx="118.5" cy="622.0" r="68" fill="#eecf93" opacity="0.17"/><circle cx="177.3" cy="805.0" r="40" fill="#eecf93" opacity="0.25"/><circle cx="108.0" cy="391.0" r="22" fill="#eecf93" opacity="0.24"/><circle cx="574.2" cy="793.0" r="14" fill="#eecf93" opacity="0.16"/><circle cx="339.0" cy="433.0" r="53" fill="#eecf93" opacity="0.10"/><circle cx="555.3" cy="256.0" r="73" fill="#eecf93" opacity="0.17"/><circle cx="513.3" cy="625.0" r="28" fill="#eecf93" opacity="0.25"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · KLASIK</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Oliver Twist</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">ADALET · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

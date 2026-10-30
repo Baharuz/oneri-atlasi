@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Rüzgârın Gölgesi için özgün temsili görsel">
+<title>Rüzgârın Gölgesi — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="137.4" cy="130.0" r="47" fill="#eecf93" opacity="0.12"/><circle cx="431.4" cy="178.0" r="44" fill="#eecf93" opacity="0.28"/><circle cx="311.7" cy="712.0" r="69" fill="#eecf93" opacity="0.27"/><circle cx="299.1" cy="508.0" r="29" fill="#eecf93" opacity="0.26"/><circle cx="89.1" cy="637.0" r="26" fill="#eecf93" opacity="0.24"/><circle cx="481.8" cy="415.0" r="19" fill="#eecf93" opacity="0.28"/><circle cx="200.4" cy="397.0" r="13" fill="#eecf93" opacity="0.13"/><circle cx="557.4" cy="649.0" r="32" fill="#eecf93" opacity="0.16"/><circle cx="114.3" cy="799.0" r="59" fill="#eecf93" opacity="0.13"/><circle cx="162.6" cy="697.0" r="48" fill="#eecf93" opacity="0.20"/><circle cx="131.1" cy="745.0" r="61" fill="#eecf93" opacity="0.28"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · GIZEM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Rüzgârın Gölgesi</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">KITAPLAR · GIZEMLI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Benim Adım Kırmızı için özgün temsili görsel">
+<title>Benim Adım Kırmızı — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="544.8" cy="649.0" r="70" fill="#eecf93" opacity="0.24"/><circle cx="469.2" cy="106.0" r="14" fill="#eecf93" opacity="0.26"/><circle cx="343.2" cy="430.0" r="48" fill="#eecf93" opacity="0.15"/><circle cx="339.0" cy="658.0" r="40" fill="#eecf93" opacity="0.28"/><circle cx="154.2" cy="154.0" r="53" fill="#eecf93" opacity="0.13"/><circle cx="198.3" cy="193.0" r="74" fill="#eecf93" opacity="0.11"/><circle cx="374.7" cy="700.0" r="59" fill="#eecf93" opacity="0.13"/><circle cx="82.8" cy="778.0" r="27" fill="#eecf93" opacity="0.18"/><circle cx="410.4" cy="283.0" r="14" fill="#eecf93" opacity="0.27"/><circle cx="47.1" cy="703.0" r="76" fill="#eecf93" opacity="0.21"/><circle cx="450.3" cy="814.0" r="45" fill="#eecf93" opacity="0.21"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · GIZEM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Benim Adım Kırmızı</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">SANAT · GIZEMLI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

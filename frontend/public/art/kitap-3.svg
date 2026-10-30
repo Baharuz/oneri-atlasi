@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="1984 için özgün temsili görsel">
+<title>1984 — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="244.5" cy="646.0" r="71" fill="#eecf93" opacity="0.10"/><circle cx="507.0" cy="655.0" r="42" fill="#eecf93" opacity="0.18"/><circle cx="248.7" cy="784.0" r="38" fill="#eecf93" opacity="0.27"/><circle cx="108.0" cy="316.0" r="21" fill="#eecf93" opacity="0.27"/><circle cx="444.0" cy="670.0" r="60" fill="#eecf93" opacity="0.15"/><circle cx="181.5" cy="145.0" r="51" fill="#eecf93" opacity="0.23"/><circle cx="519.6" cy="802.0" r="41" fill="#eecf93" opacity="0.20"/><circle cx="160.5" cy="694.0" r="15" fill="#eecf93" opacity="0.17"/><circle cx="294.9" cy="640.0" r="73" fill="#eecf93" opacity="0.20"/><circle cx="152.1" cy="88.0" r="19" fill="#eecf93" opacity="0.25"/><circle cx="544.8" cy="817.0" r="25" fill="#eecf93" opacity="0.21"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · DISTOPYA</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">1984</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">ÖZGÜRLÜK · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Muhteşem Gatsby için özgün temsili görsel">
+<title>Muhteşem Gatsby — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#271e4b"/><stop offset="1" stop-color="#7960b5"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="498.6" cy="175.0" r="56" fill="#eecf93" opacity="0.10"/><circle cx="168.9" cy="319.0" r="67" fill="#eecf93" opacity="0.19"/><circle cx="137.4" cy="550.0" r="43" fill="#eecf93" opacity="0.27"/><circle cx="280.2" cy="196.0" r="53" fill="#eecf93" opacity="0.23"/><circle cx="483.9" cy="469.0" r="51" fill="#eecf93" opacity="0.16"/><circle cx="542.7" cy="112.0" r="75" fill="#eecf93" opacity="0.27"/><circle cx="519.6" cy="271.0" r="25" fill="#eecf93" opacity="0.21"/><circle cx="271.8" cy="730.0" r="17" fill="#eecf93" opacity="0.12"/><circle cx="576.3" cy="604.0" r="65" fill="#eecf93" opacity="0.22"/><circle cx="439.8" cy="766.0" r="46" fill="#eecf93" opacity="0.23"/><circle cx="147.9" cy="772.0" r="19" fill="#eecf93" opacity="0.19"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#eecf93" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#271e4b" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#eecf93" letter-spacing="3">KITAP · KLASIK</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Muhteşem Gatsby</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#eecf93" letter-spacing="2">AŞK · MELANKOLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

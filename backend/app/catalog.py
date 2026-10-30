@@ -1,5 +1,6 @@
 from sqlalchemy import select
 from .models import Content, Tag, ContentTag
+from .catalog_expansion import DATA as EXPANSION
 import json
 
 # Etiketler ve kısa açıklamalar bu öğrenci projesi için elle hazırlanmıştır.
@@ -173,7 +174,8 @@ DESCRIPTIONS = {
 def seed(db):
     existing = {(item.source, item.source_id): item for item in db.scalars(select(Content)).all()}
     for category, block in DATA.items():
-        for number, line in enumerate(block.splitlines(), 1):
+        lines = block.splitlines() + EXPANSION.get(category, "").splitlines()
+        for number, line in enumerate(lines, 1):
             source_id = f"{category}-{number}"
             parts = line.split("|", 4)
             title, genres, themes, moods = parts[:4]
@@ -185,9 +187,14 @@ def seed(db):
                 continue
             values = [genres.split(","), themes.split(","), moods.split(",")]
             description = parts[4] if len(parts) == 5 else DESCRIPTIONS[(category, title)]
-            db.add(Content(category=category, title=title, description=description, genres=values[0], themes=values[1], moods=values[2], language="tr" if len(parts) == 5 else "en", source="local", source_id=source_id))
+            db.add(Content(category=category, title=title, description=description, genres=values[0], themes=values[1], moods=values[2], language="tr", source="local", source_id=source_id))
     db.flush()
     items = db.scalars(select(Content)).all()
+    for item in items:
+        if item.source == "local" and item.category in DATA:
+            item.image_url = f"/art/{item.source_id}.svg"
+            item.image_source_url = f"https://github.com/Baharuz/oneri-atlasi/blob/main/frontend/public/art/{item.source_id}.svg"
+            item.image_credit = "Öneri Atlası özgün temsili görseli · Resmî kapak/afiş değil · Proje içi kullanım"
     lookup = {(tag.kind, tag.name): tag.id for tag in db.scalars(select(Tag)).all()}
     needed = {(kind, name) for item in items for kind, group in (("genre", item.genres), ("theme", item.themes), ("mood", item.moods)) for name in group}
     for kind, name in needed - lookup.keys():

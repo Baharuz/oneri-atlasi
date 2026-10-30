@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Arcane için özgün temsili görsel">
+<title>Arcane — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="63.9" cy="703.0" r="34" fill="#f2d2a8" opacity="0.26"/><circle cx="147.9" cy="715.0" r="51" fill="#f2d2a8" opacity="0.20"/><circle cx="483.9" cy="253.0" r="23" fill="#f2d2a8" opacity="0.16"/><circle cx="229.8" cy="490.0" r="45" fill="#f2d2a8" opacity="0.16"/><circle cx="357.9" cy="502.0" r="16" fill="#f2d2a8" opacity="0.26"/><circle cx="465.0" cy="340.0" r="20" fill="#f2d2a8" opacity="0.15"/><circle cx="376.8" cy="478.0" r="48" fill="#f2d2a8" opacity="0.14"/><circle cx="97.5" cy="619.0" r="33" fill="#f2d2a8" opacity="0.17"/><circle cx="437.7" cy="325.0" r="35" fill="#f2d2a8" opacity="0.21"/><circle cx="414.6" cy="367.0" r="39" fill="#f2d2a8" opacity="0.19"/><circle cx="532.2" cy="316.0" r="33" fill="#f2d2a8" opacity="0.22"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · ANIMASYON</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Arcane</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">SINIF · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>
