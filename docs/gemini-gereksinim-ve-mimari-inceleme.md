@@ -1,3 +1,5 @@
+> **Arşiv notu (30 Ekim 2026):** Bu belge ilk tasarım incelemesinin tarihsel kaydıdır. 500 eserlik güncel katalog, özgün temsili görseller ve 0003 geçişi için [durum raporuna](mvp1-durum-raporu.md) bakın. Aşağıdaki eski eksikler güncel teslim durumu değildir.
+
 # Gemini incelemesi — Ürün gereksinimleri ve mimari taslağı
 
 **Durum:** İnceleme taslağı (v0.5, 22 Ekim 2026; hesaplı kaydetmenin veritabanında tutulması kararlaştırıldı)

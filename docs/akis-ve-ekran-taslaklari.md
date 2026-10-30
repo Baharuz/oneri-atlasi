@@ -1,3 +1,5 @@
+> **Arşiv notu (30 Ekim 2026):** Bu çoklu kaynak ve kategoriler arası öneri taslağı mevcut MVP akışını göstermez. Güncel uygulama tek eser seçer, aynı kategoriden önerir ve 500 özgün temsili SVG kullanır. [Durum raporu](mvp1-durum-raporu.md).
+
 # Öneri Atlası — ilk teslim
 
 **Akış ve ekran taslakları.** Kararlar: Dört kategori (kitap, film, dizi, oyun), farklı kategorilerden 1–5 başlangıç eseri, kategoriler arası öneri, hesaplı kaydetme ve gerçek görseller. Arama şimdilik eser adına göre.

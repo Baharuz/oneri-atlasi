@@ -1,17 +1,14 @@
-# MVP-1 öneri kalitesi gözlemi
+# Öneri kalitesi kontrolü
 
-**Durum:** Yerel PostgreSQL'de 26 Ekim 2026 manuel kontrolü; algoritma kalitesinin kapsamlı kanıtı değildir. API seçilen tek eserden aynı kategoriye en fazla sekiz sonuç döndürüyor ve eşleşen etiketlerden kısa gerekçe oluşturuyor.
+**Güncelleme:** 30 Ekim 2026. Kontrol 500 eserlik seed üzerinde yapıldı.
 
-| Kaynak | İlk sonuçlar | Değerlendirme |
+Öneriler aynı kategorideki eserlerden çıkar. Tür eşleşmesi 3, tema 2, atmosfer 1 ağırlık taşır; kaynak eser sonuçlardan çıkarılır. Bu sıralama ve editoryal etiketler, kategori içindeki yakın eserlerin öne çıkması için ayarlandı.
+
+| Kaynak | İncelenen üst sıralar | Değerlendirme |
 | --- | --- | --- |
-| Dune (kitap) | Vakıf, Yüzüklerin Efendisi, Neuromancer | Vakıf güçlü bir bilimkurgu/siyasi entrika eşleşmesi; diğerleri kısmen tema benzerliği. |
-| Arrival (film) | Her, Inception, Blade Runner 2049, Interstellar | Benzer bilimkurgu/duygusal tema var; Interstellar dördüncü sırada. |
-| Dark (dizi) | Black Mirror, Severance, Stranger Things | Gizem, karanlık atmosfer ve gerçeklik temasıyla makul başlangıç. |
-| Stardew Valley (oyun) | Journey, Baldur's Gate 3, Celeste, Mass Effect | Kullanıcının istediği sıcak/2D yaşam simülasyonu yakınlığı zayıf. 15 oyunluk katalogda bu alt türden yeterli komşu yok. |
+| Stardew Valley | Animal Crossing, My Time at Portia, Spiritfarer, Coral Island, Harvest Moon | Sıcak yaşam simülasyonu ve üretim/dostluk yakınlığı önceki zayıf sıralamaya göre belirgin biçimde iyileşti. |
+| Dune | Vakıf, Hyperion | Büyük ölçekli bilimkurgu ve siyaset bağı güçlü. |
+| Arrival | Contact | İlk temas ve iletişim temaları örtüşüyor. |
+| Dark | Fringe, 12 Monkeys | Gizem ve zaman kurgusu yakın. |
 
-## Kabul ve düzeltme
-
-- Her dört kategoride en az bir güçlü örnek ve bir zayıf örnek insan tarafından değerlendirilir; yalnız otomatik skor iyi sonuç anlamına gelmez.
-- Stardew Valley için en az bir doğrulanmış cozy/yaşam simülasyonu eseri ilk üç sonuçta görünmeli. Bunun için görseli, açıklaması ve etiketleri doğrulanmış adaylar kataloğa eklenmeli; mevcut esere zorla alakasız etiket yapıştırılmamalı.
-- Souls-like örneği henüz mevcut katalogda başlangıç eseri olarak yok. Bu kullanıcı senaryosu gösterilecekse doğrulanmış bir başlangıç ve en az iki uygun sonuç eklenmeli.
-- Eser ve etiket değişikliklerinden sonra aynı senaryolar tekrar çalıştırılıp önce/sonra çıktısı kaydedilir. Öneri gerekçesinin etiketlerle ve gerçek eser niteliğiyle tutarlı olup olmadığı kontrol edilir.
+Backend kalite testi ayrıca Outer Wilds ve Karanlığın Sol Eli örneklerini kapsar. Sıralama kuralları ve etiketler insan incelemesinin yerini tutmaz; yeni kullanıcı davranışı geldikçe tekrar değerlendirilmelidir.
