@@ -77,7 +77,7 @@ def set_cookies(response: Response, user_id: int):
     response.set_cookie("csrf", secrets.token_urlsafe(32), httponly=False, secure=COOKIE_SECURE, samesite=COOKIE_SAMESITE, max_age=604800)
 
 def content_dict(item):
-    return {field: getattr(item, field) for field in ("id", "category", "title", "description", "genres", "themes", "moods", "language", "year", "image_url", "image_credit", "image_source_url", "source", "source_id")}
+    return {field: getattr(item, field) for field in ("id", "category", "title", "description", "genres", "themes", "moods", "pace", "audience", "language", "year", "image_url", "image_credit", "image_source_url", "source", "source_id")}
 
 @app.get("/api/health")
 def health(): return {"ok": True}

@@ -4,7 +4,7 @@
 
 ## Kapsam
 
-Katalog kitap, film, dizi ve oyun kategorilerinden 125'er, toplam 500 gerçek eserden oluşur. Eser seçimi, aynı kategoride gerekçeli öneriler, hesapla kaydetme ve kaydedilenler ekranı uygulamadadır. Müzik kategorisi `0003` geçişiyle kaldırıldı.
+Katalog kitap, film, dizi ve oyun kategorilerinden 125'er, toplam 500 gerçek eserden oluşur. Eser seçimi, aynı kategoride gerekçeli öneriler, hesapla kaydetme ve kaydedilenler ekranı uygulamadadır. Müzik kategorisi `0003` geçişiyle kaldırıldı. `0004`, tempo ve geniş hedef kitle etiketlerini ekler; bunlar resmî yaş sınıflandırması değildir.
 
 ## Veri ve görseller
 

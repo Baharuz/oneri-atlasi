@@ -24,6 +24,8 @@ class Content(Base):
     genres: Mapped[list] = mapped_column(JSON, default=list)
     themes: Mapped[list] = mapped_column(JSON, default=list)
     moods: Mapped[list] = mapped_column(JSON, default=list)
+    pace: Mapped[str | None] = mapped_column(String(20), nullable=True)
+    audience: Mapped[str | None] = mapped_column(String(40), nullable=True)
     language: Mapped[str] = mapped_column(String(20), default="tr")
     year: Mapped[int | None] = mapped_column(Integer, nullable=True)
     image_url: Mapped[str | None] = mapped_column(String(500), nullable=True)

@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 
 type Category = 'kitap'|'film'|'dizi'|'oyun';
-type Content = {id:number; category:Category; title:string; description:string; genres:string[]; themes:string[]; moods:string[]; source:string; year:number|null; image_url:string|null; image_credit:string|null; image_source_url:string|null};
+type Content = {id:number; category:Category; title:string; description:string; genres:string[]; themes:string[]; moods:string[]; pace:string|null; audience:string|null; source:string; year:number|null; image_url:string|null; image_credit:string|null; image_source_url:string|null};
 type Result = {content:Content; reason:string; score:number};
 type Recommendation = {source:Content; results:Result[]};
 type User = {id:number; email:string; favorites:number[]; feedback:Record<number,string>};

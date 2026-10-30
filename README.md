@@ -45,14 +45,14 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 
 ## Katalog denetimi
 
-Şema geçişlerinin son sürümü `0003_remove_unused_category`'dir. Katalog tamamlanma hedefi kategori başına 125, toplam 500 eserdir. Hedefin karşılanıp karşılanmadığını, mükerrer başlıkları ve boş görsel/atıf/açıklama alanlarını denetlemek için `backend` dizininde:
+Şema geçişleri `0003` ile kullanılmayan kategoriyi temizler; son sürüm `0004_editorial_metadata` tempo ve hedef kitle etiketlerini ekler. Katalog tamamlanma hedefi kategori başına 125, toplam 500 eserdir. Hedefin karşılanıp karşılanmadığını, mükerrer başlıkları ve boş görsel/atıf/açıklama alanlarını denetlemek için `backend` dizininde:
 
 ```powershell
 python -m app.catalog_audit
 python -m app.catalog_audit --check-urls
 ```
 
-İkinci komut yerel SVG dosyalarının geçerli olduğunu ve kaynak bağlantılarının HTTP yanıtını ayrıca denetler. Görseller yalnızca bu proje için üretilmiştir; resmî eser görseli olarak sunulmamalıdır. Denetim kategori başına 125 kayıt bekler.
+İkinci komut yerel SVG dosyalarını ve dış kaynak bağlantılarının HTTP yanıtını denetler; proje içi GitHub kaynak bağlantıları yerel dosya/yol eşleşmesiyle doğrulanır. Görseller yalnızca bu proje için üretilmiştir; resmî eser görseli olarak sunulmamalıdır. Denetim kategori başına 125 kayıt bekler.
 
 ## Öneri algoritması
 

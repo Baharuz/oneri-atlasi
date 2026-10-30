@@ -6,7 +6,7 @@
 
 ## 28–30 Ekim 2026
 
-- Kullanılmayan kategori `0003` geçişiyle temizlendi.
+- Kullanılmayan kategori `0003` geçişiyle temizlendi. `0004`, tempo ve geniş hedef kitle etiketlerini ekledi.
 - Katalog 25'er eserden 125'er esere genişletildi; toplam 500 gerçek eser var.
 - Her esere özel Türkçe açıklama ve etiketler düzenlendi; 500 özgün temsili SVG üretildi. Kaynak ve proje içi kullanım kredisi kataloğa işlendi.
 - Öneri ağırlıkları ve yakın tür komşuları düzenlendi. Stardew Valley, Dune, Arrival, Dark, Outer Wilds ve Karanlığın Sol Eli örnekleri test edildi.

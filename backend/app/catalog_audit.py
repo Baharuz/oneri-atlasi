@@ -14,6 +14,7 @@ import httpx
 from sqlalchemy import select
 
 from .catalog import REPORT_CATEGORIES, quality_issues
+from .catalog_metadata import editorial_metadata
 from .models import Content
 
 EXPECTED_PER_CATEGORY = 125
@@ -65,6 +66,10 @@ def audit(db, check_urls=False, client=None):
         if key in seen:
             errors.append(f"Mükerrer eser: {item.category} / {item.title} (#{seen[key]}, #{item.id})")
         seen[key] = item.id
+        if item.pace not in {"sakin", "orta", "hızlı"} or item.audience not in {"genel", "genç ve yetişkin", "yetişkin"}:
+            errors.append(f"#{item.id} tempo/hedef kitle etiketi eksik veya geçersiz")
+        elif item.source == "local" and (item.pace, item.audience) != editorial_metadata(item.category, item.genres, item.themes, item.moods):
+            errors.append(f"#{item.id} tempo/hedef kitle etiketi katalogla uyuşmuyor")
         if item.source == "local" and item.category in REPORT_CATEGORIES:
             expected_image = f"/art/{item.source_id}.svg"
             expected_source = f"https://github.com/Baharuz/oneri-atlasi/blob/main/frontend/public/art/{item.source_id}.svg"

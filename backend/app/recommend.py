@@ -8,6 +8,8 @@ def recommend(contents, sources, answers, profile=None, feedback=None):
     feedback = feedback or {}
     weights = defaultdict(float)
     source_ids = {item.id for item in sources}
+    source_paces = {(item.category, item.pace) for item in sources if item.pace}
+    source_audiences = {(item.category, item.audience) for item in sources if item.audience}
     for item in sources:
         for tag in item.themes: weights[("theme", tag)] += 2
         for tag in item.moods: weights[("mood", tag)] += 1
@@ -36,6 +38,8 @@ def recommend(contents, sources, answers, profile=None, feedback=None):
                 value = weights[("genre", category, tag)]
                 if value: score += value; matches.append((value, tag))
             if not matches: continue
+            if (category, item.pace) in source_paces: score += 0.5
+            if (category, item.audience) in source_audiences: score += 0.25
             if feedback.get(item.id) == "like": score += 2
             if mode == "surprise": score += min(2, len(set(item.themes) - set(answers.get("features", []))))
             elif mode == "discover": score += min(1, len(set(item.themes) - set(answers.get("features", []))))

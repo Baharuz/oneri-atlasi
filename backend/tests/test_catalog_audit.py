@@ -48,6 +48,12 @@ def test_full_seed_has_500_valid_records_and_art():
             "categories": {"kitap": 125, "film": 125, "dizi": 125, "oyun": 125},
             "errors": [],
         }
+        assert all(item.pace in {"sakin", "orta", "hızlı"} and item.audience in {"genel", "genç ve yetişkin", "yetişkin"} for item in db.query(Content).all())
+        stardew = db.query(Content).filter_by(title="Stardew Valley", category="oyun").one()
+        assert (stardew.pace, stardew.audience) == ("sakin", "genel")
+        db.query(Content).filter_by(title="Dune", category="kitap").one().pace = None
+        assert any("tempo/hedef kitle" in error for error in audit(db)["errors"])
+        db.rollback()
         item = db.query(Content).filter_by(source_id="oyun-125").one()
         item.image_source_url = "https://example.invalid/yanlis"
         assert any("kaynak bağlantısı uyuşmuyor" in error for error in audit(db)["errors"])

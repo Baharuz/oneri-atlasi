@@ -1,6 +1,7 @@
 from sqlalchemy import select
 from .models import Content, Tag, ContentTag
 from .catalog_expansion import DATA as EXPANSION
+from .catalog_metadata import editorial_metadata
 import json
 
 # Etiketler ve kısa açıklamalar bu öğrenci projesi için elle hazırlanmıştır.
@@ -192,6 +193,7 @@ def seed(db):
     items = db.scalars(select(Content)).all()
     for item in items:
         if item.source == "local" and item.category in DATA:
+            item.pace, item.audience = editorial_metadata(item.category, item.genres, item.themes, item.moods)
             item.image_url = f"/art/{item.source_id}.svg"
             item.image_source_url = f"https://github.com/Baharuz/oneri-atlasi/blob/main/frontend/public/art/{item.source_id}.svg"
             item.image_credit = "Öneri Atlası özgün temsili görseli · Resmî kapak/afiş değil · Proje içi kullanım"
