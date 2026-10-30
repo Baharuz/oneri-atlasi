@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Wailing için özgün temsili görsel">
+<title>The Wailing — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#302235"/><stop offset="1" stop-color="#b45672"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="225.6" cy="70.0" r="38" fill="#f6bf73" opacity="0.15"/><circle cx="458.7" cy="787.0" r="28" fill="#f6bf73" opacity="0.14"/><circle cx="145.8" cy="202.0" r="12" fill="#f6bf73" opacity="0.25"/><circle cx="357.9" cy="334.0" r="17" fill="#f6bf73" opacity="0.17"/><circle cx="494.4" cy="313.0" r="18" fill="#f6bf73" opacity="0.19"/><circle cx="412.5" cy="61.0" r="75" fill="#f6bf73" opacity="0.19"/><circle cx="276.0" cy="274.0" r="26" fill="#f6bf73" opacity="0.13"/><circle cx="418.8" cy="751.0" r="19" fill="#f6bf73" opacity="0.15"/><circle cx="542.7" cy="430.0" r="59" fill="#f6bf73" opacity="0.26"/><circle cx="183.6" cy="589.0" r="75" fill="#f6bf73" opacity="0.21"/><circle cx="131.1" cy="133.0" r="53" fill="#f6bf73" opacity="0.27"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f6bf73" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#302235" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f6bf73" letter-spacing="3">FILM · KORKU</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Wailing</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f6bf73" letter-spacing="2">GIZEM · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Favourite için özgün temsili görsel">
+<title>The Favourite — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#302235"/><stop offset="1" stop-color="#b45672"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="173.1" cy="301.0" r="33" fill="#f6bf73" opacity="0.12"/><circle cx="181.5" cy="94.0" r="13" fill="#f6bf73" opacity="0.11"/><circle cx="469.2" cy="418.0" r="73" fill="#f6bf73" opacity="0.22"/><circle cx="248.7" cy="544.0" r="29" fill="#f6bf73" opacity="0.24"/><circle cx="567.9" cy="160.0" r="51" fill="#f6bf73" opacity="0.13"/><circle cx="366.3" cy="745.0" r="71" fill="#f6bf73" opacity="0.25"/><circle cx="349.5" cy="622.0" r="38" fill="#f6bf73" opacity="0.20"/><circle cx="154.2" cy="490.0" r="72" fill="#f6bf73" opacity="0.16"/><circle cx="530.1" cy="448.0" r="75" fill="#f6bf73" opacity="0.23"/><circle cx="395.7" cy="520.0" r="74" fill="#f6bf73" opacity="0.17"/><circle cx="225.6" cy="508.0" r="41" fill="#f6bf73" opacity="0.21"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f6bf73" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#302235" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f6bf73" letter-spacing="3">FILM · TARIHI</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Favourite</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f6bf73" letter-spacing="2">GÜÇ · NEŞELI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

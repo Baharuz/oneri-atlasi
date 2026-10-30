@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Grandmaster için özgün temsili görsel">
+<title>The Grandmaster — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#302235"/><stop offset="1" stop-color="#b45672"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="462.9" cy="778.0" r="33" fill="#f6bf73" opacity="0.10"/><circle cx="45.0" cy="622.0" r="27" fill="#f6bf73" opacity="0.17"/><circle cx="278.1" cy="451.0" r="39" fill="#f6bf73" opacity="0.25"/><circle cx="206.7" cy="355.0" r="72" fill="#f6bf73" opacity="0.26"/><circle cx="563.7" cy="682.0" r="49" fill="#f6bf73" opacity="0.27"/><circle cx="259.2" cy="817.0" r="46" fill="#f6bf73" opacity="0.26"/><circle cx="315.9" cy="769.0" r="17" fill="#f6bf73" opacity="0.20"/><circle cx="278.1" cy="157.0" r="26" fill="#f6bf73" opacity="0.23"/><circle cx="360.0" cy="133.0" r="56" fill="#f6bf73" opacity="0.28"/><circle cx="477.6" cy="559.0" r="66" fill="#f6bf73" opacity="0.28"/><circle cx="265.5" cy="703.0" r="62" fill="#f6bf73" opacity="0.15"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f6bf73" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#302235" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f6bf73" letter-spacing="3">FILM · AKSIYON</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Grandmaster</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f6bf73" letter-spacing="2">ONUR · SAKIN</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

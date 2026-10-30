@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Good Will Hunting için özgün temsili görsel">
+<title>Good Will Hunting — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#302235"/><stop offset="1" stop-color="#b45672"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="551.1" cy="412.0" r="15" fill="#f6bf73" opacity="0.19"/><circle cx="471.3" cy="406.0" r="39" fill="#f6bf73" opacity="0.21"/><circle cx="544.8" cy="55.0" r="12" fill="#f6bf73" opacity="0.20"/><circle cx="152.1" cy="298.0" r="44" fill="#f6bf73" opacity="0.18"/><circle cx="462.9" cy="154.0" r="43" fill="#f6bf73" opacity="0.11"/><circle cx="427.2" cy="817.0" r="15" fill="#f6bf73" opacity="0.18"/><circle cx="385.2" cy="577.0" r="42" fill="#f6bf73" opacity="0.16"/><circle cx="381.0" cy="505.0" r="74" fill="#f6bf73" opacity="0.15"/><circle cx="525.9" cy="505.0" r="32" fill="#f6bf73" opacity="0.13"/><circle cx="540.6" cy="673.0" r="24" fill="#f6bf73" opacity="0.10"/><circle cx="536.4" cy="64.0" r="69" fill="#f6bf73" opacity="0.15"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f6bf73" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#302235" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f6bf73" letter-spacing="3">FILM · DRAM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Good Will Hunting</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f6bf73" letter-spacing="2">KIMLIK · DUYGUSAL</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

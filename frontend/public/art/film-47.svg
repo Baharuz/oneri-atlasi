@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Green Mile için özgün temsili görsel">
+<title>The Green Mile — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#302235"/><stop offset="1" stop-color="#b45672"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="116.4" cy="295.0" r="34" fill="#f6bf73" opacity="0.16"/><circle cx="525.9" cy="496.0" r="35" fill="#f6bf73" opacity="0.14"/><circle cx="368.4" cy="640.0" r="29" fill="#f6bf73" opacity="0.26"/><circle cx="370.5" cy="646.0" r="31" fill="#f6bf73" opacity="0.14"/><circle cx="336.9" cy="220.0" r="38" fill="#f6bf73" opacity="0.10"/><circle cx="173.1" cy="436.0" r="69" fill="#f6bf73" opacity="0.12"/><circle cx="278.1" cy="220.0" r="42" fill="#f6bf73" opacity="0.17"/><circle cx="452.4" cy="613.0" r="27" fill="#f6bf73" opacity="0.14"/><circle cx="164.7" cy="766.0" r="37" fill="#f6bf73" opacity="0.24"/><circle cx="368.4" cy="358.0" r="45" fill="#f6bf73" opacity="0.15"/><circle cx="378.9" cy="316.0" r="39" fill="#f6bf73" opacity="0.17"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f6bf73" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#302235" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f6bf73" letter-spacing="3">FILM · DRAM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Green Mile</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f6bf73" letter-spacing="2">ADALET · DUYGUSAL</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Godfather için özgün temsili görsel">
+<title>The Godfather — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#302235"/><stop offset="1" stop-color="#b45672"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="477.6" cy="334.0" r="70" fill="#f6bf73" opacity="0.24"/><circle cx="490.2" cy="286.0" r="59" fill="#f6bf73" opacity="0.20"/><circle cx="175.2" cy="115.0" r="71" fill="#f6bf73" opacity="0.21"/><circle cx="383.1" cy="211.0" r="14" fill="#f6bf73" opacity="0.28"/><circle cx="393.6" cy="553.0" r="47" fill="#f6bf73" opacity="0.19"/><circle cx="345.3" cy="583.0" r="17" fill="#f6bf73" opacity="0.15"/><circle cx="68.1" cy="565.0" r="48" fill="#f6bf73" opacity="0.12"/><circle cx="242.4" cy="85.0" r="23" fill="#f6bf73" opacity="0.27"/><circle cx="502.8" cy="583.0" r="62" fill="#f6bf73" opacity="0.11"/><circle cx="334.8" cy="175.0" r="33" fill="#f6bf73" opacity="0.11"/><circle cx="368.4" cy="424.0" r="35" fill="#f6bf73" opacity="0.24"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f6bf73" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#302235" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f6bf73" letter-spacing="3">FILM · SUÇ</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Godfather</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f6bf73" letter-spacing="2">AILE · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

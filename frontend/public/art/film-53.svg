@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Before Sunrise için özgün temsili görsel">
+<title>Before Sunrise — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#302235"/><stop offset="1" stop-color="#b45672"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="391.5" cy="178.0" r="27" fill="#f6bf73" opacity="0.11"/><circle cx="328.5" cy="478.0" r="15" fill="#f6bf73" opacity="0.13"/><circle cx="334.8" cy="220.0" r="70" fill="#f6bf73" opacity="0.24"/><circle cx="492.3" cy="595.0" r="18" fill="#f6bf73" opacity="0.12"/><circle cx="486.0" cy="106.0" r="29" fill="#f6bf73" opacity="0.11"/><circle cx="51.3" cy="430.0" r="26" fill="#f6bf73" opacity="0.21"/><circle cx="433.5" cy="532.0" r="59" fill="#f6bf73" opacity="0.13"/><circle cx="89.1" cy="814.0" r="74" fill="#f6bf73" opacity="0.13"/><circle cx="286.5" cy="346.0" r="48" fill="#f6bf73" opacity="0.18"/><circle cx="427.2" cy="364.0" r="45" fill="#f6bf73" opacity="0.27"/><circle cx="210.9" cy="685.0" r="63" fill="#f6bf73" opacity="0.19"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f6bf73" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#302235" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f6bf73" letter-spacing="3">FILM · ROMANTIK</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Before Sunrise</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f6bf73" letter-spacing="2">AŞK · SAKIN</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

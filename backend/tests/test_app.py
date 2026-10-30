@@ -49,7 +49,7 @@ def test_seed_expands_existing_catalog_idempotently():
         db.commit()
         original_id = original.id
         seed(db)
-        assert db.query(Content).count() == 200
+        assert db.query(Content).count() == 300
         assert db.get(Content, original_id).description == "Elle düzenlenmiş açıklama"
         assert db.query(Content).filter_by(source_id="kitap-2").one().description == DESCRIPTIONS[("kitap", "Yüzüklerin Efendisi")]
         assert db.query(ContentTag).count() > 0
@@ -58,7 +58,7 @@ def test_seed_expands_existing_catalog_idempotently():
         assert "temalarını" not in new_book.description
         links = db.query(ContentTag).count()
         seed(db)
-        assert db.query(Content).count() == 200
+        assert db.query(Content).count() == 300
         assert db.query(ContentTag).count() == links
 
 def test_user_isolation_persistence_and_ephemeral_answers():
@@ -126,10 +126,10 @@ def test_saved_persistence_and_isolation():
 def test_catalog_filtering_four_categories():
     c=client()
     items=c.get('/api/contents').json()
-    assert len(items)==200 and {x['category'] for x in items}=={'kitap','film','dizi','oyun'}
+    assert len(items)==300 and {x['category'] for x in items}=={'kitap','film','dizi','oyun'}
     for category in ('kitap','film','dizi','oyun'):
         rows=c.get('/api/contents',params={'category':category}).json()
-        assert len(rows)==(125 if category=='kitap' else 25) and all(x['category']==category for x in rows)
+        assert len(rows)==(125 if category in ('kitap','film') else 25) and all(x['category']==category for x in rows)
     assert c.get('/api/contents',params={'category':'gecersiz'}).status_code==422
     assert c.get('/api/contents',params={'q':'siyasi entrika'}).json()==[]
 
