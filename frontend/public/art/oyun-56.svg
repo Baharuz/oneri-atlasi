@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Braid için özgün temsili görsel">
+<title>Braid — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="82.8" cy="262.0" r="32" fill="#e8ce7e" opacity="0.12"/><circle cx="221.4" cy="151.0" r="66" fill="#e8ce7e" opacity="0.28"/><circle cx="536.4" cy="817.0" r="57" fill="#e8ce7e" opacity="0.11"/><circle cx="374.7" cy="808.0" r="15" fill="#e8ce7e" opacity="0.14"/><circle cx="49.2" cy="97.0" r="28" fill="#e8ce7e" opacity="0.26"/><circle cx="441.9" cy="139.0" r="13" fill="#e8ce7e" opacity="0.26"/><circle cx="166.8" cy="787.0" r="65" fill="#e8ce7e" opacity="0.24"/><circle cx="492.3" cy="205.0" r="62" fill="#e8ce7e" opacity="0.22"/><circle cx="437.7" cy="523.0" r="61" fill="#e8ce7e" opacity="0.23"/><circle cx="477.6" cy="448.0" r="29" fill="#e8ce7e" opacity="0.17"/><circle cx="393.6" cy="310.0" r="30" fill="#e8ce7e" opacity="0.14"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · BULMACA</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Braid</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">ZAMAN · SAKIN</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

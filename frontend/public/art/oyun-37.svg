@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Garden Story için özgün temsili görsel">
+<title>Garden Story — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="490.2" cy="808.0" r="12" fill="#e8ce7e" opacity="0.24"/><circle cx="284.4" cy="511.0" r="47" fill="#e8ce7e" opacity="0.24"/><circle cx="570.0" cy="805.0" r="53" fill="#e8ce7e" opacity="0.12"/><circle cx="446.1" cy="460.0" r="61" fill="#e8ce7e" opacity="0.11"/><circle cx="433.5" cy="388.0" r="16" fill="#e8ce7e" opacity="0.27"/><circle cx="353.7" cy="151.0" r="63" fill="#e8ce7e" opacity="0.10"/><circle cx="528.0" cy="190.0" r="36" fill="#e8ce7e" opacity="0.26"/><circle cx="206.7" cy="781.0" r="33" fill="#e8ce7e" opacity="0.14"/><circle cx="240.3" cy="526.0" r="32" fill="#e8ce7e" opacity="0.10"/><circle cx="45.0" cy="292.0" r="27" fill="#e8ce7e" opacity="0.13"/><circle cx="557.4" cy="55.0" r="15" fill="#e8ce7e" opacity="0.12"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · MACERA</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Garden Story</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">TOPLUM · NEŞELI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Finding Paradise için özgün temsili görsel">
+<title>Finding Paradise — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="265.5" cy="373.0" r="19" fill="#e8ce7e" opacity="0.16"/><circle cx="494.4" cy="601.0" r="43" fill="#e8ce7e" opacity="0.24"/><circle cx="328.5" cy="523.0" r="12" fill="#e8ce7e" opacity="0.10"/><circle cx="393.6" cy="706.0" r="33" fill="#e8ce7e" opacity="0.28"/><circle cx="257.1" cy="160.0" r="24" fill="#e8ce7e" opacity="0.22"/><circle cx="154.2" cy="172.0" r="55" fill="#e8ce7e" opacity="0.26"/><circle cx="204.6" cy="91.0" r="40" fill="#e8ce7e" opacity="0.21"/><circle cx="322.2" cy="454.0" r="16" fill="#e8ce7e" opacity="0.21"/><circle cx="309.6" cy="604.0" r="13" fill="#e8ce7e" opacity="0.21"/><circle cx="78.6" cy="799.0" r="55" fill="#e8ce7e" opacity="0.14"/><circle cx="347.4" cy="661.0" r="67" fill="#e8ce7e" opacity="0.18"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · MACERA</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Finding Paradise</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">HATIRA · DUYGUSAL</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

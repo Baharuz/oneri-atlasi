@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Portal için özgün temsili görsel">
+<title>Portal — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="511.2" cy="403.0" r="44" fill="#e8ce7e" opacity="0.14"/><circle cx="456.6" cy="751.0" r="52" fill="#e8ce7e" opacity="0.21"/><circle cx="97.5" cy="532.0" r="56" fill="#e8ce7e" opacity="0.16"/><circle cx="353.7" cy="664.0" r="33" fill="#e8ce7e" opacity="0.20"/><circle cx="173.1" cy="265.0" r="50" fill="#e8ce7e" opacity="0.11"/><circle cx="467.1" cy="739.0" r="36" fill="#e8ce7e" opacity="0.17"/><circle cx="137.4" cy="289.0" r="70" fill="#e8ce7e" opacity="0.18"/><circle cx="385.2" cy="553.0" r="13" fill="#e8ce7e" opacity="0.12"/><circle cx="87.0" cy="235.0" r="51" fill="#e8ce7e" opacity="0.14"/><circle cx="259.2" cy="103.0" r="57" fill="#e8ce7e" opacity="0.17"/><circle cx="500.7" cy="541.0" r="41" fill="#e8ce7e" opacity="0.23"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · BULMACA</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Portal</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">TEKNOLOJI · GERILIMLI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

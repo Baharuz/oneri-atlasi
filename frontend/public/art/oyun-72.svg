@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Life is Strange: True Colors için özgün temsili görsel">
+<title>Life is Strange: True Colors — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="542.7" cy="532.0" r="75" fill="#e8ce7e" opacity="0.18"/><circle cx="284.4" cy="121.0" r="58" fill="#e8ce7e" opacity="0.21"/><circle cx="532.2" cy="331.0" r="20" fill="#e8ce7e" opacity="0.13"/><circle cx="561.6" cy="682.0" r="23" fill="#e8ce7e" opacity="0.15"/><circle cx="540.6" cy="139.0" r="19" fill="#e8ce7e" opacity="0.18"/><circle cx="387.3" cy="667.0" r="40" fill="#e8ce7e" opacity="0.10"/><circle cx="490.2" cy="337.0" r="59" fill="#e8ce7e" opacity="0.11"/><circle cx="534.3" cy="565.0" r="25" fill="#e8ce7e" opacity="0.17"/><circle cx="101.7" cy="628.0" r="18" fill="#e8ce7e" opacity="0.13"/><circle cx="563.7" cy="694.0" r="53" fill="#e8ce7e" opacity="0.26"/><circle cx="486.0" cy="244.0" r="37" fill="#e8ce7e" opacity="0.10"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · MACERA</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Life is Strange:</text><text x="50" y="538" class="title">True Colors</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">KIMLIK · DUYGUSAL</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

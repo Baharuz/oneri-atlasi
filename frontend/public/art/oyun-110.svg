@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Planet Zoo için özgün temsili görsel">
+<title>Planet Zoo — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="91.2" cy="391.0" r="73" fill="#e8ce7e" opacity="0.22"/><circle cx="47.1" cy="616.0" r="52" fill="#e8ce7e" opacity="0.11"/><circle cx="192.0" cy="145.0" r="74" fill="#e8ce7e" opacity="0.24"/><circle cx="257.1" cy="661.0" r="14" fill="#e8ce7e" opacity="0.15"/><circle cx="309.6" cy="802.0" r="18" fill="#e8ce7e" opacity="0.21"/><circle cx="126.9" cy="622.0" r="47" fill="#e8ce7e" opacity="0.10"/><circle cx="473.4" cy="148.0" r="52" fill="#e8ce7e" opacity="0.25"/><circle cx="574.2" cy="529.0" r="65" fill="#e8ce7e" opacity="0.27"/><circle cx="507.0" cy="664.0" r="61" fill="#e8ce7e" opacity="0.26"/><circle cx="244.5" cy="208.0" r="68" fill="#e8ce7e" opacity="0.21"/><circle cx="435.6" cy="628.0" r="33" fill="#e8ce7e" opacity="0.22"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · SIMÜLASYON</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Planet Zoo</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">DOĞA · SAKIN</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

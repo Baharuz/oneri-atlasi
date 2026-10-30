@@ -36,7 +36,27 @@ def test_feature_changes_ranking():
         source=next(x for x in contents if x.title=='Küçük Prens')
         friendship=recommend(contents,[source],{'features':['dostluk'],'categories':['oyun']})['oyun']
         exploration=recommend(contents,[source],{'features':['keşif'],'categories':['oyun']})['oyun']
-        assert [x['content'].id for x in friendship[:4]] != [x['content'].id for x in exploration[:4]]
+        assert [x['content'].id for x in friendship] != [x['content'].id for x in exploration]
+
+
+def test_recommendation_quality_across_categories():
+    expectations = {
+        'Stardew Valley': ('Animal Crossing: New Horizons', 'Harvest Moon: Friends of Mineral Town'),
+        'Dune': ('Vakıf', 'Hyperion'),
+        'Arrival': ('Contact', 'Blade Runner'),
+        'Dark': ('Fringe', '12 Monkeys'),
+        'Outer Wilds': ('Subnautica', 'Tunic'),
+        'Karanlığın Sol Eli': ('Mülksüzler', 'Solaris'),
+    }
+    with Session() as db:
+        contents = db.query(Content).all()
+        for title, expected in expectations.items():
+            source = next(item for item in contents if item.title == title)
+            rows = recommend(contents, [source], {'categories': [source.category]})[source.category]
+            titles = [row['content'].title for row in rows]
+            assert all(row['content'].category == source.category for row in rows)
+            assert all(value in titles for value in expected), (title, titles)
+            assert all(row['score'] > 0 and row['reason'] for row in rows)
 
 def test_seed_expands_existing_catalog_idempotently():
     from app.models import ContentTag
@@ -49,7 +69,7 @@ def test_seed_expands_existing_catalog_idempotently():
         db.commit()
         original_id = original.id
         seed(db)
-        assert db.query(Content).count() == 400
+        assert db.query(Content).count() == 500
         assert db.get(Content, original_id).description == "Elle düzenlenmiş açıklama"
         assert db.query(Content).filter_by(source_id="kitap-2").one().description == DESCRIPTIONS[("kitap", "Yüzüklerin Efendisi")]
         assert db.query(ContentTag).count() > 0
@@ -58,7 +78,7 @@ def test_seed_expands_existing_catalog_idempotently():
         assert "temalarını" not in new_book.description
         links = db.query(ContentTag).count()
         seed(db)
-        assert db.query(Content).count() == 400
+        assert db.query(Content).count() == 500
         assert db.query(ContentTag).count() == links
 
 def test_user_isolation_persistence_and_ephemeral_answers():
@@ -126,10 +146,10 @@ def test_saved_persistence_and_isolation():
 def test_catalog_filtering_four_categories():
     c=client()
     items=c.get('/api/contents').json()
-    assert len(items)==400 and {x['category'] for x in items}=={'kitap','film','dizi','oyun'}
+    assert len(items)==500 and {x['category'] for x in items}=={'kitap','film','dizi','oyun'}
     for category in ('kitap','film','dizi','oyun'):
         rows=c.get('/api/contents',params={'category':category}).json()
-        assert len(rows)==(125 if category in ('kitap','film','dizi') else 25) and all(x['category']==category for x in rows)
+        assert len(rows)==125 and all(x['category']==category for x in rows)
     assert c.get('/api/contents',params={'category':'gecersiz'}).status_code==422
     assert c.get('/api/contents',params={'q':'siyasi entrika'}).json()==[]
 

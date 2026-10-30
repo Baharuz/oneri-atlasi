@@ -305,4 +305,104 @@ His Dark Materials|fantastik|özgürlük,keşif,aile|büyülü,destansı|Lyra, k
 The Wheel of Time|fantastik|kehanet,güç,dostluk|destansı,büyülü|Moiraine, karanlık gücü durdurabilecek kişiyi bulmak için beş genci köylerinden uzak bir yolculuğa çıkarır.
 House of the Dragon|fantastik|aile,siyasi entrika,güç|karanlık,destansı|Targaryen ailesindeki veraset tartışması, krallığın geleceğini belirleyecek iç savaşa doğru büyür.
 The Boys|aksiyon|güç,adalet,şöhret|karanlık,neşeli|Süper kahramanların şirketlerce yönetildiği dünyada Billy Butcher ve ekibi, dokunulmaz sanılan figürlerin suçlarını ortaya çıkarmaya çalışır.""",
+    "oyun": """Harvest Moon: Friends of Mineral Town|simülasyon|çiftçilik,dostluk,gündelik yaşam|sakin,neşeli|Oyuncu Mineral Town'daki eski çiftliği devralır, tarlaları işler ve kasaba sakinleriyle bağ kurar.
+Story of Seasons: Friends of Mineral Town|simülasyon|çiftçilik,dostluk,gündelik yaşam|sakin,neşeli|Mineral Town'a dönen oyuncu, çiftliği yeniden kurarken komşularla ilişkilerini ve mevsimlik işlerini geliştirir.
+Story of Seasons: Pioneers of Olive Town|simülasyon|çiftçilik,keşif,dostluk|sakin,neşeli|Oyuncu dedesinden kalan araziyi temizleyip çiftliği büyütürken Olive Town'ın yaşamına katılır.
+Coral Island|simülasyon|çiftçilik,doğa,dostluk|sakin,neşeli|Tropik adada çiftlik kuran oyuncu, mercan resifini iyileştirme çalışmalarına ve kasaba etkinliklerine katılır.
+Sun Haven|simülasyon|çiftçilik,büyü,dostluk|büyülü,neşeli|Oyuncu Sun Haven'da çiftlik kurarken farklı halklarla tanışır ve büyülü bölgelerde üretim yapar.
+Roots of Pacha|simülasyon|çiftçilik,toplum,keşif|sakin,neşeli|Taş Devri topluluğunun bir üyesi, yeni tarım fikirleri geliştirerek köyün yaşamını dönüştürür.
+Wylde Flowers|simülasyon|çiftçilik,büyü,kimlik|sıcak,büyülü|Tara, büyükannesinin çiftliğine döner ve Fairhaven'daki gündelik işleri gizli büyü dünyasıyla birlikte yürütür.
+Fae Farm|simülasyon|çiftçilik,büyü,dostluk|büyülü,neşeli|Azoria adasında çiftlik kuran oyuncu, büyülü yaratıklarla ve komşularla etkileşim içinde yeni alanlar açar.
+Cozy Grove|simülasyon|dostluk,doğa,gündelik yaşam|sakin,melankolik|Ruh izcisi, perili adadaki ayı ruhlarına yardım ederek her gün küçük hikâyeler ve yeni bölgeler keşfeder.
+Ooblets|simülasyon|çiftçilik,dostluk,toplama|neşeli,sakin|Oyuncu Badgetown'da bitki yetiştirir, Ooblet toplar ve kasabanın renkli günlük işlerine katılır.
+Littlewood|simülasyon|gündelik yaşam,dostluk,şehir kurma|sakin,neşeli|Büyük macera bittikten sonra oyuncu, kasabayı yeniden inşa ederek sakinlerle ilişkilerini geliştirir.
+Garden Story|macera|toplum,doğa,dostluk|neşeli,umutlu|Genç üzüm Concord, bahçedeki köyleri onarmak ve topluluğu korumak için kısa görevlere çıkar.
+Moonlighter|aksiyon|dükkân,keşif,kişisel yolculuk|neşeli,gerilimli|Will gündüz dükkân işletir, geceleri zindanlardan topladığı eşyalarla işini büyütür.
+Potion Permit|simülasyon|toplum,doğa,kişisel yolculuk|sakin,neşeli|Kimyager olarak Moonbury'ye gelen oyuncu, hastaları tedavi etmek için çevrede malzeme toplar.
+Potion Craft|simülasyon|zanaat,strateji,gündelik yaşam|sakin,neşeli|Oyuncu kendi iksir dükkânında malzemeleri öğütüp karıştırarak müşterilerin ihtiyaçlarına uygun tarifler dener.
+Strange Horticulture|bulmaca|doğa,gizem,strateji|sakin,tekinsiz|Bir bitki dükkânını yöneten oyuncu, müşterilerin öykülerini dinleyip doğru bitkileri seçerek kasabadaki gizemi çözer.
+Coffee Talk|görsel roman|iletişim,dostluk,gündelik yaşam|sakin,sıcak|Gece açık kafede çalışan barista, farklı müşterilere içecek hazırlarken onların dertlerini dinler.
+VA-11 Hall-A|görsel roman|iletişim,kimlik,gündelik yaşam|sakin,melankolik|Siberpunk bir şehirde barmen Jill, müşterilerin siparişlerini hazırlarken yaşamlarından kesitler öğrenir.
+Lake|macera|gündelik yaşam,kişisel yolculuk,dostluk|sakin,sıcak|Meredith, iki haftalığına memleketinde posta dağıtırken eski ilişkilerini ve gelecekteki işini düşünür.
+Season: A Letter to the Future|macera|keşif,hatıra,doğa|sakin,melankolik|Genç bir kadın, yaklaşan değişimden önce dünyayı bisikletle dolaşıp sesleri ve insanların anılarını kaydeder.
+Eastshade|macera|keşif,doğa,kişisel yolculuk|sakin,büyülü|Gezgin ressam, Eastshade adasında manzaraları resmederek sakinlerin isteklerini ve adanın hikâyelerini öğrenir.
+The Legend of Zelda: Breath of the Wild|macera|keşif,özgürlük,ayrıntılı evren|sakin,destansı|Link, yüz yıllık uykudan sonra Hyrule'un açık coğrafyasını keşfedip Ganon'a karşı hazırlık yapar.
+The Legend of Zelda: Tears of the Kingdom|macera|keşif,zanaat,ayrıntılı evren|destansı,büyülü|Link, Hyrule'un gökyüzü ve yeraltına uzanan bölgelerinde yeni güçler kullanarak krallığın gizemini araştırır.
+The Legend of Zelda: Link's Awakening|macera|keşif,gizem,kişisel yolculuk|büyülü,melankolik|Link, Koholint Adası'ndan ayrılmanın yolunu ararken sakinlerle ve adanın düşsel sırrıyla karşılaşır.
+The Legend of Zelda: Majora's Mask|macera|zaman,toplum,hayatta kalma|karanlık,büyülü|Link, üç günlük döngüde Termina'yı yıkımdan kurtarmaya ve sakinlerin sorunlarını çözmeye çalışır.
+The Legend of Zelda: Ocarina of Time|macera|zaman,cesaret,ayrıntılı evren|destansı,büyülü|Genç Link, Hyrule'daki kutsal taşları ararken zamanın akışı ve Ganondorf'un yükselişiyle yüzleşir.
+Tunic|macera|keşif,gizem,strateji|büyülü,gerilimli|Küçük bir tilki, anlamı yavaş yavaş çözülen bir kılavuzla gizemli adanın zindanlarını araştırır.
+Death's Door|aksiyon|görev,ölüm,keşif|karanlık,neşeli|Ruh toplayan bir karga, çalınan hedefinin peşine düşerek farklı diyarlardaki kapıları açar.
+Hyper Light Drifter|aksiyon|keşif,hayatta kalma,gizem|karanlık,melankolik|Hastalığına çare arayan Drifter, yıkılmış topraklarda eski teknolojinin izlerini sürer.
+Fez|bulmaca|keşif,gerçeklik,gizem|neşeli,sakin|Gomez, iki boyutlu görünen dünyanın çevrilebilen üçüncü boyutunu kullanarak kayıp küpleri toplar.
+Braid|bulmaca|zaman,gerçeklik,kişisel yolculuk|sakin,melankolik|Tim, zamanı farklı biçimlerde geri sararak bulmacaları çözer ve aradığı prensesin öyküsüne yaklaşır.
+The Witness|bulmaca|keşif,örüntü,gerçeklik|sakin,düşündürücü|Oyuncu, sessiz bir adadaki çizgi panellerinin kurallarını çevreyi gözleyerek öğrenir.
+The Talos Principle|bulmaca|kimlik,teknoloji,özgürlük|sakin,düşündürücü|Yapay bir varlık, antik görünümlü alanlarda bulmacalar çözerken yaratıcısının kurallarını sorgular.
+The Talos Principle 2|bulmaca|kimlik,toplum,teknoloji|sakin,düşündürücü|Yeni kurulan robot toplumundan bir ekip, gizemli bir adadaki yapıların ve kendi geleceklerinin anlamını araştırır.
+Portal|bulmaca|teknoloji,strateji,hayatta kalma|gerilimli,neşeli|Chell, deney odalarından kaçmak için portal silahını kullanır ve GLaDOS'un vaatlerinden şüphelenir.
+The Stanley Parable: Ultra Deluxe|macera|özgürlük,anlatı,gerçeklik|neşeli,tekinsiz|Stanley, boş ofiste anlatıcının yönlendirmelerini izleyebilir ya da onlara karşı gelerek başka yollar açabilir.
+What Remains of Edith Finch|macera|aile,hatıra,kayıp|melankolik,duygusal|Edith, aile evindeki odaları gezerken akrabalarının son günlerini farklı anlatım biçimleriyle öğrenir.
+Gone Home|macera|aile,kimlik,hatıra|sakin,gizemli|Bir yıl sonra eve dönen Katie, boş evdeki notları ve eşyaları inceleyerek ailesine ne olduğunu öğrenir.
+The Vanishing of Ethan Carter|macera|gizem,aile,doğa|sakin,tekinsiz|Dedektif Paul Prospero, kayıp Ethan'ı ararken Red Creek Valley'deki olayların izlerini inceler.
+Everybody's Gone to the Rapture|macera|gizem,toplum,hatıra|sakin,melankolik|Oyuncu, boşalmış İngiliz köyünde ışık izlerini takip ederek sakinlerin son konuşmalarını dinler.
+Dear Esther|macera|yas,hatıra,kişisel yolculuk|sakin,melankolik|İsimsiz anlatıcı, ıssız adada yürürken Esther'e yazdığı parçalı mektuplarla geçmişini açar.
+Oxenfree|macera|dostluk,gizem,iletişim|tekinsiz,gerilimli|Alex ve arkadaşları adadaki doğaüstü sinyali açığa çıkarınca gece boyunca konuşmalarla kararlar almak zorunda kalır.
+Oxenfree II: Lost Signals|macera|iletişim,gizem,zaman|tekinsiz,gerilimli|Riley, Camena'daki radyo parazitlerini araştırırken geçmişe açılan olaylarla karşılaşır.
+Night in the Woods|macera|dostluk,kimlik,kasaba|melankolik,neşeli|Mae üniversiteyi bırakıp Possum Springs'e döner; eski arkadaşlarıyla değişen kasabayı keşfeder.
+Kentucky Route Zero|macera|yolculuk,sınıf,gerçeklik|melankolik,tekinsiz|Conway'in teslimat rotası, Kentucky'nin gizli yollarında borç ve kayıp hikâyelerine dönüşür.
+Life is Strange|macera|dostluk,zaman,kimlik|duygusal,gizemli|Max, zamanı geri sarabildiğini öğrenince Chloe ile birlikte kayıp bir öğrencinin izini sürer.
+Life is Strange: True Colors|macera|kimlik,aile,iletişim|duygusal,umutlu|Alex, başkalarının duygularını hissetme yeteneğiyle Haven Springs'te ağabeyinin ölümünü araştırır.
+Tell Me Why|macera|aile,hatıra,kimlik|duygusal,gizemli|İkizler Tyler ve Alyson, çocukluk evlerine dönüp anneleriyle ilgili farklı anılarını karşılaştırır.
+As Dusk Falls|macera|aile,suç,hayat seçimleri|gerilimli,duygusal|Arizona'da bir motel olayında yolları kesişen iki ailenin kararları, yıllar boyunca sonuç verir.
+Undertale|rol yapma|dostluk,vicdan,hayat seçimleri|neşeli,duygusal|Yeraltına düşen çocuk, karşılaştığı canavarlarla savaşmak ya da onları anlamak arasında seçim yapar.
+Deltarune|rol yapma|dostluk,kimlik,gizem|neşeli,tekinsiz|Kris ve arkadaşları, karanlık dünyalara geçip kaynakları kapatırken kendi rollerini sorgular.
+Omori|rol yapma|dostluk,yas,hatıra|neşeli,karanlık|Sunny'nin gerçek yaşamı ile düş dünyası arasında gidip gelen hikâye, eski bir arkadaş grubunun sakladığı acıya yaklaşır.
+To the Moon|macera|hatıra,aşk,ölüm|duygusal,sakin|İki doktor, yaşlı Johnny'nin anılarında dolaşarak gerçekleşmemiş Ay'a gitme isteğini zihninde tamamlamaya çalışır.
+Finding Paradise|macera|hatıra,aile,hayat seçimleri|duygusal,sakin|Dr. Watts ve Dr. Rosalene, Colin'in anılarında ilerlerken onun neyi değiştirmek istediğini anlamaya çalışır.
+OneShot|bulmaca|dostluk,gerçeklik,görev|sakin,duygusal|Niko, karanlığa gömülmüş dünyaya ışık taşırken oyuncuyla kurduğu bağ üzerinden kararlar alır.
+Chicory: A Colorful Tale|macera|sanat,kimlik,dostluk|sakin,umutlu|Fırçayı devralan küçük kahraman, rengini yitiren dünyayı boyayarak insanlara ve kendine yardım eder.
+GRIS|platform|yas,kişisel yolculuk,umut|sakin,duygusal|Gris, kayıp duygusunun ardından renkleri geri gelen bir dünyada yeni yeteneklerle ilerler.
+Neva|platform|aile,doğa,kayıp|büyülü,duygusal|Alba, kurt yavrusu Neva'yla mevsimler boyunca yol alıp yozlaşan doğaya karşı birbirlerine dayanır.
+Ori and the Will of the Wisps|platform|aile,keşif,doğa|büyülü,duygusal|Ori, fırtınada ayrıldığı Ku'yu ararken Niwen ormanının yaralarını iyileştirmeye çalışır.
+Hollow Knight: Silksong|platform|keşif,gizem,hayatta kalma|karanlık,destansı|Hornet, Pharloom'da esir düştükten sonra krallığın zirvesine çıkarak onu saran sırları çözer.
+Cuphead|platform|strateji,dostluk,hayatta kalma|neşeli,gerilimli|Cuphead ile Mugman, Şeytan'a olan borçlarını ödemek için sıra dışı bölüm sonu düşmanlarıyla savaşır.
+Shovel Knight|platform|dostluk,onur,keşif|neşeli,destansı|Shovel Knight, kayıp Shield Knight'ı bulmak için No Quarter Tarikatı'nın şövalyelerini aşar.
+Dead Cells|aksiyon|keşif,hayatta kalma,strateji|gerilimli,neşeli|Oyuncu, değişen kalede her denemede yeni yollar ve silahlar deneyerek adanın geçmişini öğrenir.
+Rogue Legacy 2|aksiyon|aile,keşif,strateji|neşeli,gerilimli|Bir soyun farklı yetenekli varisleri, her ölümden sonra kaleye dönüp aile mirasını genişletir.
+Slay the Spire|strateji|strateji,risk,keşif|sakin,gerilimli|Oyuncu, kart destesini her karşılaşmada değiştirerek kulenin katlarını tırmanır ve zor seçimler yapar.
+Balatro|strateji|strateji,risk,örüntü|neşeli,sakin|Oyuncu, poker ellerini değiştiren jokerlerle puan hedeflerini aşmak için her tur farklı bir deste kurar.
+Into the Breach|strateji|zaman,strateji,hayatta kalma|sakin,gerilimli|Gelecekten gelen pilotlar, küçük savaş alanlarında böcek istilasının hamlelerini önceden görüp sivilleri korur.
+FTL: Faster Than Light|strateji|uzay,hayatta kalma,strateji|gerilimli,destansı|Bir gemi mürettebatı, isyancılardan kaçarken federasyona önemli bilgiyi ulaştırmak için yıldız sistemleri arasında ilerler.
+RimWorld|simülasyon|hayatta kalma,toplum,strateji|gerilimli,neşeli|Uzak gezegene düşen kolonistler, barınak ve ilişkiler kurarak rastlantısal krizlere uyum sağlar.
+Factorio|simülasyon|zanaat,teknoloji,strateji|sakin,gerilimli|Oyuncu, yabancı gezegende kaynakları otomatik fabrikalara dönüştürerek roket yapmaya çalışır.
+Satisfactory|simülasyon|zanaat,keşif,teknoloji|sakin,neşeli|Oyuncu, geniş bir gezegende üç boyutlu üretim hatları kurup yeni kaynak bölgelerini açar.
+Oxygen Not Included|simülasyon|hayatta kalma,toplum,strateji|neşeli,gerilimli|Küçük koloninin sakinleri, yeraltı asteroidinde oksijen, ısı ve kaynak dengesini kurmaya çalışır.
+Don't Starve|hayatta kalma|doğa,hayatta kalma,keşif|karanlık,tekinsiz|Wilson, tuhaf vahşi doğada açlık ve karanlığa karşı araçlar yapıp çevresinin kurallarını öğrenir.
+Valheim|hayatta kalma|zanaat,keşif,dostluk|destansı,sakin|Viking savaşçıları, rastlantısal dünyada barınak kurup biyomların koruyucularını yenerek ilerler.
+Minecraft|sandbox|zanaat,keşif,özgürlük|sakin,neşeli|Oyuncu, bloklardan oluşan dünyada kaynak toplayarak yapılar kurar ve kendi keşif hedeflerini belirler.
+No Man's Sky|macera|keşif,uzay,zanaat|sakin,destansı|Gezgin, sayısız gezegeni araştırırken gemisini geliştirip evrenin merkezine ilişkin izleri toplar.
+Astroneer|simülasyon|keşif,uzay,zanaat|neşeli,sakin|Oyuncu, renkli gezegenlerde araziyi şekillendirip üsler kurarak yeni sistemlere ulaşır.
+The Long Dark|hayatta kalma|doğa,hayatta kalma,yalnızlık|sakin,gerilimli|Pilot Mackenzie, elektromanyetik felaket sonrası donmuş Kanada'da kaynak arayıp hayatta kalmaya çalışır.
+Green Hell|hayatta kalma|doğa,hayatta kalma,kimlik|gerilimli,karanlık|Amazon ormanında mahsur kalan Jake, yaralarını iyileştirip çevreye uyum sağlarken eşini arar.
+This War of Mine|hayatta kalma|savaş,vicdan,toplum|karanlık,duygusal|Kuşatma altındaki şehirde siviller, yiyecek ve ilaç bulmak için ahlaki açıdan zor kararlar alır.
+Frostpunk|strateji|hayatta kalma,güç,toplum|karanlık,gerilimli|Sürekli kış yaşayan bir şehirde lider, ısıyı korurken halkı ayakta tutacak yasaları seçer.
+Cities: Skylines|simülasyon|şehir kurma,strateji,toplum|sakin,neşeli|Oyuncu yollar, hizmetler ve mahalleler tasarlayarak büyüyen bir şehrin günlük ihtiyaçlarını yönetir.
+SimCity 4|simülasyon|şehir kurma,strateji,toplum|sakin,neşeli|Oyuncu, bölgeler arasında ulaşım ve ekonomi dengesi kurarak komşu şehirlerin gelişimini yönlendirir.
+Two Point Hospital|simülasyon|işletme,mizah,strateji|neşeli,sakin|Oyuncu, tuhaf hastalıkları tedavi eden hastaneler kurarken personel ve bütçeyi yönetir.
+Planet Zoo|simülasyon|doğa,hayvanlar,zanaat|sakin,neşeli|Oyuncu, hayvanların gereksinimlerine uygun yaşam alanları kurup ziyaretçileri ağırlayan bir hayvanat bahçesi geliştirir.
+PowerWash Simulator|simülasyon|gündelik yaşam,işletme,kişisel yolculuk|sakin,neşeli|Oyuncu, kirli ev ve araçları temizleyerek küçük işletmesine yeni işler ve ekipmanlar kazandırır.
+House Flipper|simülasyon|zanaat,işletme,gündelik yaşam|sakin,neşeli|Oyuncu yıpranmış evleri temizleyip yeniler, sonra onları satarak daha büyük projelere geçer.
+The Sims 4|simülasyon|gündelik yaşam,aile,özgürlük|sakin,neşeli|Oyuncu, kendi karakterlerinin evlerini ve ilişkilerini tasarlayarak farklı yaşam öyküleri kurar.
+It Takes Two|macera|aile,dostluk,işbirliği|neşeli,duygusal|Minyatür oyuncaklara dönüşen Cody ile May, evliliklerini onarmak için birlikte yaratıcı bölümleri aşar.
+Unravel Two|platform|dostluk,işbirliği,keşif|sakin,umutlu|İki iplik karakteri, birbirlerine bağlı kalarak bulmacaları çözer ve doğadaki engelleri aşar.
+Overcooked! 2|simülasyon|işbirliği,strateji,mizah|neşeli,gerilimli|Oyuncular, değişen mutfaklarda siparişleri yetiştirmek için görevleri hızla paylaşır.
+Moving Out|simülasyon|işbirliği,mizah,gündelik yaşam|neşeli,gerilimli|Taşıma ekibi, tuhaf evlerdeki eşyaları zaman dolmadan kamyona ulaştırmak için birlikte çalışır.
+Human: Fall Flat|bulmaca|işbirliği,strateji,mizah|neşeli,sakin|Esnek hareketli karakterler, fizik kurallarını kullanarak açık uçlu alanlarda çıkış yolunu bulur.
+Pico Park|bulmaca|işbirliği,strateji,dostluk|neşeli,gerilimli|Küçük kedilerden oluşan ekip, anahtara ulaşmak için birbirinin üstüne çıkar ve eş zamanlı hareket eder.
+Keep Talking and Nobody Explodes|bulmaca|iletişim,strateji,zaman|gerilimli,neşeli|Bir oyuncu bombayı incelerken diğerleri kılavuzdaki bilgileri anlatarak parçaları güvenle çözmeye çalışır.
+The Case of the Golden Idol|bulmaca|gizem,suç,strateji|sakin,gerilimli|Oyuncu, sabitlenmiş suç sahnelerindeki sözcük ve nesneleri birleştirerek kurbanların öyküsünü çözer.
+The Curse of the Golden Idol|bulmaca|gizem,suç,strateji|sakin,tekinsiz|Farklı dönemlerde yaşanan olayların ayrıntıları, altın idolün çevresindeki yeni bir gizemi ortaya çıkarır.
+Chants of Sennaar|bulmaca|iletişim,keşif,toplum|sakin,düşündürücü|Oyuncu, kulede yaşayan halkların dillerini gözlemleyip çevirerek aralarındaki kopukluğu gidermeye çalışır.
+Dorfromantik|bulmaca|doğa,şehir kurma,strateji|sakin,neşeli|Oyuncu altıgen arazi parçalarını yerleştirerek nehirleri, köyleri ve ormanları uyumlu bir manzaraya dönüştürür.
+Inscryption|strateji|gizem,strateji,gerçeklik|karanlık,tekinsiz|Oyuncu, esrarengiz bir kulübede kart oyununu öğrenirken kuralların ve bulunduğu yerin ardındaki sırları çözer.""",
 }

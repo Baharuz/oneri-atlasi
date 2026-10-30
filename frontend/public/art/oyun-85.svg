@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Hollow Knight: Silksong için özgün temsili görsel">
+<title>Hollow Knight: Silksong — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="532.2" cy="160.0" r="38" fill="#e8ce7e" opacity="0.16"/><circle cx="278.1" cy="121.0" r="63" fill="#e8ce7e" opacity="0.10"/><circle cx="173.1" cy="235.0" r="45" fill="#e8ce7e" opacity="0.17"/><circle cx="507.0" cy="583.0" r="61" fill="#e8ce7e" opacity="0.21"/><circle cx="217.2" cy="418.0" r="65" fill="#e8ce7e" opacity="0.28"/><circle cx="364.2" cy="115.0" r="47" fill="#e8ce7e" opacity="0.22"/><circle cx="59.7" cy="103.0" r="31" fill="#e8ce7e" opacity="0.28"/><circle cx="307.5" cy="232.0" r="53" fill="#e8ce7e" opacity="0.26"/><circle cx="322.2" cy="328.0" r="60" fill="#e8ce7e" opacity="0.13"/><circle cx="469.2" cy="493.0" r="26" fill="#e8ce7e" opacity="0.13"/><circle cx="481.8" cy="133.0" r="50" fill="#e8ce7e" opacity="0.15"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · PLATFORM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Hollow Knight:</text><text x="50" y="538" class="title">Silksong</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">KEŞIF · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

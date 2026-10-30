@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Stanley Parable: Ultra Deluxe için özgün temsili görsel">
+<title>The Stanley Parable: Ultra Deluxe — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="351.6" cy="733.0" r="30" fill="#e8ce7e" opacity="0.14"/><circle cx="84.9" cy="322.0" r="40" fill="#e8ce7e" opacity="0.22"/><circle cx="192.0" cy="199.0" r="45" fill="#e8ce7e" opacity="0.20"/><circle cx="326.4" cy="487.0" r="62" fill="#e8ce7e" opacity="0.16"/><circle cx="93.3" cy="799.0" r="14" fill="#e8ce7e" opacity="0.27"/><circle cx="309.6" cy="178.0" r="65" fill="#e8ce7e" opacity="0.20"/><circle cx="504.9" cy="376.0" r="23" fill="#e8ce7e" opacity="0.10"/><circle cx="576.3" cy="445.0" r="58" fill="#e8ce7e" opacity="0.27"/><circle cx="399.9" cy="787.0" r="75" fill="#e8ce7e" opacity="0.23"/><circle cx="544.8" cy="346.0" r="46" fill="#e8ce7e" opacity="0.20"/><circle cx="364.2" cy="694.0" r="13" fill="#e8ce7e" opacity="0.21"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · MACERA</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Stanley Parable:</text><text x="50" y="538" class="title">Ultra Deluxe</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">ÖZGÜRLÜK · NEŞELI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

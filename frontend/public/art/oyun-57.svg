@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Witness için özgün temsili görsel">
+<title>The Witness — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#203e34"/><stop offset="1" stop-color="#67a67b"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="131.1" cy="148.0" r="21" fill="#e8ce7e" opacity="0.24"/><circle cx="269.7" cy="343.0" r="58" fill="#e8ce7e" opacity="0.12"/><circle cx="242.4" cy="787.0" r="75" fill="#e8ce7e" opacity="0.20"/><circle cx="364.2" cy="814.0" r="33" fill="#e8ce7e" opacity="0.18"/><circle cx="154.2" cy="526.0" r="20" fill="#e8ce7e" opacity="0.16"/><circle cx="528.0" cy="763.0" r="50" fill="#e8ce7e" opacity="0.23"/><circle cx="345.3" cy="634.0" r="72" fill="#e8ce7e" opacity="0.26"/><circle cx="261.3" cy="448.0" r="33" fill="#e8ce7e" opacity="0.22"/><circle cx="456.6" cy="58.0" r="68" fill="#e8ce7e" opacity="0.11"/><circle cx="311.7" cy="250.0" r="19" fill="#e8ce7e" opacity="0.26"/><circle cx="158.4" cy="472.0" r="71" fill="#e8ce7e" opacity="0.16"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#e8ce7e" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#203e34" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#e8ce7e" letter-spacing="3">OYUN · BULMACA</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Witness</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#e8ce7e" letter-spacing="2">KEŞIF · SAKIN</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

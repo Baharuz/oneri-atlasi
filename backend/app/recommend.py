@@ -10,9 +10,9 @@ def recommend(contents, sources, answers, profile=None, feedback=None):
     source_ids = {item.id for item in sources}
     for item in sources:
         for tag in item.themes: weights[("theme", tag)] += 2
-        for tag in item.moods: weights[("mood", tag)] += 1.5
+        for tag in item.moods: weights[("mood", tag)] += 1
         # Genres are only useful within their own category.
-        for tag in item.genres: weights[("genre", item.category, tag)] += 1
+        for tag in item.genres: weights[("genre", item.category, tag)] += 3
     for tag in profile.get("features", []): weights[("theme", tag)] += 1.5
     for tag in profile.get("moods", []): weights[("mood", tag)] += 1
     for tag in answers.get("features", []): weights[("theme", tag)] += 5

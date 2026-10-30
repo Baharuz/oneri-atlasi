@@ -65,6 +65,24 @@ def audit(db, check_urls=False, client=None):
         if key in seen:
             errors.append(f"Mükerrer eser: {item.category} / {item.title} (#{seen[key]}, #{item.id})")
         seen[key] = item.id
+        if item.source == "local" and item.category in REPORT_CATEGORIES:
+            expected_image = f"/art/{item.source_id}.svg"
+            expected_source = f"https://github.com/Baharuz/oneri-atlasi/blob/main/frontend/public/art/{item.source_id}.svg"
+            if item.image_url != expected_image:
+                errors.append(f"#{item.id} image_url: yerel eser görseliyle uyuşmuyor")
+            else:
+                problem = _url_error(None, item.image_url, True)
+                if problem:
+                    errors.append(f"#{item.id} image_url: {problem}")
+                else:
+                    art = Path(__file__).resolve().parents[2] / "frontend" / "public" / item.image_url.lstrip("/")
+                    art_title = ET.parse(art).getroot().find("{http://www.w3.org/2000/svg}title")
+                    if art_title is None or not art_title.text.startswith(item.title + " — "):
+                        errors.append(f"#{item.id} image_url: SVG başlığı eserle uyuşmuyor")
+            if item.image_source_url != expected_source:
+                errors.append(f"#{item.id} image_source_url: kaynak bağlantısı uyuşmuyor")
+            if "proje içi kullanım" not in (item.image_credit or "").lower():
+                errors.append(f"#{item.id} image_credit: kullanım bilgisi yok")
     issues = quality_issues(db)
     for issue in issues:
         errors.append(f"#{issue['id']} {issue['title']}: {', '.join(issue['issues'])}")
@@ -78,6 +96,8 @@ def audit(db, check_urls=False, client=None):
                     url = getattr(item, field)
                     if not url:
                         continue
+                    if field == "image_source_url" and item.source == "local" and url == f"https://github.com/Baharuz/oneri-atlasi/blob/main/frontend/public/art/{item.source_id}.svg":
+                        continue  # Aynı dosyanın yerel varlığı ve yolu yukarıda doğrulandı.
                     problem = _url_error(client, url, image)
                     if problem:
                         errors.append(f"#{item.id} {field}: {problem}")

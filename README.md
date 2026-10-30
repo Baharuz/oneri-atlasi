@@ -40,7 +40,7 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 - Hesaplı: kayıt, giriş, çıkış, kalıcı tercihler, favoriler, değiştirilebilir beğeni/beğenmeme, öneri geçmişi ve “Bugüne özel öneri al”.
 - Anlık test cevapları profili değiştirmez; yalnızca açık kaydetme düğmesi bunu yapar.
 - API her kullanıcının özel kaydını oturumdaki kullanıcı kimliğiyle sınırlar. Şifreler Argon2 ile hashlenir.
-- Mevcut katalogda 125 kitap, 125 film, 125 dizi ve 25 oyun olmak üzere 400 eser vardır. Açıklamalar eser özelinde Türkçe hazırlanmıştır. Görseller resmî kapak/afiş değildir; eser adlarından ve etiketlerinden `app.catalog_art` ile üretilen özgün, temsili SVG'lerdir. Önce `backend` dizininde `python -m app.catalog_art`, ardından `python seed.py` çalıştırın. Seed, elle düzenlenmiş açıklamaları ve kullanıcı kayıtlarını korur; yerel katalog görsellerini proje görsellerine geçirir.
+- Katalogda her kategoriden 125, toplam 500 eser vardır. Açıklamalar eser özelinde Türkçe hazırlanmıştır. Görseller resmî kapak/afiş değildir; eser adlarından ve etiketlerinden `app.catalog_art` ile üretilen özgün, temsili SVG'lerdir. Önce `backend` dizininde `python -m app.catalog_art`, ardından `python seed.py` çalıştırın. Seed, elle düzenlenmiş açıklamaları ve kullanıcı kayıtlarını korur; yerel katalog görsellerini proje görsellerine geçirir.
 - Kaydedilenler ekranı doğrudan `GET /api/me/saved` sonucunu gösterir. Görseli olan eserlerde kart ve detay ekranı kaynak atfını bağlantısıyla birlikte gösterir.
 
 ## Katalog denetimi
@@ -52,11 +52,11 @@ python -m app.catalog_audit
 python -m app.catalog_audit --check-urls
 ```
 
-İkinci komut yerel SVG dosyalarının geçerli olduğunu ve kaynak bağlantılarının HTTP yanıtını ayrıca denetler. Görseller yalnızca bu proje için üretilmiştir; resmî eser görseli olarak sunulmamalıdır. Mevcut 400 eserlik katalog, 500 eserlik sayı hedefinde beklenen şekilde başarısız olur.
+İkinci komut yerel SVG dosyalarının geçerli olduğunu ve kaynak bağlantılarının HTTP yanıtını ayrıca denetler. Görseller yalnızca bu proje için üretilmiştir; resmî eser görseli olarak sunulmamalıdır. Denetim kategori başına 125 kayıt bekler.
 
 ## Öneri algoritması
 
-Kaynak içeriklerin tema etiketleri 2, atmosfer etiketleri 1,5, aynı kategorideki türleri 1 ağırlık alır. Profilde kayıtlı tema/atmosferler 1,5/1; anlık testte işaretlenen özellik/atmosferler 5/3 ağırlık alır. Adayın eşleşen etiket ağırlıkları toplanır. Beğenilmeyen ve seçilen kaynak içerikler çıkarılır. “Keşfet” ve “Şaşırt” seçenekleri yalnızca en az bir gerçek eşleşmesi olan adaylarda tekrar eden etiketlere çeşitlilik cezası uygular. Her kategorinin sonuçları ayrı sıralanır ve gerçek eşleşen en güçlü iki etiket gerekçede gösterilir. Sayısal skor arayüzde olasılık veya doğruluk yüzdesi olarak gösterilmez.
+Kaynak içeriklerin tema etiketleri 2, atmosfer etiketleri 1, aynı kategorideki türleri 3 ağırlık alır. Profilde kayıtlı tema/atmosferler 1,5/1; anlık testte işaretlenen özellik/atmosferler 5/3 ağırlık alır. Adayın eşleşen etiket ağırlıkları toplanır. Beğenilmeyen ve seçilen kaynak içerikler çıkarılır. “Keşfet” ve “Şaşırt” seçenekleri yalnızca en az bir gerçek eşleşmesi olan adaylarda tekrar eden etiketlere çeşitlilik cezası uygular. Her kategorinin sonuçları ayrı sıralanır ve gerçek eşleşen en güçlü iki etiket gerekçede gösterilir. Sayısal skor arayüzde olasılık veya doğruluk yüzdesi olarak gösterilmez.
 
 ## Sağlayıcılar ve sınırlar
 
