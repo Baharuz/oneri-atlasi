@@ -47,6 +47,8 @@ def test_recommendation_quality_across_categories():
         'Dark': ('Fringe', '12 Monkeys'),
         'Outer Wilds': ('Subnautica', 'Tunic'),
         'Karanlığın Sol Eli': ('Mülksüzler', 'Solaris'),
+        'The Lighthouse': ('The Wailing', 'Shutter Island'),
+        'Severance': ('The OA', 'Counterpart'),
     }
     with Session() as db:
         contents = db.query(Content).all()
