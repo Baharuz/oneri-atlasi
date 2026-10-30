@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Blue Eye Samurai için özgün temsili görsel">
+<title>Blue Eye Samurai — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="208.8" cy="448.0" r="68" fill="#f2d2a8" opacity="0.11"/><circle cx="53.4" cy="730.0" r="21" fill="#f2d2a8" opacity="0.24"/><circle cx="217.2" cy="64.0" r="33" fill="#f2d2a8" opacity="0.27"/><circle cx="374.7" cy="715.0" r="44" fill="#f2d2a8" opacity="0.14"/><circle cx="246.6" cy="529.0" r="69" fill="#f2d2a8" opacity="0.17"/><circle cx="353.7" cy="220.0" r="49" fill="#f2d2a8" opacity="0.18"/><circle cx="200.4" cy="580.0" r="23" fill="#f2d2a8" opacity="0.28"/><circle cx="532.2" cy="190.0" r="52" fill="#f2d2a8" opacity="0.27"/><circle cx="179.4" cy="64.0" r="35" fill="#f2d2a8" opacity="0.26"/><circle cx="420.9" cy="814.0" r="23" fill="#f2d2a8" opacity="0.13"/><circle cx="481.8" cy="418.0" r="21" fill="#f2d2a8" opacity="0.21"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · ANIMASYON</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Blue Eye Samurai</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">INTIKAM · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

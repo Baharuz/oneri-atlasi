@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Night Manager için özgün temsili görsel">
+<title>The Night Manager — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="551.1" cy="88.0" r="44" fill="#f2d2a8" opacity="0.21"/><circle cx="189.9" cy="700.0" r="35" fill="#f2d2a8" opacity="0.18"/><circle cx="467.1" cy="271.0" r="23" fill="#f2d2a8" opacity="0.10"/><circle cx="374.7" cy="742.0" r="29" fill="#f2d2a8" opacity="0.27"/><circle cx="546.9" cy="463.0" r="39" fill="#f2d2a8" opacity="0.13"/><circle cx="61.8" cy="688.0" r="40" fill="#f2d2a8" opacity="0.11"/><circle cx="324.3" cy="427.0" r="45" fill="#f2d2a8" opacity="0.24"/><circle cx="280.2" cy="466.0" r="21" fill="#f2d2a8" opacity="0.21"/><circle cx="490.2" cy="550.0" r="36" fill="#f2d2a8" opacity="0.16"/><circle cx="326.4" cy="139.0" r="50" fill="#f2d2a8" opacity="0.25"/><circle cx="513.3" cy="151.0" r="14" fill="#f2d2a8" opacity="0.11"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · GERILIM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Night Manager</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">KIMLIK · GERILIMLI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

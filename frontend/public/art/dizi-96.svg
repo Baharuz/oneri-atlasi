@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Office için özgün temsili görsel">
+<title>The Office — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="210.9" cy="592.0" r="30" fill="#f2d2a8" opacity="0.16"/><circle cx="252.9" cy="370.0" r="16" fill="#f2d2a8" opacity="0.14"/><circle cx="486.0" cy="799.0" r="53" fill="#f2d2a8" opacity="0.17"/><circle cx="479.7" cy="277.0" r="15" fill="#f2d2a8" opacity="0.22"/><circle cx="137.4" cy="640.0" r="30" fill="#f2d2a8" opacity="0.23"/><circle cx="173.1" cy="529.0" r="58" fill="#f2d2a8" opacity="0.16"/><circle cx="578.4" cy="820.0" r="44" fill="#f2d2a8" opacity="0.10"/><circle cx="429.3" cy="73.0" r="72" fill="#f2d2a8" opacity="0.18"/><circle cx="231.9" cy="91.0" r="35" fill="#f2d2a8" opacity="0.20"/><circle cx="137.4" cy="607.0" r="73" fill="#f2d2a8" opacity="0.11"/><circle cx="84.9" cy="694.0" r="40" fill="#f2d2a8" opacity="0.27"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · KOMEDI</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Office</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">IŞ HAYATI · NEŞELI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

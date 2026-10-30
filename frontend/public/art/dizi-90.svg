@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Killing Eve için özgün temsili görsel">
+<title>Killing Eve — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="349.5" cy="574.0" r="18" fill="#f2d2a8" opacity="0.12"/><circle cx="95.4" cy="67.0" r="17" fill="#f2d2a8" opacity="0.25"/><circle cx="168.9" cy="430.0" r="64" fill="#f2d2a8" opacity="0.22"/><circle cx="66.0" cy="427.0" r="31" fill="#f2d2a8" opacity="0.16"/><circle cx="448.2" cy="700.0" r="47" fill="#f2d2a8" opacity="0.28"/><circle cx="475.5" cy="799.0" r="46" fill="#f2d2a8" opacity="0.13"/><circle cx="429.3" cy="805.0" r="15" fill="#f2d2a8" opacity="0.27"/><circle cx="97.5" cy="166.0" r="31" fill="#f2d2a8" opacity="0.12"/><circle cx="441.9" cy="421.0" r="33" fill="#f2d2a8" opacity="0.14"/><circle cx="210.9" cy="76.0" r="23" fill="#f2d2a8" opacity="0.21"/><circle cx="479.7" cy="463.0" r="42" fill="#f2d2a8" opacity="0.20"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · GERILIM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Killing Eve</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">TAKINTI · GERILIMLI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

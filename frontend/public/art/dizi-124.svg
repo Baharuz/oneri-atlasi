@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="House of the Dragon için özgün temsili görsel">
+<title>House of the Dragon — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="210.9" cy="199.0" r="66" fill="#f2d2a8" opacity="0.18"/><circle cx="328.5" cy="697.0" r="49" fill="#f2d2a8" opacity="0.22"/><circle cx="101.7" cy="442.0" r="53" fill="#f2d2a8" opacity="0.25"/><circle cx="87.0" cy="502.0" r="25" fill="#f2d2a8" opacity="0.13"/><circle cx="580.5" cy="403.0" r="73" fill="#f2d2a8" opacity="0.28"/><circle cx="509.1" cy="367.0" r="28" fill="#f2d2a8" opacity="0.10"/><circle cx="355.8" cy="802.0" r="67" fill="#f2d2a8" opacity="0.21"/><circle cx="91.2" cy="76.0" r="75" fill="#f2d2a8" opacity="0.20"/><circle cx="481.8" cy="193.0" r="57" fill="#f2d2a8" opacity="0.15"/><circle cx="563.7" cy="103.0" r="21" fill="#f2d2a8" opacity="0.25"/><circle cx="267.6" cy="412.0" r="29" fill="#f2d2a8" opacity="0.26"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · FANTASTIK</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">House of the Dragon</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">AILE · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

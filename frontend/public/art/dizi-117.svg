@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Vinland Saga için özgün temsili görsel">
+<title>Vinland Saga — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="544.8" cy="301.0" r="24" fill="#f2d2a8" opacity="0.18"/><circle cx="347.4" cy="247.0" r="49" fill="#f2d2a8" opacity="0.21"/><circle cx="387.3" cy="667.0" r="45" fill="#f2d2a8" opacity="0.13"/><circle cx="559.5" cy="163.0" r="43" fill="#f2d2a8" opacity="0.14"/><circle cx="221.4" cy="205.0" r="49" fill="#f2d2a8" opacity="0.18"/><circle cx="187.8" cy="724.0" r="62" fill="#f2d2a8" opacity="0.19"/><circle cx="370.5" cy="388.0" r="21" fill="#f2d2a8" opacity="0.19"/><circle cx="173.1" cy="322.0" r="45" fill="#f2d2a8" opacity="0.16"/><circle cx="301.2" cy="445.0" r="17" fill="#f2d2a8" opacity="0.17"/><circle cx="183.6" cy="595.0" r="25" fill="#f2d2a8" opacity="0.24"/><circle cx="263.4" cy="481.0" r="46" fill="#f2d2a8" opacity="0.27"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · ANIMASYON</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Vinland Saga</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">INTIKAM · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The White Lotus için özgün temsili görsel">
+<title>The White Lotus — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="49.2" cy="145.0" r="71" fill="#f2d2a8" opacity="0.12"/><circle cx="158.4" cy="145.0" r="37" fill="#f2d2a8" opacity="0.14"/><circle cx="166.8" cy="427.0" r="35" fill="#f2d2a8" opacity="0.23"/><circle cx="504.9" cy="310.0" r="48" fill="#f2d2a8" opacity="0.14"/><circle cx="368.4" cy="409.0" r="27" fill="#f2d2a8" opacity="0.28"/><circle cx="173.1" cy="772.0" r="20" fill="#f2d2a8" opacity="0.28"/><circle cx="351.6" cy="382.0" r="58" fill="#f2d2a8" opacity="0.28"/><circle cx="332.7" cy="340.0" r="44" fill="#f2d2a8" opacity="0.21"/><circle cx="122.7" cy="628.0" r="12" fill="#f2d2a8" opacity="0.21"/><circle cx="242.4" cy="604.0" r="22" fill="#f2d2a8" opacity="0.20"/><circle cx="122.7" cy="817.0" r="69" fill="#f2d2a8" opacity="0.19"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · DRAM</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The White Lotus</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">SINIF · NEŞELI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

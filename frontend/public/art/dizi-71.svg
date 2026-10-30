@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="The Night Of için özgün temsili görsel">
+<title>The Night Of — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="378.9" cy="88.0" r="57" fill="#f2d2a8" opacity="0.23"/><circle cx="313.8" cy="757.0" r="67" fill="#f2d2a8" opacity="0.21"/><circle cx="99.6" cy="535.0" r="52" fill="#f2d2a8" opacity="0.19"/><circle cx="234.0" cy="58.0" r="23" fill="#f2d2a8" opacity="0.20"/><circle cx="112.2" cy="712.0" r="43" fill="#f2d2a8" opacity="0.12"/><circle cx="68.1" cy="226.0" r="29" fill="#f2d2a8" opacity="0.27"/><circle cx="103.8" cy="496.0" r="41" fill="#f2d2a8" opacity="0.18"/><circle cx="544.8" cy="565.0" r="76" fill="#f2d2a8" opacity="0.21"/><circle cx="168.9" cy="166.0" r="76" fill="#f2d2a8" opacity="0.16"/><circle cx="399.9" cy="322.0" r="71" fill="#f2d2a8" opacity="0.18"/><circle cx="460.8" cy="580.0" r="29" fill="#f2d2a8" opacity="0.11"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · POLISIYE</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">The Night Of</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">ADALET · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

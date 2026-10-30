@@ -40,7 +40,7 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 - Hesaplı: kayıt, giriş, çıkış, kalıcı tercihler, favoriler, değiştirilebilir beğeni/beğenmeme, öneri geçmişi ve “Bugüne özel öneri al”.
 - Anlık test cevapları profili değiştirmez; yalnızca açık kaydetme düğmesi bunu yapar.
 - API her kullanıcının özel kaydını oturumdaki kullanıcı kimliğiyle sınırlar. Şifreler Argon2 ile hashlenir.
-- Mevcut katalogda 125 kitap, 125 film, 25 dizi ve 25 oyun olmak üzere 300 eser vardır. Açıklamalar eser özelinde Türkçe hazırlanmıştır. Görseller resmî kapak/afiş değildir; eser adlarından ve etiketlerinden `app.catalog_art` ile üretilen özgün, temsili SVG'lerdir. Önce `backend` dizininde `python -m app.catalog_art`, ardından `python seed.py` çalıştırın. Seed, elle düzenlenmiş açıklamaları ve kullanıcı kayıtlarını korur; yerel katalog görsellerini proje görsellerine geçirir.
+- Mevcut katalogda 125 kitap, 125 film, 125 dizi ve 25 oyun olmak üzere 400 eser vardır. Açıklamalar eser özelinde Türkçe hazırlanmıştır. Görseller resmî kapak/afiş değildir; eser adlarından ve etiketlerinden `app.catalog_art` ile üretilen özgün, temsili SVG'lerdir. Önce `backend` dizininde `python -m app.catalog_art`, ardından `python seed.py` çalıştırın. Seed, elle düzenlenmiş açıklamaları ve kullanıcı kayıtlarını korur; yerel katalog görsellerini proje görsellerine geçirir.
 - Kaydedilenler ekranı doğrudan `GET /api/me/saved` sonucunu gösterir. Görseli olan eserlerde kart ve detay ekranı kaynak atfını bağlantısıyla birlikte gösterir.
 
 ## Katalog denetimi
@@ -52,7 +52,7 @@ python -m app.catalog_audit
 python -m app.catalog_audit --check-urls
 ```
 
-İkinci komut yerel SVG dosyalarının geçerli olduğunu ve kaynak bağlantılarının HTTP yanıtını ayrıca denetler. Görseller yalnızca bu proje için üretilmiştir; resmî eser görseli olarak sunulmamalıdır. Mevcut 300 eserlik katalog, 500 eserlik sayı hedefinde beklenen şekilde başarısız olur.
+İkinci komut yerel SVG dosyalarının geçerli olduğunu ve kaynak bağlantılarının HTTP yanıtını ayrıca denetler. Görseller yalnızca bu proje için üretilmiştir; resmî eser görseli olarak sunulmamalıdır. Mevcut 400 eserlik katalog, 500 eserlik sayı hedefinde beklenen şekilde başarısız olur.
 
 ## Öneri algoritması
 

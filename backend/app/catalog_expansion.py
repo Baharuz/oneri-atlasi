@@ -205,4 +205,104 @@ The Wailing|korku|gizem,inanç,aile|karanlık,tekinsiz|Köyde yaşanan tuhaf öl
 Get Out|korku|önyargı,kimlik,hayatta kalma|tekinsiz,gerilimli|Chris, sevgilisinin ailesini ziyaret ettiğinde evdeki aşırı nazik tavrın ardında korkunç bir düzen olduğunu fark eder.
 Us|korku|aile,kimlik,sınıf|karanlık,tekinsiz|Adelaide'nin ailesi tatilde kendilerine benzeyen yabancılarla karşılaşınca geçmişteki bir olay yeniden açılır.
 The Lighthouse|korku|yalnızlık,güç,gerçeklik|karanlık,tekinsiz|Issız bir adadaki iki deniz feneri görevlisi, fırtına ve gerilim altında birbirlerinin güvenini kaybeder.""",
+    "dizi": """The Wire|suç|sınıf,adalet,güç|karanlık,düşündürücü|Baltimore'da polis, sokak örgütleri ve kamu kurumları arasındaki ilişkiler, bir soruşturmanın farklı cephelerinden izlenir.
+The Sopranos|suç|aile,kimlik,güç|karanlık,gerilimli|Mafya lideri Tony Soprano, aile yaşamı ve suç örgütü baskısı arasında terapiye başlar.
+Mad Men|dram|kimlik,iş hayatı,aile|melankolik,düşündürücü|Reklamcı Don Draper, 1960'ların değişen Amerika'sında kurduğu kimliği ve yakın ilişkilerini sürdürmeye çalışır.
+Succession|dram|aile,güç,siyasi entrika|karanlık,neşeli|Medya patronu Logan Roy'un çocukları, şirketin geleceği ve babalarının onayı için birbirleriyle mücadele eder.
+The Americans|gerilim|kimlik,aile,sadakat|karanlık,gerilimli|Soğuk Savaş döneminde Amerikalı aile gibi yaşayan iki Sovyet ajanı, görevleriyle çocukları arasında kalır.
+Homeland|gerilim|siyasi entrika,güven,kimlik|gerilimli,karanlık|CIA görevlisi Carrie Mathison, savaş esaretinden dönen bir askerin olası tehdidini araştırırken kendi yargılarına güvenmek zorundadır.
+24|aksiyon|terör,hayatta kalma,zaman|gerilimli,heyecanlı|Ajan Jack Bauer, tek bir güne sığan krizlerde zamanla yarışarak saldırıları önlemeye çalışır.
+Lost|gizem|hayatta kalma,dostluk,gerçeklik|gizemli,gerilimli|Uçak kazasından sağ çıkanlar, ıssız görünen adada yaşarken geçmişleri ve adanın tuhaflıklarıyla yüzleşir.
+The Leftovers|dram|yas,aile,inanç|melankolik,tekinsiz|Dünya nüfusunun bir bölümü açıklanamadan kaybolunca geride kalanlar hayatlarını yeniden anlamlandırmaya çalışır.
+Station Eleven|distopya|hayatta kalma,sanat,dostluk|melankolik,umutlu|Küresel salgından yıllar sonra gezici bir tiyatro topluluğu, geçmişle bağını koruyarak yerleşimler arasında dolaşır.
+Silo|distopya|gizem,özgürlük,hayatta kalma|karanlık,gerilimli|Yeraltındaki dev siloda yaşayan Juliette, dış dünya hakkındaki kesin kurallara meydan okuyan kanıtlar bulur.
+The 100|bilimkurgu|hayatta kalma,gençlik,güç|gerilimli,destansı|Uzay istasyonundan Dünya'ya gönderilen gençler, gezegenin yeniden yaşanabilir olup olmadığını öğrenirken kendi düzenlerini kurar.
+Battlestar Galactica|bilimkurgu|hayatta kalma,siyasi entrika,kimlik|karanlık,destansı|Cylon saldırısından kurtulan insan filosu, yeni bir yuva ararken aralarındaki gizli düşmanlardan şüphelenir.
+Firefly|bilimkurgu|dostluk,özgürlük,uzay|neşeli,gerilimli|Kaptan Malcolm Reynolds ve Serenity mürettebatı, sınır gezegenlerinde iş alarak merkezi otoriteden uzak yaşamaya çalışır.
+Star Trek: The Next Generation|bilimkurgu|keşif,diplomasi,teknoloji|umutlu,destansı|Kaptan Picard'ın Enterprise ekibi, yeni dünyaları araştırırken etik kararlar ve yabancı uygarlıklarla karşılaşır.
+Star Trek: Deep Space Nine|bilimkurgu|siyasi entrika,savaş,kimlik|destansı,düşündürücü|Komutan Sisko, stratejik uzay istasyonunda farklı halkların gerilimini yönetirken yaklaşan savaşla uğraşır.
+Doctor Who|bilimkurgu|zaman,keşif,dostluk|neşeli,büyülü|Doktor, TARDIS ile farklı zamanlara ve gezegenlere giderek yol arkadaşlarıyla birlikte tehlikeleri çözer.
+The X-Files|bilimkurgu|gizem,komplo,güven|karanlık,tekinsiz|FBI ajanları Mulder ile Scully, açıklanamayan olayları araştırırken büyük bir komploya yaklaşır.
+Fringe|bilimkurgu|gizem,teknoloji,aile|gerilimli,gizemli|Olivia Dunham'ın ekibi sıra dışı bilimsel olayları araştırırken paralel evrenlerle bağlantı kurar.
+Orphan Black|bilimkurgu|kimlik,teknoloji,aile|gerilimli,karanlık|Sarah Manning, kendisine tıpatıp benzeyen bir kadının ölümüne tanık olunca klonların ardındaki kuruluşu araştırır.
+Counterpart|bilimkurgu|kimlik,siyasi entrika,gerçeklik|sakin,gerilimli|Sıradan memur Howard Silk, çalıştığı kurumun paralel dünyaya açılan kapısını ve kendi diğer hâlini öğrenir.
+12 Monkeys|bilimkurgu|zaman,hayatta kalma,gizem|gerilimli,karanlık|Gelecekten gelen James Cole, yıkıcı salgını önlemek için geçmişteki olayları değiştirmeye çalışır.
+Travelers|bilimkurgu|zaman,kimlik,görev|gerilimli,düşündürücü|Gelecekten gelen bilinçler, felaketi önlemek için günümüzde yaşayan insanların bedenlerine yerleşir.
+Devs|bilimkurgu|teknoloji,gerçeklik,gizem|sakin,tekinsiz|Yazılım mühendisi Lily, erkek arkadaşının ölümünden sonra çalıştığı şirketin gizli Devs birimini araştırır.
+Sense8|bilimkurgu|kimlik,dostluk,özgürlük|duygusal,destansı|Dünyanın farklı şehirlerindeki sekiz kişi, zihinsel bağ kurduklarını keşfederek birbirlerine yardım eder.
+Altered Carbon|bilimkurgu|kimlik,teknoloji,sınıf|karanlık,gerilimli|Bilinçlerin bedenler arasında taşınabildiği gelecekte Takeshi Kovacs, zengin bir adamın ölümünü araştırır.
+For All Mankind|bilimkurgu|uzay,siyasi entrika,aile|destansı,düşündürücü|Uzay yarışının farklı ilerlediği bir tarihte astronotlar ve aileleri, yeni hedeflerin bedellerini yaşar.
+The Last Man on Earth|komedi|yalnızlık,hayatta kalma,toplum|neşeli,tekinsiz|Salgından sonra tek başına kaldığını sanan Phil, başka hayatta kalanlarla karşılaşınca birlikte yaşamanın zorluklarını öğrenir.
+The Walking Dead|korku|hayatta kalma,güç,aile|karanlık,gerilimli|Rick Grimes, ölülerin dolaştığı bir dünyada bir grubu korumaya çalışırken insan topluluklarının tehlikeleriyle karşılaşır.
+Kingdom|korku|hayatta kalma,siyasi entrika,savaş|karanlık,destansı|Joseon döneminde veliaht prens, saraydaki entrikalarla yayılan ölümcül salgının bağlantısını araştırır.
+Sweet Home|korku|hayatta kalma,kimlik,dayanışma|karanlık,gerilimli|Apartman sakinleri insanlar canavara dönüşürken binada birlikte kalmanın ve güvenmenin yolunu arar.
+All of Us Are Dead|korku|hayatta kalma,gençlik,dostluk|gerilimli,karanlık|Lisede başlayan zombi salgınında öğrenciler sınıfları geçip yardım gelene kadar direnmeye çalışır.
+The Haunting of Hill House|korku|aile,yas,geçmiş|karanlık,duygusal|Crain kardeşler, çocukluklarında yaşadıkları perili eve ve yıllar sonra süren travmalarına geri döner.
+Midnight Mass|korku|inanç,toplum,suçluluk|karanlık,tekinsiz|Küçük adaya gelen rahibin ardından yaşanan mucize sanılan olaylar, sakinlerin inançlarını ve korkularını açığa çıkarır.
+The Fall of the House of Usher|korku|aile,güç,suç|karanlık,tekinsiz|İlaç şirketi sahibi Roderick Usher, ailesindeki ölümleri anlatırken geçmişteki kararlarının sonuçlarıyla yüzleşir.
+Yellowjackets|gerilim|hayatta kalma,geçmiş,kimlik|karanlık,tekinsiz|Uçak kazasından sağ çıkan genç futbolcuların vahşi doğadaki deneyimi, yetişkinlikte yeniden gün yüzüne çıkar.
+From|korku|gizem,hayatta kalma,toplum|karanlık,gerilimli|Yolunu kaybedenlerin çıkamadığı kasabada sakinler, geceleri ortaya çıkan varlıklardan korunmak için kurallar oluşturur.
+Twin Peaks|gizem|suç,kimlik,gerçeklik|tekinsiz,gizemli|Laura Palmer'ın ölümü, küçük kasabanın sakin görünen yüzünün ardındaki sırları dedektif Dale Cooper'a açar.
+True Detective|polisiye|adalet,takıntı,suç|karanlık,gerilimli|Farklı sezonlardaki dedektifler, cinayetleri araştırırken geçmişlerinin ve yaşadıkları yerlerin etkisiyle yüzleşir.
+Mindhunter|polisiye|suç,psikoloji,adalet|sakin,tekinsiz|FBI görevlileri Holden Ford ile Bill Tench, seri katillerle görüşerek yeni bir suç analizi yöntemi geliştirmeye çalışır.
+Broadchurch|polisiye|suç,aile,toplum|karanlık,duygusal|Bir çocuğun ölümü üzerine yapılan soruşturma, küçük sahil kasabasındaki aileleri ve sırları sarsar.
+The Killing|polisiye|suç,siyasi entrika,aile|karanlık,gerilimli|Genç bir kızın cinayeti, dedektiflerin uzun soruşturmasında aile ve yerel siyaseti birbirine bağlar.
+Mare of Easttown|polisiye|aile,suç,geçmiş|karanlık,duygusal|Dedektif Mare Sheehan, küçük kasabasındaki cinayeti araştırırken kendi ailesindeki kayıplarla uğraşır.
+Happy Valley|polisiye|adalet,aile,geçmiş|karanlık,gerilimli|Polis memuru Catherine Cawood, torununu büyütürken geçmişte ailesine zarar veren kişinin yeniden ortaya çıkmasıyla karşılaşır.
+Luther|polisiye|suç,vicdan,takıntı|karanlık,gerilimli|Dedektif John Luther, zor davalarda üstün sezgisini kullanırken işinin kişisel hayatına verdiği zarar büyür.
+The Night Of|polisiye|adalet,kimlik,sınıf|karanlık,düşündürücü|Bir cinayetle suçlanan Naz, dava boyunca ceza adaleti sisteminin ve hapishanenin dönüştürücü etkisini yaşar.
+The Undoing|gerilim|aile,gerçeklik,suç|gerilimli,karanlık|Terapist Grace Fraser'ın düzenli yaşamı, çevresindeki bir cinayet ve eşine dair şüphelerle çözülür.
+Sharp Objects|gerilim|aile,geçmiş,kimlik|karanlık,tekinsiz|Gazeteci Camille, genç kız cinayetlerini araştırmak için döndüğü kasabada annesi ve çocukluğuyla yüzleşir.
+Big Little Lies|dram|aile,suç,sınıf|duygusal,gerilimli|Monterey'deki annelerin görünüşte kusursuz yaşamları, okul çevresindeki çatışma ve bir ölümle sarsılır.
+The White Lotus|dram|sınıf,güç,kimlik|neşeli,tekinsiz|Lüks tatil köyündeki konuklar ve çalışanlar, dinlenme beklentilerinin ardında sınıfsal gerilimleri açığa çıkarır.
+The Handmaid's Tale|distopya|özgürlük,güç,kimlik|karanlık,gerilimli|June, kadınların haklarının ellerinden alındığı Gilead'da kızını bulmak ve sistemden kurtulmak için direnç gösterir.
+The Man in the High Castle|alternatif tarih|güç,özgürlük,gerçeklik|karanlık,gerilimli|Mihver devletlerinin kazandığı bir dünyada bulunan filmler, farklı bir tarihin var olabileceğini düşündürür.
+Years and Years|dram|aile,teknoloji,siyasi entrika|gerilimli,düşündürücü|Lyons ailesinin yıllara yayılan yaşamı, teknolojik ve siyasi değişimlerin gündelik etkilerini gösterir.
+Mr. Inbetween|suç|aile,sadakat,kimlik|karanlık,neşeli|Kirli işlerden para kazanan Ray, kızına iyi bir baba olmaya çalışırken iki yaşamını dengeleyemez.
+Barry|suç|kimlik,suç,sanat|karanlık,neşeli|Tetikçi Barry, Los Angeles'ta oyunculuk dersine katılınca geçmişinden çıkıp başka biri olmayı hayal eder.
+Ozark|suç|aile,güç,hayatta kalma|karanlık,gerilimli|Marty Byrde, tehlikeli müşterilerine borcunu ödemek için ailesiyle Ozark'a taşınıp para aklamaya başlar.
+Narcos|suç|güç,adalet,siyasi entrika|gerilimli,karanlık|Kolombiya'daki uyuşturucu ticaretinin yükselişi, kartellerin ve onları izleyen görevlilerin gözünden anlatılır.
+Peaky Blinders|suç|aile,güç,savaş sonrası|karanlık,gerilimli|Tommy Shelby, Birmingham'daki ailesinin işlerini büyütürken savaşın izleriyle ve rakipleriyle uğraşır.
+Boardwalk Empire|suç|siyasi entrika,güç,sadakat|karanlık,destansı|İçki yasağı döneminde Atlantic City'yi yöneten Nucky Thompson, siyaset ve suç arasındaki konumunu korumaya çalışır.
+The Shield|suç|adalet,güç,vicdan|karanlık,gerilimli|Los Angeles'ta özel polis birimini yöneten Vic Mackey'nin yöntemleri, suçla mücadele ile yolsuzluğu birbirine karıştırır.
+Line of Duty|polisiye|adalet,güç,gizem|gerilimli,karanlık|Yolsuzluk karşıtı polis birimi AC-12, teşkilat içindeki şüpheli kararları ve gizli ilişkileri araştırır.
+Slow Horses|gerilim|siyasi entrika,sadakat,mizah|karanlık,neşeli|Görevden düşmüş istihbaratçılar, Jackson Lamb yönetiminde beklenmedik biçimde büyük tehditlerin ortasına düşer.
+The Night Manager|gerilim|kimlik,siyasi entrika,güven|gerilimli,ışıltılı|Otel yöneticisi Jonathan Pine, silah tüccarı Roper'ın çevresine sızmak için tehlikeli bir rol üstlenir.
+Bodyguard|gerilim|siyasi entrika,güven,travma|gerilimli,karanlık|Savaş gazisi koruma David Budd, görüşlerine karşı çıktığı içişleri bakanını korurken komplonun içine çekilir.
+Killing Eve|gerilim|takıntı,kimlik,suç|gerilimli,neşeli|İstihbarat görevlisi Eve ile suikastçı Villanelle'in karşılıklı ilgisi, görevlerinin sınırlarını aşar.
+The Diplomat|dram|siyasi entrika,evlilik,güç|gerilimli,neşeli|ABD büyükelçisi Kate Wyler, uluslararası krizi yönetirken eşiyle karmaşık ortaklığını sürdürmeye çalışır.
+House of Cards|dram|siyasi entrika,güç,intikam|karanlık,gerilimli|Washington'da istediği görevi alamayan Frank Underwood, iktidar basamaklarını kendi yöntemleriyle tırmanır.
+The West Wing|dram|siyasi entrika,adalet,dayanışma|umutlu,gerilimli|Başkan Bartlet'in ekibi, Beyaz Saray'da günlük krizlerle ve uzun vadeli siyasi kararlarla uğraşır.
+Veep|komedi|siyasi entrika,güç,mizah|neşeli,gerilimli|Başkan yardımcısı Selina Meyer ile ekibi, Washington'daki küçük zaferleri büyük krizlere dönüştürür.
+Parks and Recreation|komedi|dostluk,toplum,kişisel yolculuk|neşeli,umutlu|Pawnee belediyesinde çalışan Leslie Knope, kamusal projeleri yürütürken arkadaşlarıyla engelleri aşar.
+The Office|komedi|iş hayatı,dostluk,mizah|neşeli,sıcak|Dunder Mifflin'in Scranton ofisindeki çalışanlar, yöneticileri Michael Scott'ın tuhaf kararlarıyla günlük işlerini sürdürür.
+Brooklyn Nine-Nine|komedi|dostluk,adalet,mizah|neşeli,sıcak|Jake Peralta ve ekibi, New York'taki polis merkezinde davaları çözerken birbirleriyle güçlü bir bağ kurar.
+Community|komedi|dostluk,kimlik,eğitim|neşeli,deneysel|Greendale'de kurulan çalışma grubu, birbirinden farklı üyelerin tuhaf dersler ve kampüs krizleri içindeki arkadaşlığına dönüşür.
+Abbott Elementary|komedi|eğitim,dayanışma,mizah|neşeli,umutlu|Philadelphia'daki devlet okulunun öğretmenleri, kısıtlı imkânlara rağmen öğrencileri için yaratıcı yollar bulur.
+Schitt's Creek|komedi|aile,sınıf,kişisel yolculuk|neşeli,sıcak|Servetini kaybeden Rose ailesi, sahip oldukları küçük kasabada yaşayarak birbirlerini yeniden tanır.
+Modern Family|komedi|aile,kuşak çatışması,mizah|neşeli,sıcak|Birbirine bağlı üç aile, ebeveynlik ve gündelik ilişkilerindeki değişimleri farklı bakış açılarından yaşar.
+The Marvelous Mrs. Maisel|komedi|kimlik,aile,kişisel yolculuk|neşeli,ışıltılı|Midge Maisel, evliliği değişince sahne komedyenliğinde kendi sesini bulmaya çalışır.
+BoJack Horseman|animasyon|kimlik,şöhret,yas|neşeli,melankolik|Eski televizyon yıldızı BoJack, kariyerindeki boşluk ve arkadaşlarına verdiği zararlarla yüzleşmeye çalışır.
+Rick and Morty|animasyon|bilimkurgu,aile,mizah|neşeli,tekinsiz|Bilim insanı Rick ile torunu Morty, boyutlar arasında dolaşırken aile içindeki çatışmaları da yanlarında taşır.
+Adventure Time|animasyon|dostluk,keşif,kimlik|büyülü,neşeli|Finn ile Jake, Ooo Diyarı'nda maceralara atılırken çevrelerindeki dünyanın geçmişini keşfeder.
+Over the Garden Wall|animasyon|dostluk,hayatta kalma,gizem|büyülü,melankolik|Wirt ve Greg, Bilinmeyen adlı ormanda evlerine dönüş yolunu ararken tuhaf karakterlerle karşılaşır.
+Gravity Falls|animasyon|gizem,aile,keşif|neşeli,gizemli|İkizler Dipper ile Mabel, yazı geçirdikleri kasabada garip olayların ve gizli bir günlüğün izini sürer.
+Hilda|animasyon|keşif,dostluk,doğa|büyülü,sakin|Hilda, doğadaki yaratıklarla kurduğu bağları yeni taşındığı şehirde sürdürmenin yolunu bulur.
+Blue Eye Samurai|animasyon|intikam,kimlik,adalet|karanlık,destansı|Edo dönemi Japonya'sında Mizu, geçmişinden sorumlu insanları bulmak için kimliğini gizleyerek yol alır.
+Castlevania|animasyon|intikam,aile,hayatta kalma|karanlık,destansı|Trevor Belmont, Alucard ve Sypha, Drakula'nın insanlığa karşı başlattığı yıkımı durdurmaya çalışır.
+Invincible|animasyon|aile,güç,kimlik|karanlık,destansı|Mark Grayson süper güçlerini keşfederken kahraman babası Omni-Man hakkında beklenmedik gerçekler öğrenir.
+One Piece|macera|dostluk,keşif,özgürlük|neşeli,destansı|Luffy, efsanevi hazineyi aramak için farklı yeteneklere sahip arkadaşlardan bir korsan ekibi kurar.
+Fullmetal Alchemist: Brotherhood|animasyon|aile,adalet,bedel|destansı,duygusal|Edward ile Alphonse, başarısız bir simya girişiminde kaybettiklerini geri almak için Felsefe Taşı'nı arar.
+Attack on Titan|animasyon|hayatta kalma,özgürlük,siyasi entrika|karanlık,destansı|Duvarların ardında yaşayan Eren ve arkadaşları, devlerin tehdidini araştırırken kendi dünyalarının geçmişini öğrenir.
+Death Note|animasyon|adalet,güç,strateji|karanlık,gerilimli|Light Yagami, isim yazdığı kişiyi öldüren defteri bulur; gizemli dedektif L onu durdurmaya çalışır.
+Monster|animasyon|vicdan,suç,kimlik|karanlık,gerilimli|Cerrah Tenma, yıllar önce kurtardığı çocuğun cinayetlerle bağlantısını öğrenince Avrupa boyunca onu arar.
+Vinland Saga|animasyon|intikam,savaş,kişisel yolculuk|karanlık,destansı|Thorfinn, babasının ölümünün ardından Viking savaşlarına katılırken intikamının anlamını sorgular.
+Cowboy Bebop|animasyon|geçmiş,dostluk,uzay|melankolik,neşeli|Spike ve Bebop ekibi, ödül avcılığı yaparken kaçamadıkları geçmişleriyle farklı gezegenlerde karşılaşır.
+Neon Genesis Evangelion|animasyon|kimlik,aile,hayatta kalma|karanlık,tekinsiz|Shinji, insanlığı koruyan dev makineyi kullanmaya çağrılırken babasıyla ve kendi korkularıyla yüzleşir.
+The Sandman|fantastik|güç,mitoloji,kimlik|karanlık,büyülü|Yıllarca tutsak kalan Rüya, kaçtıktan sonra kaybettiği eşyaları toplayıp krallığındaki düzeni onarmaya çalışır.
+Good Omens|fantastik|dostluk,kader,mizah|neşeli,büyülü|Melek Aziraphale ile iblis Crowley, dünyanın sonunu engellemek için beklenmedik bir ortaklık kurar.
+His Dark Materials|fantastik|özgürlük,keşif,aile|büyülü,destansı|Lyra, kaçırılan çocukları ararken paralel dünyaların ve güçlü kurumların sakladığı sırları açar.
+The Wheel of Time|fantastik|kehanet,güç,dostluk|destansı,büyülü|Moiraine, karanlık gücü durdurabilecek kişiyi bulmak için beş genci köylerinden uzak bir yolculuğa çıkarır.
+House of the Dragon|fantastik|aile,siyasi entrika,güç|karanlık,destansı|Targaryen ailesindeki veraset tartışması, krallığın geleceğini belirleyecek iç savaşa doğru büyür.
+The Boys|aksiyon|güç,adalet,şöhret|karanlık,neşeli|Süper kahramanların şirketlerce yönetildiği dünyada Billy Butcher ve ekibi, dokunulmaz sanılan figürlerin suçlarını ortaya çıkarmaya çalışır.""",
 }

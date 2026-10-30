@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Line of Duty için özgün temsili görsel">
+<title>Line of Duty — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="257.1" cy="676.0" r="51" fill="#f2d2a8" opacity="0.27"/><circle cx="72.3" cy="457.0" r="15" fill="#f2d2a8" opacity="0.26"/><circle cx="227.7" cy="148.0" r="67" fill="#f2d2a8" opacity="0.21"/><circle cx="559.5" cy="325.0" r="29" fill="#f2d2a8" opacity="0.26"/><circle cx="360.0" cy="499.0" r="63" fill="#f2d2a8" opacity="0.19"/><circle cx="517.5" cy="298.0" r="28" fill="#f2d2a8" opacity="0.10"/><circle cx="307.5" cy="175.0" r="29" fill="#f2d2a8" opacity="0.23"/><circle cx="78.6" cy="103.0" r="74" fill="#f2d2a8" opacity="0.27"/><circle cx="183.6" cy="262.0" r="36" fill="#f2d2a8" opacity="0.11"/><circle cx="563.7" cy="202.0" r="26" fill="#f2d2a8" opacity="0.22"/><circle cx="351.6" cy="172.0" r="47" fill="#f2d2a8" opacity="0.24"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · POLISIYE</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Line of Duty</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">ADALET · GERILIMLI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Rick and Morty için özgün temsili görsel">
+<title>Rick and Morty — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="236.1" cy="79.0" r="37" fill="#f2d2a8" opacity="0.18"/><circle cx="542.7" cy="535.0" r="35" fill="#f2d2a8" opacity="0.26"/><circle cx="116.4" cy="412.0" r="71" fill="#f2d2a8" opacity="0.28"/><circle cx="53.4" cy="484.0" r="64" fill="#f2d2a8" opacity="0.26"/><circle cx="301.2" cy="346.0" r="56" fill="#f2d2a8" opacity="0.23"/><circle cx="437.7" cy="118.0" r="76" fill="#f2d2a8" opacity="0.19"/><circle cx="362.1" cy="67.0" r="64" fill="#f2d2a8" opacity="0.23"/><circle cx="517.5" cy="517.0" r="33" fill="#f2d2a8" opacity="0.18"/><circle cx="152.1" cy="79.0" r="65" fill="#f2d2a8" opacity="0.18"/><circle cx="303.3" cy="526.0" r="57" fill="#f2d2a8" opacity="0.15"/><circle cx="112.2" cy="325.0" r="47" fill="#f2d2a8" opacity="0.20"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · ANIMASYON</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Rick and Morty</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">BILIMKURGU · NEŞELI</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Mindhunter için özgün temsili görsel">
+<title>Mindhunter — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="301.2" cy="688.0" r="42" fill="#f2d2a8" opacity="0.14"/><circle cx="542.7" cy="664.0" r="51" fill="#f2d2a8" opacity="0.14"/><circle cx="387.3" cy="220.0" r="23" fill="#f2d2a8" opacity="0.19"/><circle cx="179.4" cy="730.0" r="49" fill="#f2d2a8" opacity="0.18"/><circle cx="532.2" cy="124.0" r="12" fill="#f2d2a8" opacity="0.23"/><circle cx="173.1" cy="349.0" r="19" fill="#f2d2a8" opacity="0.20"/><circle cx="542.7" cy="85.0" r="69" fill="#f2d2a8" opacity="0.13"/><circle cx="301.2" cy="742.0" r="27" fill="#f2d2a8" opacity="0.12"/><circle cx="72.3" cy="721.0" r="47" fill="#f2d2a8" opacity="0.23"/><circle cx="305.4" cy="751.0" r="69" fill="#f2d2a8" opacity="0.27"/><circle cx="91.2" cy="340.0" r="39" fill="#f2d2a8" opacity="0.26"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · POLISIYE</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Mindhunter</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">SUÇ · SAKIN</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="900" viewBox="0 0 640 900" role="img" aria-label="Mare of Easttown için özgün temsili görsel">
+<title>Mare of Easttown — Öneri Atlası temsili görseli</title>
+<desc>Resmî kapak veya afiş değildir. Öneri Atlası için özgün olarak üretilmiş soyut tipografik görsel. Lisans: proje içi kullanım.</desc>
+<defs><linearGradient id="ground" x2="1" y2="1"><stop stop-color="#153746"/><stop offset="1" stop-color="#3d97a0"/></linearGradient></defs>
+<rect width="640" height="900" fill="url(#ground)"/>
+<circle cx="521.7" cy="208.0" r="54" fill="#f2d2a8" opacity="0.12"/><circle cx="84.9" cy="799.0" r="76" fill="#f2d2a8" opacity="0.10"/><circle cx="349.5" cy="211.0" r="71" fill="#f2d2a8" opacity="0.28"/><circle cx="523.8" cy="736.0" r="50" fill="#f2d2a8" opacity="0.18"/><circle cx="49.2" cy="121.0" r="64" fill="#f2d2a8" opacity="0.11"/><circle cx="164.7" cy="700.0" r="56" fill="#f2d2a8" opacity="0.16"/><circle cx="362.1" cy="517.0" r="70" fill="#f2d2a8" opacity="0.15"/><circle cx="221.4" cy="640.0" r="63" fill="#f2d2a8" opacity="0.23"/><circle cx="486.0" cy="232.0" r="41" fill="#f2d2a8" opacity="0.11"/><circle cx="177.3" cy="793.0" r="72" fill="#f2d2a8" opacity="0.24"/><circle cx="374.7" cy="766.0" r="52" fill="#f2d2a8" opacity="0.28"/>
+<path d="M-30 310 Q220 160 670 290 M-30 350 Q310 190 670 370" fill="none" stroke="#f2d2a8" opacity=".35" stroke-width="3"/>
+<rect x="34" y="340" width="572" height="430" rx="20" fill="#153746" opacity=".84"/>
+<text x="50" y="392" font-family="sans-serif" font-size="23" fill="#f2d2a8" letter-spacing="3">DIZI · POLISIYE</text>
+<style>.title{font: bold 49px Georgia,serif;fill:#fff}</style>
+<text x="50" y="475" class="title">Mare of Easttown</text>
+<text x="50" y="810" font-family="sans-serif" font-size="18" fill="#f2d2a8" letter-spacing="2">AILE · KARANLIK</text>
+<text x="50" y="858" font-family="sans-serif" font-size="16" fill="#fff" opacity=".7">ÖNERİ ATLASI · TEMSİLİ GÖRSEL</text>
+</svg>
