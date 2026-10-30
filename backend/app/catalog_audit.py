@@ -109,7 +109,7 @@ def audit(db, check_urls=False, client=None):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="500 eserlik katalog bütünlüğünü denetle.")
-    parser.add_argument("--check-urls", action="store_true", help="Görsel ve kaynak bağlantılarını HTTP ile kontrol et")
+    parser.add_argument("--check-urls", action="store_true", help="Yerel SVG'leri ve dış kaynak URL'lerini kontrol et; proje içi kaynak bağlantıları depodaki dosyalarla doğrulanır")
     args = parser.parse_args(argv)
     from .db import SessionLocal
     with SessionLocal() as db:

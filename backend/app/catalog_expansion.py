@@ -1,7 +1,7 @@
-"""Katalog genişletme taslağı.
+"""Dört kategoride 100'er yeni eserin editoryal katalog verisi.
 
 Biçim: ad | tür | temalar | atmosfer | esere özgü Türkçe açıklama.
-Bu kayıtlar görsel kaynağı ve lisansı tamamlanana kadar seed'e dahil edilmez.
+Görseller seed sırasında proje içi özgün temsili SVG dosyalarıyla eşleştirilir.
 """
 
 DATA = {
