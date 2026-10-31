@@ -29,6 +29,22 @@ def test_catalog_and_cross_category():
     assert result['film'] and result['oyun']
     assert all(x['content']['id']!=source['id'] for rows in result.values() for x in rows)
     assert all(x['reason'] for rows in result.values() for x in rows)
+    assert any(x['content']['title']=='Blade Runner 2049' for x in result['film'][:8])
+
+def test_cross_category_recommendation_quality():
+    expectations = {
+        ('Dune', 'film'): {'Blade Runner', '2001: A Space Odyssey'},
+        ('Arrival', 'oyun'): {'Firewatch', 'Outer Wilds'},
+        ('Stardew Valley', 'dizi'): {'Parks and Recreation', 'Ted Lasso'},
+        ('Dark', 'kitap'): {'Solaris', 'Üç Cisim Problemi'},
+    }
+    with Session() as db:
+        contents=db.query(Content).all()
+        for (title, category), expected in expectations.items():
+            source=next(item for item in contents if item.title==title)
+            rows=recommend(contents,[source],{'categories':[category]})[category]
+            assert expected.intersection(row['content'].title for row in rows[:5])
+            assert all(row['content'].category==category for row in rows)
 
 def test_feature_changes_ranking():
     with Session() as db:

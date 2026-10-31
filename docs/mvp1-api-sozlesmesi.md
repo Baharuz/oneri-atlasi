@@ -2,13 +2,14 @@
 
 **Güncelleme:** 30 Ekim 2026
 
-Katalog dört kategoriden (`kitap`, `film`, `dizi`, `oyun`) 125'er eser içerir. Arama ve aynı kategori önerisi misafire açıktır. Kaydetme ve kaydedilenler oturum gerektirir.
+Katalog dört kategoriden (`kitap`, `film`, `dizi`, `oyun`) 125'er eser içerir. Arama ve kategoriler arası öneri misafire açıktır. Kaydetme ve kaydedilenler oturum gerektirir.
 
 | İşlem | API | Yanıt |
 | --- | --- | --- |
 | Katalog/başlık arama | `GET /api/contents?category=oyun&q=Stardew` | `Content[]`, en çok 500 eser |
 | Eser detayı | `GET /api/contents/{id}` | `Content` veya 404 |
 | Öneriler | `GET /api/contents/{id}/recommendations` | `{source, results}`; aynı kategoride en çok 8 sonuç |
+| Hedef kategori önerileri | `POST /api/recommend` | `{kitap?: Recommendation[], film?: Recommendation[], dizi?: Recommendation[], oyun?: Recommendation[]}`; `source_ids` 1–5 eser, `answers.categories` hedef kategoriler; her hedefte en çok 8 sonuç |
 | Kayıt/giriş/çıkış | `POST /api/auth/register`, `/login`, `/logout` | Oturum/CSRF çerezleri |
 | Oturum | `GET /api/me` | Kullanıcı ve `favorites` ID listesi; misafire 401 |
 | Kaydet/kaldır | `PUT` / `DELETE /api/me/contents/{id}/favorite` | `{ok: true}`; oturum ve CSRF gerekir |

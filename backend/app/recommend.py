@@ -13,8 +13,9 @@ def recommend(contents, sources, answers, profile=None, feedback=None):
     for item in sources:
         for tag in item.themes: weights[("theme", tag)] += 2
         for tag in item.moods: weights[("mood", tag)] += 1
-        # Genres are only useful within their own category.
-        for tag in item.genres: weights[("genre", item.category, tag)] += 3
+        for tag in item.genres:
+            weights[("genre", item.category, tag)] += 3
+            weights[("cross_genre", tag)] += 2.5
     for tag in profile.get("features", []): weights[("theme", tag)] += 1.5
     for tag in profile.get("moods", []): weights[("mood", tag)] += 1
     for tag in answers.get("features", []): weights[("theme", tag)] += 5
@@ -35,7 +36,7 @@ def recommend(contents, sources, answers, profile=None, feedback=None):
                 value = weights[("mood", tag)]
                 if value: score += value; matches.append((value, tag))
             for tag in item.genres:
-                value = weights[("genre", category, tag)]
+                value = weights[("genre", category, tag)] or weights[("cross_genre", tag)]
                 if value: score += value; matches.append((value, tag))
             if not matches: continue
             if (category, item.pace) in source_paces: score += 0.5

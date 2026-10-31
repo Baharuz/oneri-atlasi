@@ -36,7 +36,7 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 
 ## Özellikler
 
-- Hesapsız: başlığa göre arama, kategori filtresi, tek eser seçimi ve aynı kategoriden gerekçeli öneriler. Seçim ekranı 500 eseri 24'erli gruplar hâlinde gösterir; arama tüm kataloğu kapsar.
+- Hesapsız: başlığa göre arama, kaynak eseri ve hedef kategoriyi seçme, seçilen kategorilerde gerekçeli öneriler. Seçim ekranı 500 eseri 24'erli gruplar hâlinde gösterir; arama tüm kataloğu kapsar.
 - Hesaplı: kayıt, giriş, çıkış, favori ekleme/çıkarma, kaydedilen eserler ve öneri geçmişi.
 - Kaydetme işlemi kullanıcının hesabına yazılır; geçici ekran seçimi profil kaydını değiştirmez.
 - API her kullanıcının özel kaydını oturumdaki kullanıcı kimliğiyle sınırlar. Şifreler Argon2 ile hashlenir.
@@ -56,7 +56,7 @@ python -m app.catalog_audit --check-urls
 
 ## Öneri algoritması
 
-Kaynak içeriklerin tema etiketleri 2, atmosfer etiketleri 1, aynı kategorideki türleri 3 ağırlık alır. Profilde kayıtlı tema/atmosferler 1,5/1; anlık testte işaretlenen özellik/atmosferler 5/3 ağırlık alır. Adayın eşleşen etiket ağırlıkları toplanır. Beğenilmeyen ve seçilen kaynak içerikler çıkarılır. “Keşfet” ve “Şaşırt” seçenekleri yalnızca en az bir gerçek eşleşmesi olan adaylarda tekrar eden etiketlere çeşitlilik cezası uygular. Her kategorinin sonuçları ayrı sıralanır ve gerçek eşleşen en güçlü iki etiket gerekçede gösterilir. Sayısal skor arayüzde olasılık veya doğruluk yüzdesi olarak gösterilmez.
+Kaynak içeriklerin tema etiketleri 2, atmosfer etiketleri 1, aynı kategorideki türleri 3 ve kategoriler arası ortak türleri 2,5 ağırlık alır. Profilde kayıtlı tema/atmosferler 1,5/1; anlık testte işaretlenen özellik/atmosferler 5/3 ağırlık alır. Adayın eşleşen etiket ağırlıkları toplanır. Beğenilmeyen ve seçilen kaynak içerikler çıkarılır. “Keşfet” ve “Şaşırt” seçenekleri yalnızca en az bir gerçek eşleşmesi olan adaylarda tekrar eden etiketlere çeşitlilik cezası uygular. Her kategorinin sonuçları ayrı sıralanır ve gerçek eşleşen en güçlü iki etiket gerekçede gösterilir. Sayısal skor arayüzde olasılık veya doğruluk yüzdesi olarak gösterilmez.
 
 ## Sağlayıcılar ve sınırlar
 

@@ -14,3 +14,9 @@
 - Yerel seed, 500 eserlik veri denetimi, backend testleri, frontend derlemesi ve gerçek tarayıcı akışları çalıştırıldı. Ayrıntı [durum raporunda](mvp1-durum-raporu.md).
 
 Tarihsel pilot sayıları güncel katalogun durumu olarak yorumlanmamalıdır.
+
+## 31 Ekim 2026
+
+- Seçim ekranına hedef kategori seçimi eklendi; POST /api/recommend yanıtı kategori başlıkları altında gösteriliyor.
+- Kategoriler arası ortak tür ağırlığı 2,5 olarak ayarlandı. Dört kaynak/hedef çifti kalite testine eklendi.
+- 28 backend testi, frontend derlemesi, masaüstü ve mobil tarayıcı akışları geçti.

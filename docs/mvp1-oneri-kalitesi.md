@@ -14,3 +14,7 @@
 | Severance | The OA, Counterpart, Sense8 | Kimlik ve gerçeklik eksenindeki niş diziler öne çıkıyor. |
 
 Backend kalite testi ayrıca Outer Wilds ve Karanlığın Sol Eli örneklerini kapsar; her dört kategoriden popüler ve niş eserler denetlenir. Sıralama kuralları ve etiketler insan incelemesinin yerini tutmaz; yeni kullanıcı davranışı geldikçe tekrar değerlendirilmelidir.
+
+## Kategoriler arası kontrol
+
+Kategoriler arası ortak tür eşleşmesi 2,5 ağırlık taşır; aynı kategoride tür ağırlığı 3'tür. Dune → film için bilimkurgu örnekleri, Arrival → oyun için Firewatch/Outer Wilds, Stardew Valley → dizi için Parks and Recreation/Ted Lasso, Dark → kitap için Solaris üst sıralarda kontrol edilir. Hedef kategoriler arayüzde tek tek veya birlikte seçilebilir.
