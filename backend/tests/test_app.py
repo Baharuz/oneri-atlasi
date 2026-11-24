@@ -191,3 +191,158 @@ def test_quality_report_flags_missing():
     assert any('image_credit' in x['issues'] for x in issues)
     assert any('image_source_url' in x['issues'] for x in issues)
     assert all(x['id'] and x['title'] for x in issues)
+
+
+def test_feedback_filters_recommendations_and_can_be_undone():
+    c = client()
+    assert c.post('/api/auth/register', json={'email': 'feedback-flow@example.com', 'password': 'password123'}).status_code == 200
+    items = c.get('/api/contents').json()
+    source = next(item for item in items if item['title'] == 'Dune')
+    body = {'source_ids': [source['id']], 'answers': {'categories': ['film']}}
+    def results():
+        response = c.post('/api/recommend', json=body, headers=csrf_headers(c))
+        assert response.status_code == 200
+        return response.json()['film']
+    initial = results()
+    candidate = initial[0]['content']['id']
+    path = f'/api/me/contents/{candidate}'
+    assert c.put(path + '/favorite', headers=csrf_headers(c)).status_code == 200
+    assert c.put(path + '/like', headers=csrf_headers(c)).status_code == 200
+    assert c.get('/api/me').json()['feedback'][str(candidate)] == 'like'
+    assert c.put(path + '/dislike', headers=csrf_headers(c)).status_code == 200
+    assert c.get('/api/me').json()['feedback'][str(candidate)] == 'dislike'
+    assert candidate not in [row['content']['id'] for row in results()]
+    assert candidate in [item['id'] for item in c.get('/api/me/saved').json()]
+    # Undo restores the previous like; deleting that like clears feedback entirely.
+    assert c.put(path + '/like', headers=csrf_headers(c)).status_code == 200
+    assert candidate in [row['content']['id'] for row in results()]
+    assert c.delete(path + '/like', headers=csrf_headers(c)).status_code == 200
+    assert str(candidate) not in c.get('/api/me').json()['feedback']
+
+
+def test_account_saved_memory_persists_and_is_isolated():
+    a, b = client(), client()
+    for c, email in [(a, 'memory-a@example.com'), (b, 'memory-b@example.com')]:
+        assert c.post('/api/auth/register', json={'email': email, 'password': 'password123'}).status_code == 200
+    items = a.get('/api/contents').json()
+    source = next(item for item in items if item['title'] == 'Dune')
+    url = f"/api/contents/{source['id']}/recommendations"
+    baseline = a.get(url).json()['results']
+    candidate = baseline[0]['content']['id']
+    score = lambda rows: next(row['score'] for row in rows if row['content']['id'] == candidate)
+    path = f'/api/me/contents/{candidate}'
+    assert a.put(path + '/favorite', headers=csrf_headers(a)).status_code == 200
+    boosted = a.get(url).json()['results']
+    assert score(boosted) > score(baseline)
+    assert b.get(url).json()['results'] == baseline
+    assert a.post('/api/auth/logout', headers=csrf_headers(a)).status_code == 200
+    assert a.get(url).json()['results'] == baseline
+    assert a.post('/api/auth/login', json={'email': 'memory-a@example.com', 'password': 'password123'}).status_code == 200
+    assert a.get(url).json()['results'] == boosted
+    assert a.delete(path + '/favorite', headers=csrf_headers(a)).status_code == 200
+    assert a.get(url).json()['results'] == baseline
+
+
+def test_profile_edit_persistence_and_request_history_are_separate():
+    from app.main import account_memory
+    from app.models import User
+    c = client()
+    assert c.post('/api/auth/register', json={'email': 'profile-memory@example.com', 'password': 'password123'}).status_code == 200
+    user_id = c.get('/api/me').json()['id']
+    items = c.get('/api/contents').json()
+    source = next(item for item in items if item['title'] == 'Stardew Valley')
+    prefs = {'features': ['gizem'], 'moods': ['karanlık']}
+    assert c.put('/api/me/preferences', json=prefs, headers=csrf_headers(c)).status_code == 200
+    assert c.post('/api/recommend', json={'source_ids': [source['id']], 'answers': {'features': ['dostluk'], 'moods': ['neşeli']}}, headers=csrf_headers(c)).status_code == 200
+    assert c.get('/api/me').json()['preferences']['features'] == ['gizem']
+    assert c.post('/api/auth/logout', headers=csrf_headers(c)).status_code == 200
+    assert c.post('/api/auth/login', json={'email': 'profile-memory@example.com', 'password': 'password123'}).status_code == 200
+    assert c.get('/api/me').json()['preferences']['moods'] == ['karanlık']
+    with Session() as db:
+        contents = db.query(Content).all()
+        feedback, remembered, past = account_memory(db.get(User, user_id), db, contents)
+        assert remembered == [] and len(past) == 1
+        assert 'dostluk' in past[0]['features'] and 'neşeli' in past[0]['moods']
+        assert account_memory(None, db, contents) == ({}, [], [])
+    assert c.put('/api/me/preferences', json={'features': [], 'moods': []}, headers=csrf_headers(c)).status_code == 200
+    assert c.get('/api/me').json()['preferences']['features'] == []
+
+
+def test_memory_is_bounded_and_dislikes_override_saved_items():
+    from types import SimpleNamespace
+    def item(id, themes):
+        return SimpleNamespace(id=id, title=str(id), category='kitap', themes=themes, moods=[], genres=[], pace=None, audience=None)
+    source, candidate, saved = item(1, ['gizem']), item(2, ['gizem', 'dostluk']), item(3, ['dostluk'])
+    base = recommend([source, candidate], [source], {'categories': ['kitap']})['kitap'][0]['score']
+    one = recommend([source, candidate], [source], {'categories': ['kitap']}, remembered=[saved])['kitap'][0]['score']
+    many = recommend([source, candidate], [source], {'categories': ['kitap']}, remembered=[saved]*100)['kitap'][0]['score']
+    assert one > base and many == one
+    historical = recommend([source, candidate], [source], {'categories': ['kitap']}, past_answers=[{'features':['dostluk']}])['kitap'][0]['score']
+    assert historical > base
+
+    disliked_memory = recommend([source, candidate], [source], {'categories': ['kitap']}, feedback={3:'dislike'}, remembered=[saved])['kitap'][0]['score']
+    assert disliked_memory == base
+    assert recommend([source, candidate], [source], {'categories': ['kitap']}, feedback={2:'dislike'})['kitap'] == []
+
+
+def test_history_open_preserves_stored_order_and_is_account_scoped():
+    from app.models import RecommendationRun
+    a,b=client(),client()
+    for c,email in [(a,'history-owner@example.com'),(b,'history-other@example.com')]:
+        assert c.post('/api/auth/register',json={'email':email,'password':'password123'}).status_code==200
+    items=a.get('/api/contents').json()
+    sources=[next(item for item in items if item['title']==title) for title in ['Dune','Arrival']]
+    response=a.post('/api/recommend',json={'source_ids':[item['id'] for item in sources],'answers':{'categories':['oyun'],'mode':'surprise'}},headers=csrf_headers(a))
+    assert response.status_code==200
+    original=response.json()
+    listing=a.get('/api/me/history').json()
+    run_id=listing[0]['id']
+    assert [source['title'] for source in listing[0]['sources']]==['Dune','Arrival']
+    assert listing[0]['count']==len(original['oyun'])
+    detail=a.get(f'/api/me/history/{run_id}').json()
+    assert detail['results']==original
+    assert len(a.get('/api/me/history').json())==1
+    assert b.get(f'/api/me/history/{run_id}').status_code==404
+    assert client().get(f'/api/me/history/{run_id}').status_code==401
+    # Existing ID-only records remain readable and do not invent historic reasons.
+    with Session() as db:
+        run=db.get(RecommendationRun,run_id)
+        run.results={'oyun':[original['oyun'][0]['content']['id'],999999]}
+        db.commit()
+    old=a.get(f'/api/me/history/{run_id}').json()
+    assert old['legacy'] and old['missing_count']==1
+    assert old['results']['oyun'][0]['score'] is None
+    assert 'saklanmamış' in old['results']['oyun'][0]['reason']
+
+
+def test_genre_feature_changes_score_for_same_and_cross_categories():
+    from types import SimpleNamespace as Item
+    source=Item(id=1,title='Kaynak',category='kitap',themes=[],moods=[],genres=['bilimkurgu'],pace=None,audience=None)
+    for category in ['kitap','film']:
+        candidate=Item(id=2,title='Aday',category=category,themes=[],moods=[],genres=['bilimkurgu'],pace=None,audience=None)
+        base=recommend([candidate],[source],{'categories':[category]})[category][0]['score']
+        preferred=recommend([candidate],[source],{'categories':[category],'features':['bilimkurgu']})[category][0]['score']
+        assert preferred==base+5
+
+
+def test_multiple_source_validation():
+    c=client()
+    ids=[item['id'] for item in c.get('/api/contents').json()[:6]]
+    assert c.post('/api/recommend',json={'source_ids':ids[:5]}).status_code==200
+    assert c.post('/api/recommend',json={'source_ids':ids}).status_code==422
+    assert c.post('/api/recommend',json={'source_ids':[ids[0],ids[0]]}).status_code==422
+
+
+def test_source_backed_catalog_details_preserve_manual_edits():
+    from app.catalog_details import coverage
+    isolated=create_engine('sqlite+pysqlite:///:memory:')
+    Base.metadata.create_all(isolated)
+    with sessionmaker(bind=isolated)() as db:
+        seed(db)
+        report=coverage(db)
+        assert report['total']==500 and report['with_year']==9 and report['with_creators']==9
+        dune=db.query(Content).filter_by(category='kitap',title='Dune').one()
+        assert dune.year==1965 and dune.creators==['Frank Herbert']
+        dune.year=1966;dune.creators=['Elle düzenlenmiş'];db.commit()
+        seed(db)
+        assert dune.year==1966 and dune.creators==['Elle düzenlenmiş']

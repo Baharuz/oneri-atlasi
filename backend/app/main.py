@@ -77,7 +77,7 @@ def set_cookies(response: Response, user_id: int):
     response.set_cookie("csrf", secrets.token_urlsafe(32), httponly=False, secure=COOKIE_SECURE, samesite=COOKIE_SAMESITE, max_age=604800)
 
 def content_dict(item):
-    return {field: getattr(item, field) for field in ("id", "category", "title", "description", "genres", "themes", "moods", "pace", "audience", "language", "year", "image_url", "image_credit", "image_source_url", "source", "source_id")}
+    return {field: getattr(item, field) for field in ("id", "category", "title", "description", "genres", "themes", "moods", "pace", "audience", "language", "year", "creators", "metadata_source_url", "image_url", "image_credit", "image_source_url", "source", "source_id")}
 
 @app.get("/api/health")
 def health(): return {"ok": True}
@@ -119,9 +119,6 @@ def save_preferences(data: ProfileInput, user: User = Depends(current_user), db:
         found = db.scalars(select(Content.id).where(Content.id.in_(data.source_ids), Content.category.in_(CATEGORIES))).all()
         if len(found) != len(data.source_ids): raise HTTPException(422, "İçerik bulunamadı")
     user.preferences = data.model_dump()
-    for content_id in data.source_ids:
-        existing = db.scalar(select(Interaction).where(Interaction.user_id == user.id, Interaction.content_id == content_id, Interaction.kind == "favorite"))
-        if not existing: db.add(Interaction(user_id=user.id, content_id=content_id, kind="favorite"))
     db.commit()
     return {"preferences": user.preferences}
 
@@ -140,16 +137,36 @@ def content_detail(content_id: int, db: Session = Depends(get_db)):
     if not item or item.category not in CATEGORIES: raise HTTPException(404, "İçerik bulunamadı")
     return content_dict(item)
 
+def account_memory(user, db, all_contents):
+    """Read only this account's explicit signals and latest 20 recommendation requests."""
+    if not user:
+        return {}, [], []
+    interactions = db.scalars(select(Interaction).where(Interaction.user_id == user.id)).all()
+    feedback = {row.content_id: row.kind for row in interactions if row.kind in {"like", "dislike"}}
+    positive_ids = {row.content_id for row in interactions if row.kind in {"favorite", "like"}}
+    remembered = [item for item in all_contents if item.id in positive_ids and feedback.get(item.id) != "dislike"]
+    runs = db.scalars(select(RecommendationRun).where(RecommendationRun.user_id == user.id)
+                      .order_by(RecommendationRun.created_at.desc(), RecommendationRun.id.desc()).limit(20)).all()
+    lookup = {item.id: item for item in all_contents}
+    past_answers = []
+    for row in runs:
+        answers = row.request_data.get("answers", {})
+        past_sources = [lookup[item_id] for item_id in row.request_data.get("source_ids", [])
+                        if item_id in lookup and feedback.get(item_id) != "dislike"]
+        past_answers.append({
+            "features": list(set(answers.get("features", [])) | {tag for item in past_sources for tag in item.themes}),
+            "moods": list(set(answers.get("moods", [])) | {tag for item in past_sources for tag in item.moods}),
+        })
+    return feedback, remembered, past_answers
+
 @app.get("/api/contents/{content_id}/recommendations")
 def content_recommendations(content_id: int, request: Request, db: Session = Depends(get_db)):
     source = db.get(Content, content_id)
     if not source or source.category not in CATEGORIES: raise HTTPException(404, "İçerik bulunamadı")
     all_contents = db.scalars(select(Content).where(Content.category.in_(CATEGORIES))).all()
     user = optional_user(request, db)
-    feedback = {}
-    if user:
-        feedback = {x.content_id: x.kind for x in db.scalars(select(Interaction).where(Interaction.user_id == user.id, Interaction.kind.in_(["like", "dislike"]))).all()}
-    result = recommend(all_contents, [source], {"categories": [source.category]}, user.preferences if user else None, feedback)
+    feedback, remembered, past_answers = account_memory(user, db, all_contents)
+    result = recommend(all_contents, [source], {"categories": [source.category]}, user.preferences if user else None, feedback, remembered, past_answers)
     rows = result.get(source.category, [])
     return {"source": content_dict(source), "results": [{"content": content_dict(x["content"]), "score": x["score"], "reason": x["reason"]} for x in rows]}
 
@@ -162,13 +179,11 @@ def recommendations(data: RecommendInput, request: Request, db: Session = Depend
     allowed = set().union(*(set(x.themes + x.moods + x.genres) for x in sources))
     if not set(data.answers.features) <= allowed: raise HTTPException(422, "Seçilen özellik kaynak içeriklerde yok")
     user = optional_user(request, db)
-    feedback = {}
-    if user:
-        feedback = {x.content_id: x.kind for x in db.scalars(select(Interaction).where(Interaction.user_id == user.id, Interaction.kind.in_(["like", "dislike"]))).all()}
-    result = recommend(all_contents, sources, data.answers.model_dump(), user.preferences if user else None, feedback)
+    feedback, remembered, past_answers = account_memory(user, db, all_contents)
+    result = recommend(all_contents, sources, data.answers.model_dump(), user.preferences if user else None, feedback, remembered, past_answers)
     output = {category: [{"content": content_dict(x["content"]), "score": x["score"], "reason": x["reason"]} for x in rows] for category, rows in result.items()}
     if user:
-        db.add(RecommendationRun(user_id=user.id, request_data=data.model_dump(), results={k: [x["content"]["id"] for x in v] for k, v in output.items()})); db.commit()
+        db.add(RecommendationRun(user_id=user.id, request_data=data.model_dump(), results=output)); db.commit()
     return output
 
 @app.put("/api/me/contents/{content_id}/{kind}", dependencies=[Depends(csrf)])
@@ -188,7 +203,39 @@ def remove_interaction(content_id: int, kind: str, user: User = Depends(current_
     db.execute(delete(Interaction).where(Interaction.user_id == user.id, Interaction.content_id == content_id, Interaction.kind == kind)); db.commit()
     return {"ok": True}
 
+def history_source_names(run, db):
+    ids = run.request_data.get("source_ids", [])
+    lookup = {item.id: item for item in db.scalars(select(Content).where(Content.id.in_(ids))).all()}
+    return [{"id": item_id, "title": lookup[item_id].title if item_id in lookup else "Katalogdan kaldırılan eser"} for item_id in ids]
+
 @app.get("/api/me/history")
 def history(user: User = Depends(current_user), db: Session = Depends(get_db)):
-    runs = db.scalars(select(RecommendationRun).where(RecommendationRun.user_id == user.id).order_by(RecommendationRun.created_at.desc()).limit(20)).all()
-    return [{"id": x.id, "created_at": x.created_at, "request": x.request_data, "results": x.results} for x in runs]
+    runs = db.scalars(select(RecommendationRun).where(RecommendationRun.user_id == user.id)
+                      .order_by(RecommendationRun.created_at.desc(), RecommendationRun.id.desc()).limit(20)).all()
+    return [{"id": run.id, "created_at": run.created_at, "request": run.request_data,
+             "sources": history_source_names(run, db), "count": sum(len(rows) for rows in run.results.values())}
+            for run in runs]
+
+@app.get("/api/me/history/{run_id}")
+def history_detail(run_id: int, user: User = Depends(current_user), db: Session = Depends(get_db)):
+    run = db.scalar(select(RecommendationRun).where(RecommendationRun.id == run_id, RecommendationRun.user_id == user.id))
+    if not run: raise HTTPException(404, "Geçmiş kaydı bulunamadı")
+    ids = {row if isinstance(row, int) else row["content"]["id"] for rows in run.results.values() for row in rows}
+    ids.update(run.request_data.get("source_ids", []))
+    lookup = {item.id: item for item in db.scalars(select(Content).where(Content.id.in_(ids), Content.category.in_(CATEGORIES))).all()}
+    results = {}
+    missing = 0
+    legacy = False
+    for category, rows in run.results.items():
+        if category not in CATEGORIES: continue
+        results[category] = []
+        for row in rows:
+            item_id = row if isinstance(row, int) else row["content"]["id"]
+            if item_id not in lookup: missing += 1; continue
+            legacy = legacy or isinstance(row, int)
+            results[category].append({"content": content_dict(lookup[item_id]),
+                                     "score": None if isinstance(row, int) else row.get("score"),
+                                     "reason": "Eski öneri kaydı; gerekçe saklanmamış." if isinstance(row, int) else row.get("reason", "")})
+    return {"id": run.id, "created_at": run.created_at, "request": run.request_data,
+            "sources": [content_dict(lookup[item_id]) for item_id in run.request_data.get("source_ids", []) if item_id in lookup],
+            "results": results, "missing_count": missing, "legacy": legacy}

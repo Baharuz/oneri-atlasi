@@ -1,4 +1,4 @@
-> **Arşiv notu (30 Ekim 2026):** Bu çoklu kaynak ve kategoriler arası öneri taslağı mevcut MVP akışını göstermez. Güncel uygulama tek eser seçer, aynı kategoriden önerir ve 500 özgün temsili SVG kullanır. [Durum raporu](mvp1-durum-raporu.md).
+> Güncel uygulama (24 Kasım 2026): 1–5 kaynak eser, kategoriler arası öneri, tema/tür/atmosfer tercihleri, üç öneri modu, profil hafızası ve açılabilir öneri geçmişi vardır. Görseller özgün temsili SVG’lerdir; aşağıdaki ilk taslaktaki “gerçek görsel” hedefi uygulanmamıştır.
 
 # Öneri Atlası — ilk teslim
 

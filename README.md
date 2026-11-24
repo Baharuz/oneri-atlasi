@@ -28,7 +28,7 @@ npm install
 npm run dev
 ```
 
-Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `localhost:8000` adresine iletir. Test için backend klasöründe `pytest -q`, arayüz derlemesi için frontend klasöründe `npm run build` çalıştırın.
+Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `localhost:8000` adresine iletir. Test için backend klasöründe `python -m pytest -q`, frontend klasöründe `npm test`, arayüz derlemesi için frontend klasöründe `npm run build` çalıştırın.
 
 ## Ortam değişkenleri
 
@@ -36,7 +36,11 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 
 ## Özellikler
 
-- Hesapsız: başlığa göre arama, kaynak eseri ve hedef kategoriyi seçme, seçilen kategorilerde gerekçeli öneriler. Seçim ekranı 500 eseri 24'erli gruplar hâlinde gösterir; arama tüm kataloğu kapsar.
+- **Profilim** ekranında tema ve atmosfer tercihleri düzenlenip kalıcı kaydedilebilir. Hesaplı öneriler bu tercihlerden, kaydedilen/beğenilen eserlerin tema ve atmosferlerinden ve son 20 öneri isteğinin kaynak/tercihlerinden yararlanır. Hesap bilgisi sunucudaki oturumdan alınır; misafirler ve diğer hesaplar bu hafızayı kullanmaz. Anlık tercihler profilin üzerine yazılmaz.
+- Hesapla giriş yapan kullanıcı kartlardaki **Beğen / Beğenme** düğmeleriyle geri bildirim verebilir. Beğenme, eseri mevcut önerilerden ve sonraki öneri isteklerinden çıkarır; son çıkarma işlemi **Geri al** ile geri çevrilebilir. Beğen düğmesine tekrar basmak beğeniyi kaldırır. Kaydedilenler listesi bu işlemle silinmez.
+- Öneri modu seçilebilir: **Benzer** (varsayılan), **Keşfet** veya **Şaşırt**. Keşfet ve Şaşırt, eşleşen eserler arasında çeşitliliğe giderek daha fazla ağırlık verir; rastgele veya tamamen ilgisiz eser seçmez. Sonuç ekranı kullanılan modu gösterir.
+- Eser seçildikten sonra “Bu eserde neyi sevdin?” alanında isteğe bağlı tema ve atmosfer tercihleri seçilebilir. Tercihler yalnızca o öneri isteğinde kullanılır; kaynak eser değişince temizlenir.
+- Hesapsız: başlığa göre arama, 1–5 kaynak eseri ve hedef kategoriyi seçme, seçilen kategorilerde gerekçeli öneriler. Seçim ekranı 500 eseri 24'erli gruplar hâlinde gösterir; arama tüm kataloğu kapsar.
 - Hesaplı: kayıt, giriş, çıkış, favori ekleme/çıkarma, kaydedilen eserler ve öneri geçmişi.
 - Kaydetme işlemi kullanıcının hesabına yazılır; geçici ekran seçimi profil kaydını değiştirmez.
 - API her kullanıcının özel kaydını oturumdaki kullanıcı kimliğiyle sınırlar. Şifreler Argon2 ile hashlenir.
@@ -45,7 +49,7 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 
 ## Katalog denetimi
 
-Şema geçişleri `0003` ile kullanılmayan kategoriyi temizler; son sürüm `0004_editorial_metadata` tempo ve hedef kitle etiketlerini ekler. Katalog tamamlanma hedefi kategori başına 125, toplam 500 eserdir. Hedefin karşılanıp karşılanmadığını, mükerrer başlıkları ve boş görsel/atıf/açıklama alanlarını denetlemek için `backend` dizininde:
+Şema geçişleri `0003` ile kullanılmayan kategoriyi temizler; `0004_editorial_metadata` tempo ve hedef kitle etiketlerini ekler; son geçiş `0005_catalog_details` eser sahibi ve bilgi kaynağını ekler. Katalog tamamlanma hedefi kategori başına 125, toplam 500 eserdir. Hedefin karşılanıp karşılanmadığını, mükerrer başlıkları ve boş görsel/atıf/açıklama alanlarını denetlemek için `backend` dizininde:
 
 ```powershell
 python -m app.catalog_audit
@@ -61,3 +65,18 @@ Kaynak içeriklerin tema etiketleri 2, atmosfer etiketleri 1, aynı kategorideki
 ## Sağlayıcılar ve sınırlar
 
 `CatalogProvider` arayüzü ileride katalog verisi getiren adaptörler içindir. TMDB ve RAWG için salt okunur aday toplama aracı bulunur; bunların kullanımı ilgili API anahtarlarını gerektirir. Öneri sıralamasını dış API'ler değil, uygulamanın kendi algoritması yapar. Görsel yüklenemezse yerel kategori simgesi gösterilir. Bazı dar tercih birleşimlerinde uygun sonuç bulunmayabilir; arayüz bunu belirtir. PostgreSQL kurulumu için Docker Desktop çalışır durumda olmalıdır.
+
+### Hesap hafızasının ağırlığı
+Kaydedilen ve beğenilen eserler tekilleştirilir; tema/atmosfer katkıları eser sayısına bölünerek toplam 1,25/0,75 ile sınırlanır. Son 20 isteğin kaynak eser ve açık tercihlerinin katkısı ortalama 0,5/0,25 olur. Beğenilmeyen eserler olumlu hafızaya katılmaz ve sonuçlardan çıkarılır. Sadece gösterilen sonuçlar hafızaya olumlu sinyal olarak eklenmez. Kaydı veya beğeniyi kaldırmak ilgili sinyali sonraki isteklerden çıkarır; bağımsız geçmiş istekleri ve diğer olumlu sinyaller geçerliliğini korur.
+
+## Geçmiş ve eser bilgileri
+
+Profilim'de her geçmiş kaydının kaynak adları ve öneri sayısı görünür. Sonuçları aç, saklanmış sırayı ve yeni kayıtlarda saklanmış gerekçeleri gösterir; yeni öneri üretmez. Katalogdan kaldırılmış sonuçlar belirtilir. Kaydedilenlerden açılan detayın geri düğmesi Kaydedilenlere döner.
+
+`alembic upgrade head` ardından `python seed.py` çalıştırın. Kaynak bağlantıları `backend/data/catalog-details.json` içinde tutulan 9 eserin ilk yayın/çıkış yılı ve yazar/yönetmen/yaratıcı/geliştirici bilgisi doğrulanmıştır. Kalan 491 eser için bu veri tamamlanmamıştır. Eksik alanlar tahmin edilmez; detay ekranı doğrulanmadığını belirtir. Elle düzenlenmiş metadata seed ile korunur.
+
+Yeni doğrulanmış veri için aynı JSON biçiminde manifest oluşturup `python -m app.catalog_details dosya.json` ile dry-run yapın; `--apply` kalıcı yazar. `--overwrite` mevcut elle düzenlenmiş bilgileri de değiştirir. Kaynak, kategori, başlık, yıl ve eser sahibi alanları doğrulanır. Komut kapsam raporunu da verir.
+
+Arayüz otomatik testleri jsdom üzerinde çalışır; kamera/tarayıcı görsel testi değildir. Başlıca akışlar `frontend/src/main.test.tsx` içindedir.
+
+GitHub Actions her push/PR için backend testlerini, React akış testlerini ve derlemeyi çalıştırır; ayrıca geçici PostgreSQL 16 üzerinde migration, seed ve katalog denetimi yapar. Bu kontrolün sonucu Actions ekranından izlenmelidir.

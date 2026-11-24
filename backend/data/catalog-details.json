@@ -1,0 +1,89 @@
+{
+  "year_semantics": "İlk özgün yayın/çıkış yılı; dizi için ilk sezon. Kitap çeviri/baskı yılı değil.",
+  "verified_at": "2026-11-24",
+  "items": [
+    {
+      "category": "kitap",
+      "title": "Dune",
+      "year": 1965,
+      "creators": [
+        "Frank Herbert"
+      ],
+      "metadata_source_url": "https://www.penguinrandomhouseretail.com/book/?isbn=9780441013593"
+    },
+    {
+      "category": "kitap",
+      "title": "1984",
+      "year": 1949,
+      "creators": [
+        "George Orwell"
+      ],
+      "metadata_source_url": "https://www.orwellfoundation.com/the-orwell-foundation/orwell/books-by-orwell/nineteen-eighty-four/"
+    },
+    {
+      "category": "kitap",
+      "title": "Küçük Prens",
+      "year": 1943,
+      "creators": [
+        "Antoine de Saint-Exupéry"
+      ],
+      "metadata_source_url": "https://www.antoinedesaintexupery.org/ouvrage/le-petit-prince-1943/"
+    },
+    {
+      "category": "film",
+      "title": "Arrival",
+      "year": 2016,
+      "creators": [
+        "Denis Villeneuve"
+      ],
+      "metadata_source_url": "https://catalog.afi.com/Film/70894-ARRIVAL"
+    },
+    {
+      "category": "film",
+      "title": "Interstellar",
+      "year": 2014,
+      "creators": [
+        "Christopher Nolan"
+      ],
+      "metadata_source_url": "https://www.paramountmovies.com/movies/interstellar"
+    },
+    {
+      "category": "dizi",
+      "title": "Dark",
+      "year": 2017,
+      "creators": [
+        "Baran bo Odar",
+        "Jantje Friese"
+      ],
+      "metadata_source_url": "https://about.netflix.com/tr/news/dark-the-first-netflix-original-series-produced-in-germany-commences-principal-photography"
+    },
+    {
+      "category": "dizi",
+      "title": "Stranger Things",
+      "year": 2016,
+      "creators": [
+        "Matt Duffer",
+        "Ross Duffer"
+      ],
+      "metadata_source_url": "https://about.netflix.com/en/news/stranger-things-renewed-for-season-4-as-netflix-makes-overall-deal-with-the-duffer-brothers"
+    },
+    {
+      "category": "oyun",
+      "title": "Stardew Valley",
+      "year": 2016,
+      "creators": [
+        "ConcernedApe (Eric Barone)"
+      ],
+      "metadata_source_url": "https://www.stardewvalley.net/faq/"
+    },
+    {
+      "category": "oyun",
+      "title": "Outer Wilds",
+      "year": 2019,
+      "creators": [
+        "Mobius Digital"
+      ],
+      "metadata_source_url": "https://www.mobiusdigitalgames.com/press.html"
+    }
+  ]
+}

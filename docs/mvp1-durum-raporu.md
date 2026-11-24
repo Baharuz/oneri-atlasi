@@ -1,21 +1,20 @@
-# MVP-1 durum raporu
+# Güncel durum raporu
 
-**Güncelleme:** 31 Ekim 2026
+Güncelleme: 24 Kasım 2026.
 
-## Kapsam
-
-Katalog kitap, film, dizi ve oyun kategorilerinden 125'er, toplam 500 gerçek eserden oluşur. Eser seçimi, hedef kategorilerde gerekçeli öneriler, hesapla kaydetme ve kaydedilenler ekranı uygulamadadır. Müzik kategorisi `0003` geçişiyle kaldırıldı. `0004`, tempo ve geniş hedef kitle etiketlerini ekler; bunlar resmî yaş sınıflandırması değildir.
-
-## Veri ve görseller
-
-`python seed.py` mevcut kaynak kimlikleriyle upsert yapar; kullanıcıları ve etkileşimleri silmez. Katalogdaki açıklamalar esere özel Türkçe metinlerdir. Her eser için `/art/` altında özgün, temsili SVG bulunur. Bunlar resmî kapak veya afiş değildir. Kart ve detay ekranı kaynak bağlantısını ve görsel kredisini gösterir. Kaynak/kullanım açıklaması [görsel notunda](../frontend/public/art/README.md) yer alır.
+- Katalog: dört kategoride toplam 500 eser; temsili SVG görseller.
+- Kullanıcı farklı kategorilerden 1–5 kaynak seçer. Filtre değişince seçimler korunur; altıncı seçim açıklanarak engellenir.
+- Tema, tür ve atmosfer tercihleri ile Benzer / Keşfet / Şaşırt modları API'ye iletilir.
+- Hesaba özel kalıcı tercihler, kaydedilen/beğenilen eserler ve son 20 istekteki seçimler öneri hafızasına katılır. Beğenilmeyen eserler çıkarılır.
+- Profilde geçmişin kaynak adları ve sonuç sayısı görünür. Sonuçları aç, yeni öneri isteği yapmadan eski sırayı gösterir; yeni kayıtlarda skor/gerekçe saklanır. Eski ID kayıtlarında olmayan gerekçe uydurulmaz. Katalogdan kaldırılmış sonuçlar sayıyla bildirilir.
+- Detay ekranının geri düğmesi, açıldığı Kaydedilenler / Öneriler / Seçim ekranına döner. Geçmiş sonuçları profile döner.
+- `0005` migration'ı eser sahibi ve bilgi kaynağı alanlarını ekler. `python seed.py` kaynakla doğrulanmış 9 eserin yıl/eser sahibi bilgisini doldurur. Kalan **491 eserin bu alanları eksiktir**; arayüz doğrulanmadığını açıkça gösterir. 500 eserin metadata zenginleştirmesi tamamlanmış değildir.
 
 ## Doğrulama
 
-- Yerel SQLite üzerinde seed sonrasında 500 kayıt ve kategori başına 125 kayıt doğrulandı.
-- `python -m app.catalog_audit --check-urls` 500 kaydın açıklamasını, görselini, kredi ve kaynak alanlarını, SVG dosyasını ve başlık eşleşmesini kontrol etti; hata sayısı sıfırdı.
-- Backend testleri 28/28 geçti; frontend üretim derlemesi geçti.
-- Kategoriler arası öneride Dune → film, Arrival → oyun, Stardew Valley → dizi ve Dark → kitap sıralamaları kontrol edildi. Tarayıcıda tek hedef kategori ve dört hedefin birlikte gösterimi doğrulandı.
-- Gerçek tarayıcıda dört kategoride arama, seçim, öneri ve detay; misafir kaydetme, kayıt, yenileme, kaydedilenlerden kaldırma ve tekrar giriş; mobil görünüm, klavye, boş sonuç ve ağ hatası durumları denendi.
+`frontend`: `npm ci`, `npm test`, `npm run build`.
+`backend`: `python -m pytest -q`.
 
-Bu rapor yerel geliştirme ortamına ilişkindir. Dağıtım ve bağımsız kullanıcı kabul testi ayrı kararlardır.
+Arayüz testleri Vitest + jsdom + Testing Library ile gerçek React bileşenini kullanır; çoklu seçim, beş sınırı, kategori filtresinde koruma, tür/atmosfer ve mod payload'ı, kaydedilenlere geri dönüş, geçmiş açma, dislike/geri al ve profil kaydetmeyi kapsar. Ağ yanıtları taklit edilir; bu testler tarayıcı görsel kontrolünün yerine geçmez.
+
+Backend testleri SQLite üzerinde çalışır. PostgreSQL ve gerçek tarayıcı görsel kontrolü ayrıca yapılmalıdır.
