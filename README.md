@@ -36,6 +36,7 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 
 ## Özellikler
 
+- Öneri modu seçilebilir: **Benzer** (varsayılan), **Keşfet** veya **Şaşırt**. Keşfet ve Şaşırt, eşleşen eserler arasında çeşitliliğe giderek daha fazla ağırlık verir; rastgele veya tamamen ilgisiz eser seçmez. Sonuç ekranı kullanılan modu gösterir.
 - Eser seçildikten sonra “Bu eserde neyi sevdin?” alanında isteğe bağlı tema ve atmosfer tercihleri seçilebilir. Tercihler yalnızca o öneri isteğinde kullanılır; kaynak eser değişince temizlenir.
 - Hesapsız: başlığa göre arama, kaynak eseri ve hedef kategoriyi seçme, seçilen kategorilerde gerekçeli öneriler. Seçim ekranı 500 eseri 24'erli gruplar hâlinde gösterir; arama tüm kataloğu kapsar.
 - Hesaplı: kayıt, giriş, çıkış, favori ekleme/çıkarma, kaydedilen eserler ve öneri geçmişi.
