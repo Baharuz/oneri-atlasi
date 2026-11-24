@@ -119,9 +119,6 @@ def save_preferences(data: ProfileInput, user: User = Depends(current_user), db:
         found = db.scalars(select(Content.id).where(Content.id.in_(data.source_ids), Content.category.in_(CATEGORIES))).all()
         if len(found) != len(data.source_ids): raise HTTPException(422, "İçerik bulunamadı")
     user.preferences = data.model_dump()
-    for content_id in data.source_ids:
-        existing = db.scalar(select(Interaction).where(Interaction.user_id == user.id, Interaction.content_id == content_id, Interaction.kind == "favorite"))
-        if not existing: db.add(Interaction(user_id=user.id, content_id=content_id, kind="favorite"))
     db.commit()
     return {"preferences": user.preferences}
 
@@ -140,16 +137,36 @@ def content_detail(content_id: int, db: Session = Depends(get_db)):
     if not item or item.category not in CATEGORIES: raise HTTPException(404, "İçerik bulunamadı")
     return content_dict(item)
 
+def account_memory(user, db, all_contents):
+    """Read only this account's explicit signals and latest 20 recommendation requests."""
+    if not user:
+        return {}, [], []
+    interactions = db.scalars(select(Interaction).where(Interaction.user_id == user.id)).all()
+    feedback = {row.content_id: row.kind for row in interactions if row.kind in {"like", "dislike"}}
+    positive_ids = {row.content_id for row in interactions if row.kind in {"favorite", "like"}}
+    remembered = [item for item in all_contents if item.id in positive_ids and feedback.get(item.id) != "dislike"]
+    runs = db.scalars(select(RecommendationRun).where(RecommendationRun.user_id == user.id)
+                      .order_by(RecommendationRun.created_at.desc(), RecommendationRun.id.desc()).limit(20)).all()
+    lookup = {item.id: item for item in all_contents}
+    past_answers = []
+    for row in runs:
+        answers = row.request_data.get("answers", {})
+        past_sources = [lookup[item_id] for item_id in row.request_data.get("source_ids", [])
+                        if item_id in lookup and feedback.get(item_id) != "dislike"]
+        past_answers.append({
+            "features": list(set(answers.get("features", [])) | {tag for item in past_sources for tag in item.themes}),
+            "moods": list(set(answers.get("moods", [])) | {tag for item in past_sources for tag in item.moods}),
+        })
+    return feedback, remembered, past_answers
+
 @app.get("/api/contents/{content_id}/recommendations")
 def content_recommendations(content_id: int, request: Request, db: Session = Depends(get_db)):
     source = db.get(Content, content_id)
     if not source or source.category not in CATEGORIES: raise HTTPException(404, "İçerik bulunamadı")
     all_contents = db.scalars(select(Content).where(Content.category.in_(CATEGORIES))).all()
     user = optional_user(request, db)
-    feedback = {}
-    if user:
-        feedback = {x.content_id: x.kind for x in db.scalars(select(Interaction).where(Interaction.user_id == user.id, Interaction.kind.in_(["like", "dislike"]))).all()}
-    result = recommend(all_contents, [source], {"categories": [source.category]}, user.preferences if user else None, feedback)
+    feedback, remembered, past_answers = account_memory(user, db, all_contents)
+    result = recommend(all_contents, [source], {"categories": [source.category]}, user.preferences if user else None, feedback, remembered, past_answers)
     rows = result.get(source.category, [])
     return {"source": content_dict(source), "results": [{"content": content_dict(x["content"]), "score": x["score"], "reason": x["reason"]} for x in rows]}
 
@@ -162,10 +179,8 @@ def recommendations(data: RecommendInput, request: Request, db: Session = Depend
     allowed = set().union(*(set(x.themes + x.moods + x.genres) for x in sources))
     if not set(data.answers.features) <= allowed: raise HTTPException(422, "Seçilen özellik kaynak içeriklerde yok")
     user = optional_user(request, db)
-    feedback = {}
-    if user:
-        feedback = {x.content_id: x.kind for x in db.scalars(select(Interaction).where(Interaction.user_id == user.id, Interaction.kind.in_(["like", "dislike"]))).all()}
-    result = recommend(all_contents, sources, data.answers.model_dump(), user.preferences if user else None, feedback)
+    feedback, remembered, past_answers = account_memory(user, db, all_contents)
+    result = recommend(all_contents, sources, data.answers.model_dump(), user.preferences if user else None, feedback, remembered, past_answers)
     output = {category: [{"content": content_dict(x["content"]), "score": x["score"], "reason": x["reason"]} for x in rows] for category, rows in result.items()}
     if user:
         db.add(RecommendationRun(user_id=user.id, request_data=data.model_dump(), results={k: [x["content"]["id"] for x in v] for k, v in output.items()})); db.commit()

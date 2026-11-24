@@ -2,7 +2,7 @@ from collections import defaultdict
 
 LABELS = {"siyasi entrika":"siyasi entrika", "ayrıntılı evren":"ayrıntılı evren"}
 
-def recommend(contents, sources, answers, profile=None, feedback=None):
+def recommend(contents, sources, answers, profile=None, feedback=None, remembered=None, past_answers=None):
     """Weighted tag overlap with bounded novelty. Scores are ranking signals, not probabilities."""
     profile = profile or {}
     feedback = feedback or {}
@@ -16,6 +16,15 @@ def recommend(contents, sources, answers, profile=None, feedback=None):
         for tag in item.genres:
             weights[("genre", item.category, tag)] += 3
             weights[("cross_genre", tag)] += 2.5
+    # Account signals are averaged so a large library cannot overwhelm this request.
+    remembered = [item for item in (remembered or []) if feedback.get(item.id) != "dislike"]
+    for item in remembered:
+        for tag in set(item.themes): weights[("theme", tag)] += 1.25 / len(remembered)
+        for tag in set(item.moods): weights[("mood", tag)] += 0.75 / len(remembered)
+    past_answers = past_answers or []
+    for previous in past_answers:
+        for tag in set(previous.get("features", [])): weights[("theme", tag)] += 0.5 / len(past_answers)
+        for tag in set(previous.get("moods", [])): weights[("mood", tag)] += 0.25 / len(past_answers)
     for tag in profile.get("features", []): weights[("theme", tag)] += 1.5
     for tag in profile.get("moods", []): weights[("mood", tag)] += 1
     for tag in answers.get("features", []): weights[("theme", tag)] += 5

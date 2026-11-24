@@ -36,6 +36,7 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 
 ## Özellikler
 
+- **Profilim** ekranında tema ve atmosfer tercihleri düzenlenip kalıcı kaydedilebilir. Hesaplı öneriler bu tercihlerden, kaydedilen/beğenilen eserlerin tema ve atmosferlerinden ve son 20 öneri isteğinin kaynak/tercihlerinden yararlanır. Hesap bilgisi sunucudaki oturumdan alınır; misafirler ve diğer hesaplar bu hafızayı kullanmaz. Anlık tercihler profilin üzerine yazılmaz.
 - Hesapla giriş yapan kullanıcı kartlardaki **Beğen / Beğenme** düğmeleriyle geri bildirim verebilir. Beğenme, eseri mevcut önerilerden ve sonraki öneri isteklerinden çıkarır; son çıkarma işlemi **Geri al** ile geri çevrilebilir. Beğen düğmesine tekrar basmak beğeniyi kaldırır. Kaydedilenler listesi bu işlemle silinmez.
 - Öneri modu seçilebilir: **Benzer** (varsayılan), **Keşfet** veya **Şaşırt**. Keşfet ve Şaşırt, eşleşen eserler arasında çeşitliliğe giderek daha fazla ağırlık verir; rastgele veya tamamen ilgisiz eser seçmez. Sonuç ekranı kullanılan modu gösterir.
 - Eser seçildikten sonra “Bu eserde neyi sevdin?” alanında isteğe bağlı tema ve atmosfer tercihleri seçilebilir. Tercihler yalnızca o öneri isteğinde kullanılır; kaynak eser değişince temizlenir.
@@ -64,3 +65,6 @@ Kaynak içeriklerin tema etiketleri 2, atmosfer etiketleri 1, aynı kategorideki
 ## Sağlayıcılar ve sınırlar
 
 `CatalogProvider` arayüzü ileride katalog verisi getiren adaptörler içindir. TMDB ve RAWG için salt okunur aday toplama aracı bulunur; bunların kullanımı ilgili API anahtarlarını gerektirir. Öneri sıralamasını dış API'ler değil, uygulamanın kendi algoritması yapar. Görsel yüklenemezse yerel kategori simgesi gösterilir. Bazı dar tercih birleşimlerinde uygun sonuç bulunmayabilir; arayüz bunu belirtir. PostgreSQL kurulumu için Docker Desktop çalışır durumda olmalıdır.
+
+### Hesap hafızasının ağırlığı
+Kaydedilen ve beğenilen eserler tekilleştirilir; tema/atmosfer katkıları eser sayısına bölünerek toplam 1,25/0,75 ile sınırlanır. Son 20 isteğin kaynak eser ve açık tercihlerinin katkısı ortalama 0,5/0,25 olur. Beğenilmeyen eserler olumlu hafızaya katılmaz ve sonuçlardan çıkarılır. Sadece gösterilen sonuçlar hafızaya olumlu sinyal olarak eklenmez. Kaydı veya beğeniyi kaldırmak ilgili sinyali sonraki isteklerden çıkarır; bağımsız geçmiş istekleri ve diğer olumlu sinyaller geçerliliğini korur.

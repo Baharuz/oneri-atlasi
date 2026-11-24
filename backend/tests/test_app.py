@@ -218,3 +218,68 @@ def test_feedback_filters_recommendations_and_can_be_undone():
     assert candidate in [row['content']['id'] for row in results()]
     assert c.delete(path + '/like', headers=csrf_headers(c)).status_code == 200
     assert str(candidate) not in c.get('/api/me').json()['feedback']
+
+
+def test_account_saved_memory_persists_and_is_isolated():
+    a, b = client(), client()
+    for c, email in [(a, 'memory-a@example.com'), (b, 'memory-b@example.com')]:
+        assert c.post('/api/auth/register', json={'email': email, 'password': 'password123'}).status_code == 200
+    items = a.get('/api/contents').json()
+    source = next(item for item in items if item['title'] == 'Dune')
+    url = f"/api/contents/{source['id']}/recommendations"
+    baseline = a.get(url).json()['results']
+    candidate = baseline[0]['content']['id']
+    score = lambda rows: next(row['score'] for row in rows if row['content']['id'] == candidate)
+    path = f'/api/me/contents/{candidate}'
+    assert a.put(path + '/favorite', headers=csrf_headers(a)).status_code == 200
+    boosted = a.get(url).json()['results']
+    assert score(boosted) > score(baseline)
+    assert b.get(url).json()['results'] == baseline
+    assert a.post('/api/auth/logout', headers=csrf_headers(a)).status_code == 200
+    assert a.get(url).json()['results'] == baseline
+    assert a.post('/api/auth/login', json={'email': 'memory-a@example.com', 'password': 'password123'}).status_code == 200
+    assert a.get(url).json()['results'] == boosted
+    assert a.delete(path + '/favorite', headers=csrf_headers(a)).status_code == 200
+    assert a.get(url).json()['results'] == baseline
+
+
+def test_profile_edit_persistence_and_request_history_are_separate():
+    from app.main import account_memory
+    from app.models import User
+    c = client()
+    assert c.post('/api/auth/register', json={'email': 'profile-memory@example.com', 'password': 'password123'}).status_code == 200
+    user_id = c.get('/api/me').json()['id']
+    items = c.get('/api/contents').json()
+    source = next(item for item in items if item['title'] == 'Stardew Valley')
+    prefs = {'features': ['gizem'], 'moods': ['karanlık']}
+    assert c.put('/api/me/preferences', json=prefs, headers=csrf_headers(c)).status_code == 200
+    assert c.post('/api/recommend', json={'source_ids': [source['id']], 'answers': {'features': ['dostluk'], 'moods': ['neşeli']}}, headers=csrf_headers(c)).status_code == 200
+    assert c.get('/api/me').json()['preferences']['features'] == ['gizem']
+    assert c.post('/api/auth/logout', headers=csrf_headers(c)).status_code == 200
+    assert c.post('/api/auth/login', json={'email': 'profile-memory@example.com', 'password': 'password123'}).status_code == 200
+    assert c.get('/api/me').json()['preferences']['moods'] == ['karanlık']
+    with Session() as db:
+        contents = db.query(Content).all()
+        feedback, remembered, past = account_memory(db.get(User, user_id), db, contents)
+        assert remembered == [] and len(past) == 1
+        assert 'dostluk' in past[0]['features'] and 'neşeli' in past[0]['moods']
+        assert account_memory(None, db, contents) == ({}, [], [])
+    assert c.put('/api/me/preferences', json={'features': [], 'moods': []}, headers=csrf_headers(c)).status_code == 200
+    assert c.get('/api/me').json()['preferences']['features'] == []
+
+
+def test_memory_is_bounded_and_dislikes_override_saved_items():
+    from types import SimpleNamespace
+    def item(id, themes):
+        return SimpleNamespace(id=id, title=str(id), category='kitap', themes=themes, moods=[], genres=[], pace=None, audience=None)
+    source, candidate, saved = item(1, ['gizem']), item(2, ['gizem', 'dostluk']), item(3, ['dostluk'])
+    base = recommend([source, candidate], [source], {'categories': ['kitap']})['kitap'][0]['score']
+    one = recommend([source, candidate], [source], {'categories': ['kitap']}, remembered=[saved])['kitap'][0]['score']
+    many = recommend([source, candidate], [source], {'categories': ['kitap']}, remembered=[saved]*100)['kitap'][0]['score']
+    assert one > base and many == one
+    historical = recommend([source, candidate], [source], {'categories': ['kitap']}, past_answers=[{'features':['dostluk']}])['kitap'][0]['score']
+    assert historical > base
+
+    disliked_memory = recommend([source, candidate], [source], {'categories': ['kitap']}, feedback={3:'dislike'}, remembered=[saved])['kitap'][0]['score']
+    assert disliked_memory == base
+    assert recommend([source, candidate], [source], {'categories': ['kitap']}, feedback={2:'dislike'})['kitap'] == []
