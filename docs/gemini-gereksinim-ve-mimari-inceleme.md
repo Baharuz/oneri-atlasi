@@ -1,3 +1,5 @@
+> Arşiv: İlk gereksinim incelemesidir; uygulanmış özellikler için README ve güncel durum raporunu esas alın.
+
 > **Arşiv notu (30 Ekim 2026):** Bu belge ilk tasarım incelemesinin tarihsel kaydıdır. 500 eserlik güncel katalog, özgün temsili görseller ve 0003 geçişi için [durum raporuna](mvp1-durum-raporu.md) bakın. Aşağıdaki eski eksikler güncel teslim durumu değildir.
 
 # Gemini incelemesi — Ürün gereksinimleri ve mimari taslağı
@@ -14,7 +16,7 @@ Kullanıcı sevdiği bir eserden hareketle yeni kitap, oyun, dizi veya film keş
 
 ## 2. İlk sürümün sınırı
 
-İlk sürümde kullanıcı **bir eser seçer ve aynı kategoriden** öneriler alır. Dört kategorinin tamamı kullanılabilir; kategori değiştiren öneriler sonraki aşamaya bırakılır. İlk sürüm için kesinleşen işlevler:
+Bu arşivdeki ilk plan tek kaynak ve aynı kategori önerisiydi. **Güncel uygulama 1–5 kaynaktan, farklı hedef kategorilerde öneri üretir.** Aşağıdaki eski kapsam güncel durum raporu yerine kullanılmamalıdır. İlk plandaki işlevler:
 
 | ID | Kullanıcı isteği | Kabul ölçütü |
 | --- | --- | --- |

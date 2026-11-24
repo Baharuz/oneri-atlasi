@@ -20,3 +20,7 @@ Tarihsel pilot sayıları güncel katalogun durumu olarak yorumlanmamalıdır.
 - Seçim ekranına hedef kategori seçimi eklendi; POST /api/recommend yanıtı kategori başlıkları altında gösteriliyor.
 - Kategoriler arası ortak tür ağırlığı 2,5 olarak ayarlandı. Dört kaynak/hedef çifti kalite testine eklendi.
 - 28 backend testi, frontend derlemesi, masaüstü ve mobil tarayıcı akışları geçti.
+
+## 24 Kasım 2026
+
+1–5 kaynak seçimi, tema/tür/atmosfer tercihi, üç öneri modu, kart geri bildirimi ve profil hafızası eklendi. Geçmiş kayıtları kaynak adlarıyla listelenip açılabiliyor; eski ID-only kayıtlar destekleniyor. Kaydedilenlerden detay geri dönüşü düzeltildi. Tür tercihinin ağırlık türü düzeltildi. 0005 migration ile metadata alanları ve 9 doğrulanmış eser eklendi. 36 backend testi, 5 React/jsdom akış testi, üretim derlemesi ve SQLite migration kontrolü geçti. PostgreSQL ve gerçek tarayıcı görsel kontrolü yapılmadı. 491 eserin metadata doğrulaması henüz tamamlanmadı.

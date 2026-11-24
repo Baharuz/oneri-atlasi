@@ -8,4 +8,6 @@ Katalog 125 kitap, 125 film, 125 dizi ve 125 oyun içerir. Görseller eserlerin 
 
 `python -m app.catalog_audit --check-urls` her katalog satırında bu alanları, dosya varlığını, SVG yapısını ve eser başlığını doğrular. Bu kontrol dış kaynak lisansı veya gelecekteki dağıtım koşulları hakkında hüküm vermez. Proje dışı kullanım için görsel hakları ve eser adlarının kullanım bağlamı ayrıca gözden geçirilmelidir.
 
-Eski Open Library/TMDB/RAWG pilotu ve `0002` geçişi tarihsel geliştirme aşamasıydı. Güncel katalog seed'i `0004` şemasında çalışır; eski sağlayıcı görselleri seed tarafından kullanılmaz.
+Eski Open Library/TMDB/RAWG pilotu ve `0002` geçişi tarihsel geliştirme aşamasıydı. Güncel katalog seed'i `0005` şemasında çalışır; eski sağlayıcı görselleri seed tarafından kullanılmaz.
+
+Yıl/eser sahibi bilgileri, bağlantılı `backend/data/catalog-details.json` manifestinden seed ile yüklenir. 24 Kasım 2026 itibarıyla 9 doğrulanmış eser vardır; kalan 491 kayıt metadata doğrulaması bekler. Kapak kaynakları bu eser bilgisi kaynaklarından ayrı tutulur.

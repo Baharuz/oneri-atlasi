@@ -1,6 +1,6 @@
 # MVP-1 API sözleşmesi
 
-**Güncelleme:** 30 Ekim 2026
+**Güncelleme:** 24 Kasım 2026
 
 Katalog dört kategoriden (`kitap`, `film`, `dizi`, `oyun`) 125'er eser içerir. Arama ve kategoriler arası öneri misafire açıktır. Kaydetme ve kaydedilenler oturum gerektirir.
 
@@ -15,8 +15,19 @@ Katalog dört kategoriden (`kitap`, `film`, `dizi`, `oyun`) 125'er eser içerir.
 | Kaydet/kaldır | `PUT` / `DELETE /api/me/contents/{id}/favorite` | `{ok: true}`; oturum ve CSRF gerekir |
 | Kaydedilenler | `GET /api/me/saved` | Tam `Content[]`; katalog sayfalamasından bağımsız |
 
-`Content`: `id`, `category`, `title`, `description`, `genres`, `themes`, `moods`, `pace`, `audience`, `language`, `year`, `image_url`, `image_credit`, `image_source_url`, `source`, `source_id`. `image_url` yerel özgün temsili SVG dosyasına, `image_source_url` kaynak dosyasına işaret eder. Görseller resmî kapak/afiş değildir.
+`Content`: `id`, `category`, `title`, `description`, `genres`, `themes`, `moods`, `pace`, `audience`, `language`, `year`, `creators`, `metadata_source_url`, `image_url`, `image_credit`, `image_source_url`, `source`, `source_id`. `image_url` yerel özgün temsili SVG dosyasına, `image_source_url` kaynak dosyasına işaret eder. Görseller resmî kapak/afiş değildir.
 
 Tarayıcı istekleri `credentials: include` kullanır; yazma istekleri `X-CSRF-Token` gönderir. Geçersiz giriş 401, mevcut e-postayla kayıt 409, eksik CSRF/izin verilmeyen Origin 403, bulunmayan eser 404, geçersiz istek 422 döner. Arayüz yüklenme, boş sonuç ve ağ hatası durumlarını gösterir.
 
-Şema geçiş zinciri `0001` → `0002` (görsel kredi/kaynak alanları) → `0003` (kullanılmayan kategori temizliği) → `0004` (tempo/hedef kitle) biçimindedir. Seed mevcut kullanıcı ve kayıt verisini koruyarak kataloğu günceller.
+Şema geçiş zinciri `0001` → `0002` (görsel kredi/kaynak alanları) → `0003` (kullanılmayan kategori temizliği) → `0004` (tempo/hedef kitle) → `0005` (eser sahibi/bilgi kaynağı) biçimindedir. Seed mevcut kullanıcı ve kayıt verisini koruyarak kataloğu günceller.
+
+
+## Geçmiş ve tercih API'leri
+
+- `GET /api/me/history`: yalnız oturumdaki hesabın son 20 kaydı; `id`, `created_at`, `request`, `sources: [{id,title}]`, `count`.
+- `GET /api/me/history/{id}`: `sources: Content[]`, kayıtlı `results`, `request`, `created_at`, `missing_count`, `legacy`. Başka hesaba ait veya olmayan kayıtta 404. Açma yeni koşu kaydetmez ve sıralamayı yeniden hesaplamaz. Yeni kayıtlarda skor/gerekçe saklanır; eski ID-only kayıtlarda skor null, gerekçe saklanmadı mesajıdır. Eser bilgileri güncel katalogdan alınır.
+- `PUT /api/me/preferences`: kalıcı tema/atmosfer tercihleri. Anlık öneri cevapları bu kaydı değiştirmez.
+- `PUT / DELETE /api/me/contents/{id}/like` veya `/dislike`: geri bildirim ekle/kaldır.
+- `POST /api/recommend`: 1–5 benzersiz kaynak kimliği. `answers.features` tema veya tür (eski istemciler için atmosfer de desteklenir), `answers.moods` atmosfer, `answers.mode` close/discover/surprise, `answers.categories` hedef kategoriler. Özellikler kaynaklarda bulunmalıdır.
+
+Yıl, ilk özgün yayın/çıkış yılıdır; kitap çevirisi veya yeni baskı yılı değildir. `creators`, kitapta yazar, filmde yönetmen, dizide yaratıcı, oyunda geliştiricidir. Bilgisi doğrulanmayan eserde year null / creators boş kalır.

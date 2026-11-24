@@ -27,7 +27,14 @@ def recommend(contents, sources, answers, profile=None, feedback=None, remembere
         for tag in set(previous.get("moods", [])): weights[("mood", tag)] += 0.25 / len(past_answers)
     for tag in profile.get("features", []): weights[("theme", tag)] += 1.5
     for tag in profile.get("moods", []): weights[("mood", tag)] += 1
-    for tag in answers.get("features", []): weights[("theme", tag)] += 5
+    for tag in set(answers.get("features", [])):
+        # Legacy features can contain themes, genres or moods; retain their kinds.
+        if any(tag in item.themes for item in sources): weights[("theme", tag)] += 5
+        if any(tag in item.genres for item in sources):
+            weights[("cross_genre", tag)] += 5
+            for category in {item.category for item in sources if tag in item.genres}:
+                weights[("genre", category, tag)] += 5
+        if any(tag in item.moods for item in sources): weights[("mood", tag)] += 5
     for tag in answers.get("moods", []): weights[("mood", tag)] += 3
     mode = answers.get("mode", "close")
     target = answers.get("categories") or ["kitap", "film", "dizi", "oyun"]

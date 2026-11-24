@@ -197,6 +197,8 @@ def seed(db):
             item.image_url = f"/art/{item.source_id}.svg"
             item.image_source_url = f"https://github.com/Baharuz/oneri-atlasi/blob/main/frontend/public/art/{item.source_id}.svg"
             item.image_credit = "Öneri Atlası özgün temsili görseli · Resmî kapak/afiş değil · Proje içi kullanım"
+    from .catalog_details import apply_details
+    apply_details(db)
     lookup = {(tag.kind, tag.name): tag.id for tag in db.scalars(select(Tag)).all()}
     needed = {(kind, name) for item in items for kind, group in (("genre", item.genres), ("theme", item.themes), ("mood", item.moods)) for name in group}
     for kind, name in needed - lookup.keys():
