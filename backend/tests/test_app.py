@@ -191,3 +191,30 @@ def test_quality_report_flags_missing():
     assert any('image_credit' in x['issues'] for x in issues)
     assert any('image_source_url' in x['issues'] for x in issues)
     assert all(x['id'] and x['title'] for x in issues)
+
+
+def test_feedback_filters_recommendations_and_can_be_undone():
+    c = client()
+    assert c.post('/api/auth/register', json={'email': 'feedback-flow@example.com', 'password': 'password123'}).status_code == 200
+    items = c.get('/api/contents').json()
+    source = next(item for item in items if item['title'] == 'Dune')
+    body = {'source_ids': [source['id']], 'answers': {'categories': ['film']}}
+    def results():
+        response = c.post('/api/recommend', json=body, headers=csrf_headers(c))
+        assert response.status_code == 200
+        return response.json()['film']
+    initial = results()
+    candidate = initial[0]['content']['id']
+    path = f'/api/me/contents/{candidate}'
+    assert c.put(path + '/favorite', headers=csrf_headers(c)).status_code == 200
+    assert c.put(path + '/like', headers=csrf_headers(c)).status_code == 200
+    assert c.get('/api/me').json()['feedback'][str(candidate)] == 'like'
+    assert c.put(path + '/dislike', headers=csrf_headers(c)).status_code == 200
+    assert c.get('/api/me').json()['feedback'][str(candidate)] == 'dislike'
+    assert candidate not in [row['content']['id'] for row in results()]
+    assert candidate in [item['id'] for item in c.get('/api/me/saved').json()]
+    # Undo restores the previous like; deleting that like clears feedback entirely.
+    assert c.put(path + '/like', headers=csrf_headers(c)).status_code == 200
+    assert candidate in [row['content']['id'] for row in results()]
+    assert c.delete(path + '/like', headers=csrf_headers(c)).status_code == 200
+    assert str(candidate) not in c.get('/api/me').json()['feedback']

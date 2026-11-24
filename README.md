@@ -36,6 +36,7 @@ Tarayıcıda `http://localhost:5173` adresini açın. Vite `/api` isteklerini `l
 
 ## Özellikler
 
+- Hesapla giriş yapan kullanıcı kartlardaki **Beğen / Beğenme** düğmeleriyle geri bildirim verebilir. Beğenme, eseri mevcut önerilerden ve sonraki öneri isteklerinden çıkarır; son çıkarma işlemi **Geri al** ile geri çevrilebilir. Beğen düğmesine tekrar basmak beğeniyi kaldırır. Kaydedilenler listesi bu işlemle silinmez.
 - Öneri modu seçilebilir: **Benzer** (varsayılan), **Keşfet** veya **Şaşırt**. Keşfet ve Şaşırt, eşleşen eserler arasında çeşitliliğe giderek daha fazla ağırlık verir; rastgele veya tamamen ilgisiz eser seçmez. Sonuç ekranı kullanılan modu gösterir.
 - Eser seçildikten sonra “Bu eserde neyi sevdin?” alanında isteğe bağlı tema ve atmosfer tercihleri seçilebilir. Tercihler yalnızca o öneri isteğinde kullanılır; kaynak eser değişince temizlenir.
 - Hesapsız: başlığa göre arama, kaynak eseri ve hedef kategoriyi seçme, seçilen kategorilerde gerekçeli öneriler. Seçim ekranı 500 eseri 24'erli gruplar hâlinde gösterir; arama tüm kataloğu kapsar.
