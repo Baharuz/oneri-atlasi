@@ -24,3 +24,5 @@
 .resultsection{margin:28px 0 44px}
 .resultsection h2{font-size:26px;border-bottom:1px solid #e8e1eb;padding-bottom:12px}
 
+
+.preferences{margin:20px 0;padding:16px 0;border-top:1px solid #e4dce8;border-bottom:1px solid #e4dce8}.preferences h3{margin:0 0 8px;font-size:19px}.preferences p{font-size:14px;line-height:1.5}.preferences fieldset{border:0;padding:0;margin:16px 0;min-width:0}.preferences legend{font-weight:700;margin-bottom:8px}.preference-options{display:flex;flex-wrap:wrap;gap:8px}.preference-option{display:flex;align-items:center;gap:7px;margin:0;border:1px solid #b9aec4;border-radius:12px;padding:9px 11px;cursor:pointer;font-size:14px}.preference-option:has(input:checked){background:#eee5f7;border-color:#69548e;color:#403052}.preference-option input{width:16px;height:16px;margin:0;accent-color:#69548e;flex-shrink:0}.preference-option:focus-within{outline:2px solid #69548e;outline-offset:3px}
